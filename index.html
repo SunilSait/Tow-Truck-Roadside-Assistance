@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RescueFleet — 24/7 Tow Truck & Roadside Assistance</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+
+<!-- Navbar injected by JS -->
+<div id="navbar"></div>
+
+<!-- ============================================================
+     SECTION 1 — HERO (Two-Column with Floating Stats)
+     ============================================================ -->
+<section class="hero" style="padding: 100px 0 60px;">
+    <div class="container">
+        <div class="split-section" style="gap: 48px;">
+            <div class="split-content scroll-reveal">
+                <span class="section-label"><i class="fa-solid fa-bolt"></i> 24/7 Emergency Service</span>
+                <h1 style="font-size: 2.8rem; font-weight: 800; line-height: 1.15; margin-bottom: 20px;">
+                    Stranded? We'll Get<br>You <span style="color: var(--primary);">Back on Track</span>
+                </h1>
+                <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 32px; max-width: 500px;">
+                    Fast, reliable towing and roadside assistance across the region. From flat tires to engine breakdowns — we're just one call away, day or night.
+                </p>
+                <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 32px;">
+                    <a href="contact.html" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Call for Help</a>
+                    <a href="services.html" class="btn btn-secondary"><i class="fa-solid fa-list-check"></i> Our Services</a>
+                </div>
+                <div style="display: flex; gap: 32px; flex-wrap: wrap;">
+                    <div style="text-align: center;">
+                        <span style="font-size: 1.6rem; font-weight: 700; color: var(--primary); display: block;" class="counter" data-target="15">0</span>
+                        <span style="font-size: 0.78rem; color: var(--text-muted);">Min Avg. Response</span>
+                    </div>
+                    <div style="text-align: center;">
+                        <span style="font-size: 1.6rem; font-weight: 700; color: var(--primary); display: block;" class="counter" data-target="50000">0</span>
+                        <span style="font-size: 0.78rem; color: var(--text-muted);">Vehicles Rescued</span>
+                    </div>
+                    <div style="text-align: center;">
+                        <span style="font-size: 1.6rem; font-weight: 700; color: var(--primary); display: block;" class="counter" data-target="98">0</span>
+                        <span style="font-size: 0.78rem; color: var(--text-muted);">% Satisfaction</span>
+                    </div>
+                </div>
+            </div>
+            <div class="split-image scroll-reveal">
+                <img src="https://images.unsplash.com/photo-1562065198-8549d0de1687?w=700&h=500&fit=crop" alt="Tow truck on highway at sunset" style="border-radius: var(--radius-lg); width: 100%; height: 480px; object-fit: cover; box-shadow: var(--shadow-xl);">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SECTION 2 — TRUSTED BY (Logo Row)
+     ============================================================ -->
+<section style="padding: 32px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="container">
+        <div class="partners-row">
+            <span class="partner-logo">AAA Partner</span>
+            <span class="partner-logo">AutoGuard</span>
+            <span class="partner-logo">SafeDrive</span>
+            <span class="partner-logo">RoadShield</span>
+            <span class="partner-logo">FleetPro</span>
+            <span class="partner-logo">MotorCare</span>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SECTION 3 — SERVICES GRID (6 Cards)
+     ============================================================ -->
+<section class="section" style="background: var(--bg-alt);">
+    <div class="container">
+        <div class="text-center scroll-reveal" style="max-width: 600px; margin: 0 auto 48px;">
+            <span class="section-label"><i class="fa-solid fa-gear"></i> What We Do</span>
+            <h2 class="section-title">Complete Roadside Solutions</h2>
+            <p class="section-subtitle">We cover every emergency scenario so you're never left stranded. Our certified technicians handle it all.</p>
+        </div>
+        <div class="service-grid scroll-reveal">
+            <div class="service-card">
+                <div class="service-card-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
+                <h3>Emergency Towing</h3>
+                <p>Fast flatbed and wheel-lift towing for vehicles of all sizes. We handle cars, SUVs, motorcycles, and light trucks with care.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-card-icon"><i class="fa-solid fa-car-battery"></i></div>
+                <h3>Battery Jump-Start</h3>
+                <p>Dead battery? Our technicians arrive with professional-grade jump-start equipment to get you moving again quickly.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-card-icon"><i class="fa-solid fa-gas-pump"></i></div>
+                <h3>Fuel Delivery</h3>
+                <p>Ran out of gas on the road? We deliver gasoline or diesel directly to your location so you can reach the nearest station.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-card-icon"><i class="fa-solid fa-tire"></i></div>
+                <h3>Flat Tire Change</h3>
+                <p>We'll swap your flat with the spare quickly and safely, right where you are. No need to wait for a shop.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-card-icon"><i class="fa-solid fa-lock-open"></i></div>
+                <h3>Lockout Service</h3>
+                <p>Locked your keys inside? Our trained specialists use non-damaging tools to get you back into your vehicle.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-card-icon"><i class="fa-solid fa-road"></i></div>
+                <h3>Accident Recovery</h3>
+                <p>After a collision, we safely recover and transport your vehicle. We coordinate with insurance and body shops.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SECTION 4 — WHY CHOOSE US (Split with Image)
+     ============================================================ -->
+<section class="section">
+    <div class="container">
+        <div class="split-section scroll-reveal">
+            <div class="split-image">
+                <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=600&h=450&fit=crop" alt="Mechanic helping driver" style="border-radius: var(--radius-lg); width: 100%; height: 420px; object-fit: cover;">
+            </div>
+            <div class="split-content">
+                <span class="section-label"><i class="fa-solid fa-shield-halved"></i> Why Choose Us</span>
+                <h2 class="section-title" style="text-align: left;">Trusted by Thousands of Drivers</h2>
+                <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px;">
+                    With over a decade of experience, RescueFleet has built a reputation for fast response times, transparent pricing, and courteous service. We treat every call as an emergency.
+                </p>
+                <div style="display: grid; gap: 16px;">
+                    <div style="display: flex; align-items: start; gap: 14px;">
+                        <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(211,84,0,0.08); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <i class="fa-solid fa-clock" style="color: var(--primary); font-size: 0.9rem;"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 2px;">15-Minute Average Response</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary);">Our GPS-tracked fleet ensures the nearest truck reaches you fast.</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: start; gap: 14px;">
+                        <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(211,84,0,0.08); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <i class="fa-solid fa-dollar-sign" style="color: var(--primary); font-size: 0.9rem;"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 2px;">No Hidden Fees</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary);">Upfront pricing with no surprise charges. Know the cost before we dispatch.</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: start; gap: 14px;">
+                        <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(211,84,0,0.08); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <i class="fa-solid fa-certificate" style="color: var(--primary); font-size: 0.9rem;"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 2px;">Certified Technicians</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary);">All our operators are trained, licensed, and background-checked professionals.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SECTION 5 — STATS COUNTERS
+     ============================================================ -->
+<section style="padding: 60px 0; background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%); color: #fff;">
+    <div class="container">
+        <div class="stats-grid scroll-reveal">
+            <div class="stat-card" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.1);">
+                <div class="stat-icon" style="background: rgba(211,84,0,0.2);"><i class="fa-solid fa-truck-fast" style="color: var(--primary-light);"></i></div>
+                <span class="stat-number counter" data-target="120" style="color: #fff;">0</span>
+                <span class="stat-label" style="color: rgba(255,255,255,0.7);">Trucks in Fleet</span>
+            </div>
+            <div class="stat-card" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.1);">
+                <div class="stat-icon" style="background: rgba(211,84,0,0.2);"><i class="fa-solid fa-map-marked-alt" style="color: var(--primary-light);"></i></div>
+                <span class="stat-number counter" data-target="35" style="color: #fff;">0</span>
+                <span class="stat-label" style="color: rgba(255,255,255,0.7);">Cities Covered</span>
+            </div>
+            <div class="stat-card" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.1);">
+                <div class="stat-icon" style="background: rgba(211,84,0,0.2);"><i class="fa-solid fa-users" style="color: var(--primary-light);"></i></div>
+                <span class="stat-number counter" data-target="250" style="color: #fff;">0</span>
+                <span class="stat-label" style="color: rgba(255,255,255,0.7);">Expert Technicians</span>
+            </div>
+            <div class="stat-card" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.1);">
+                <div class="stat-icon" style="background: rgba(211,84,0,0.2);"><i class="fa-solid fa-star" style="color: var(--primary-light);"></i></div>
+                <span class="stat-number counter" data-target="4" style="color: #fff;">0</span>
+                <span class="stat-label" style="color: rgba(255,255,255,0.7);">Average Rating (4.9)</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SECTION 6 — HOW IT WORKS (3 Steps)
+     ============================================================ -->
+<section class="section" style="background: var(--bg-alt);">
+    <div class="container">
+        <div class="text-center scroll-reveal" style="max-width: 600px; margin: 0 auto 48px;">
+            <span class="section-label"><i class="fa-solid fa-route"></i> How It Works</span>
+            <h2 class="section-title">Help in 3 Simple Steps</h2>
+            <p class="section-subtitle">Getting roadside help has never been easier. Just call, and we'll handle the rest.</p>
+        </div>
+        <div class="process-grid scroll-reveal">
+            <div class="process-step">
+                <div class="process-number">01</div>
+                <div class="process-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                <h3>Call or Request Online</h3>
+                <p>Reach us by phone, app, or through your dashboard. Tell us your location and the issue you're facing.</p>
+            </div>
+            <div class="process-step">
+                <div class="process-number">02</div>
+                <div class="process-icon"><i class="fa-solid fa-satellite-dish"></i></div>
+                <h3>We Dispatch Help</h3>
+                <p>Our system locates the nearest available truck and dispatches it immediately. Track it in real-time.</p>
+            </div>
+            <div class="process-step">
+                <div class="process-number">03</div>
+                <div class="process-icon"><i class="fa-solid fa-thumbs-up"></i></div>
+                <h3>Back on the Road</h3>
+                <p>Our certified technician solves your problem on-site or tows you safely to your preferred destination.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SECTION 7 — ABOUT PREVIEW (Reverse Split)
+     ============================================================ -->
+<section class="section">
+    <div class="container">
+        <div class="split-section reverse scroll-reveal">
+            <div class="split-content">
+                <span class="section-label"><i class="fa-solid fa-building"></i> About RescueFleet</span>
+                <h2 class="section-title" style="text-align: left;">Serving Communities Since 2010</h2>
+                <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">
+                    What started as a single tow truck operation has grown into a trusted network of over 120 vehicles and 250 skilled professionals. We're driven by a simple mission: no one should feel helpless on the road.
+                </p>
+                <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px;">
+                    Our state-of-the-art dispatch center uses GPS tracking and AI routing to minimize wait times. Every driver is background-checked, insured, and trained in customer service excellence.
+                </p>
+                <a href="about.html" class="btn btn-primary"><i class="fa-solid fa-arrow-right"></i> Learn More About Us</a>
+            </div>
+            <div class="split-image">
+                <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=600&h=450&fit=crop" alt="Tow truck fleet" style="border-radius: var(--radius-lg); width: 100%; height: 420px; object-fit: cover;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SECTION 8 — TESTIMONIALS (3 Cards)
+     ============================================================ -->
+<section class="section" style="background: var(--bg-alt);">
+    <div class="container">
+        <div class="text-center scroll-reveal" style="max-width: 600px; margin: 0 auto 48px;">
+            <span class="section-label"><i class="fa-solid fa-quote-left"></i> Testimonials</span>
+            <h2 class="section-title">What Our Customers Say</h2>
+            <p class="section-subtitle">Real stories from real people we've helped get back on the road safely.</p>
+        </div>
+        <div class="testimonial-grid scroll-reveal">
+            <div class="testimonial-card">
+                <div class="testimonial-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">"My car broke down on the highway at 2 AM. RescueFleet arrived in just 12 minutes. The driver was professional and got me towed safely to the nearest shop. Incredible service!"</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar" style="background: #D35400;">MK</div>
+                    <div>
+                        <strong>Michael Kennedy</strong>
+                        <span>Houston, TX</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Locked myself out of my car with groceries inside. Called RescueFleet and they had a technician at my location within 15 minutes. No damage to the car at all. Highly recommend!"</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar" style="background: #1A252F;">SP</div>
+                    <div>
+                        <strong>Sarah Patterson</strong>
+                        <span>Dallas, TX</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p class="testimonial-text">"Ran out of fuel on a rural road late at night. Within 20 minutes, a RescueFleet driver brought me 3 gallons. Fair pricing and genuinely kind service. They've earned a loyal customer."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar" style="background: #A04000;">JR</div>
+                    <div>
+                        <strong>James Rodriguez</strong>
+                        <span>Austin, TX</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SECTION 9 — COVERAGE AREAS (Pills)
+     ============================================================ -->
+<section class="section">
+    <div class="container">
+        <div class="text-center scroll-reveal" style="max-width: 600px; margin: 0 auto 48px;">
+            <span class="section-label"><i class="fa-solid fa-map-location-dot"></i> Coverage</span>
+            <h2 class="section-title">Areas We Serve</h2>
+            <p class="section-subtitle">Our fleet covers a wide network of cities, highways, and rural zones across the state.</p>
+        </div>
+        <div class="scroll-reveal" style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; max-width: 800px; margin: 0 auto 32px;">
+            <span class="area-pill">Houston</span>
+            <span class="area-pill">Dallas</span>
+            <span class="area-pill">Austin</span>
+            <span class="area-pill">San Antonio</span>
+            <span class="area-pill">Fort Worth</span>
+            <span class="area-pill">El Paso</span>
+            <span class="area-pill">Arlington</span>
+            <span class="area-pill">Plano</span>
+            <span class="area-pill">Corpus Christi</span>
+            <span class="area-pill">Lubbock</span>
+            <span class="area-pill">Laredo</span>
+            <span class="area-pill">Irving</span>
+            <span class="area-pill">Garland</span>
+            <span class="area-pill">Frisco</span>
+            <span class="area-pill">McKinney</span>
+        </div>
+        <div class="text-center scroll-reveal">
+            <a href="coverage.html" class="btn btn-secondary"><i class="fa-solid fa-map"></i> View Full Coverage Map</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SECTION 10 — FAQ ACCORDION
+     ============================================================ -->
+<section class="section" style="background: var(--bg-alt);">
+    <div class="container">
+        <div class="text-center scroll-reveal" style="max-width: 600px; margin: 0 auto 48px;">
+            <span class="section-label"><i class="fa-solid fa-circle-question"></i> FAQ</span>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Find answers to the most common questions about our roadside assistance services.</p>
+        </div>
+        <div class="faq-container scroll-reveal" style="max-width: 720px; margin: 0 auto;">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How fast can you reach me in an emergency?</span>
+                    <i class="fa-solid fa-chevron-down faq-icon"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Our average response time is 15 minutes in urban areas and 25-30 minutes in suburban or rural zones. We use GPS tracking to dispatch the nearest available truck to your location.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What types of vehicles do you tow?</span>
+                    <i class="fa-solid fa-chevron-down faq-icon"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>We tow cars, SUVs, pickup trucks, motorcycles, and light commercial vehicles. For heavy-duty or specialized towing, please call us to arrange dedicated equipment.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Do you offer 24/7 service?</span>
+                    <i class="fa-solid fa-chevron-down faq-icon"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes! We operate 24 hours a day, 7 days a week, 365 days a year — including holidays. Roadside emergencies don't follow a schedule, and neither do we.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How much does a tow cost?</span>
+                    <i class="fa-solid fa-chevron-down faq-icon"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Our pricing starts at $75 for the first 5 miles, with $4 per additional mile. We provide upfront quotes before dispatching, so there are never any surprise charges.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Do you work with insurance companies?</span>
+                    <i class="fa-solid fa-chevron-down faq-icon"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, we work with all major insurance providers and can bill them directly. We also accept all major credit cards, debit cards, and cash payments.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SECTION 11 — CTA BANNER
+     ============================================================ -->
+<section class="section">
+    <div class="container">
+        <div class="cta-banner scroll-reveal">
+            <h2>Need Immediate Roadside Help?</h2>
+            <p>Our dispatchers are standing by 24/7. One call is all it takes to get a professional tow truck or roadside technician to your location.</p>
+            <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+                <a href="tel:+18005551234" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Call 1-800-555-1234</a>
+                <a href="login.html" class="btn btn-secondary" style="background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.3); color: #fff;"><i class="fa-solid fa-right-to-bracket"></i> Request Online</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer injected by JS -->
+<div id="footer"></div>
+<div id="backToTop"></div>
+
+<script src="components.js"></script>
+</body>
+</html>

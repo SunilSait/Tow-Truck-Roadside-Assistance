@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account — RescueFleet</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="signup">
+
+<div class="auth-page">
+    <!-- Top Bar -->
+    <div class="auth-topbar">
+        <a href="index.html" class="auth-topbar-logo" id="authLogo"></a>
+        <div class="auth-topbar-actions">
+            <button onclick="toggleDark()" title="Toggle Dark Mode"><i class="fa-solid fa-moon"></i></button>
+            <button onclick="toggleRTL()" title="Toggle RTL"><i class="fa-solid fa-right-left"></i></button>
+        </div>
+    </div>
+
+    <!-- Orbs -->
+    <div class="auth-card-orb orb-1"></div>
+    <div class="auth-card-orb orb-2"></div>
+
+    <!-- Card -->
+    <div class="auth-card">
+        <div class="auth-card-logo"><a href="index.html" id="authCardLogo"></a></div>
+
+        <h1>Create Account</h1>
+        <p class="auth-subtitle">Join RescueFleet for fast roadside assistance</p>
+
+        <!-- Social Login -->
+        <div class="social-login-grid">
+            <button class="social-btn" id="googleBtn"><span>Google</span></button>
+            <button class="social-btn" id="appleBtn"><span>Apple</span></button>
+            <button class="social-btn" id="facebookBtn"><span>Facebook</span></button>
+        </div>
+
+        <div class="divider">or sign up with email</div>
+
+        <!-- Form -->
+        <form onsubmit="return false;">
+            <div class="form-group">
+                <label class="form-label" for="firstName">First Name</label>
+                <input class="form-input" type="text" id="firstName" placeholder="John" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="lastName">Last Name</label>
+                <input class="form-input" type="text" id="lastName" placeholder="Doe" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="email">Email Address</label>
+                <input class="form-input" type="email" id="email" placeholder="you@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="phone">Phone Number</label>
+                <input class="form-input" type="tel" id="phone" placeholder="+1 (555) 000-0000" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="password">Password</label>
+                <div class="password-wrapper">
+                    <input class="form-input" type="password" id="password" placeholder="Create a strong password" required>
+                    <button type="button" class="password-toggle" onclick="togglePasswordVisibility('password', this)">
+                        <i class="fa-regular fa-eye pw-icon"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="confirmPassword">Confirm Password</label>
+                <div class="password-wrapper">
+                    <input class="form-input" type="password" id="confirmPassword" placeholder="Confirm your password" required>
+                    <button type="button" class="password-toggle" onclick="togglePasswordVisibility('confirmPassword', this)">
+                        <i class="fa-regular fa-eye pw-icon"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label class="checkbox-wrapper">
+                    <input type="checkbox" required> I agree to the <a href="#" class="link-primary">Terms & Conditions</a>
+                </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+                <i class="fa-solid fa-user-plus"></i> Create Account
+            </button>
+        </form>
+
+        <p class="auth-footer">Already have an account? <a href="login.html">Sign In</a></p>
+    </div>
+</div>
+
+<script src="components.js"></script>
+</body>
+</html>

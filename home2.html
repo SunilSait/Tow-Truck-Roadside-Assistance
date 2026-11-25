@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RescueFleet Premium — 24/7 Roadside Assistance</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+
+<!-- Navbar -->
+<div id="navbar"></div>
+
+<!-- ============================================================
+     SECTION 1 — HERO SLIDER (3 Slides)
+     ============================================================ -->
+<section class="hero-slider" id="heroSlider">
+    <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1549317661-bd32c8ce0afa?w=1400&h=700&fit=crop');">
+        <div class="hero-slide-overlay"></div>
+        <div class="hero-slide-content">
+            <span class="section-label" style="color: #fff; background: rgba(211,84,0,0.3);"><i class="fa-solid fa-bolt"></i> 24/7 Emergency</span>
+            <h1>Roadside Rescue<br>When You Need It Most</h1>
+            <p>Professional towing & roadside assistance available around the clock, across the entire state.</p>
+            <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Get Help Now</a>
+                <a href="services.html" class="btn btn-secondary" style="background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.3); color: #fff;"><i class="fa-solid fa-arrow-right"></i> Explore Services</a>
+            </div>
+        </div>
+    </div>
+    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1400&h=700&fit=crop');">
+        <div class="hero-slide-overlay"></div>
+        <div class="hero-slide-content">
+            <span class="section-label" style="color: #fff; background: rgba(211,84,0,0.3);"><i class="fa-solid fa-truck-fast"></i> Fast Response</span>
+            <h1>Average 15-Minute<br>Dispatch Time</h1>
+            <p>GPS-tracked fleet with AI-optimized routing ensures the nearest truck reaches you fastest.</p>
+            <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+                <a href="coverage.html" class="btn btn-primary"><i class="fa-solid fa-map"></i> View Coverage</a>
+                <a href="about.html" class="btn btn-secondary" style="background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.3); color: #fff;"><i class="fa-solid fa-circle-info"></i> About Us</a>
+            </div>
+        </div>
+    </div>
+    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1400&h=700&fit=crop');">
+        <div class="hero-slide-overlay"></div>
+        <div class="hero-slide-content">
+            <span class="section-label" style="color: #fff; background: rgba(211,84,0,0.3);"><i class="fa-solid fa-shield-halved"></i> Trusted Service</span>
+            <h1>50,000+ Vehicles<br>Rescued & Counting</h1>
+            <p>Certified technicians, transparent pricing, and a 98% customer satisfaction rate.</p>
+            <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+                <a href="login.html" class="btn btn-primary"><i class="fa-solid fa-user-plus"></i> Join Now</a>
+                <a href="contact.html" class="btn btn-secondary" style="background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.3); color: #fff;"><i class="fa-solid fa-headset"></i> Contact Us</a>
+            </div>
+        </div>
+    </div>
+    <div class="hero-slider-nav">
+        <button class="hero-slider-btn" onclick="changeSlide(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="hero-slider-btn" onclick="changeSlide(1)"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="hero-slider-dots" id="heroSliderDots"></div>
+</section>
+
+<!-- ============================================================
+     SECTION 2 — EMERGENCY BANNER
+     ============================================================ -->
+<section style="background: var(--primary); padding: 20px 0;">
+    <div class="container">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap; color: #fff; text-align: center;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-phone-volume" style="font-size: 1.3rem;"></i>
+                <div style="text-align: left;">
+                    <div style="font-size: 0.72rem; opacity: 0.8; text-transform: uppercase;">Emergency Hotline</div>
+                    <div style="font-size: 1.1rem; font-weight: 700;">1-800-555-1234</div>
+                </div>
+            </div>
+            <div style="width: 1px; height: 32px; background: rgba(255,255,255,0.3);"></div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-clock" style="font-size: 1.3rem;"></i>
+                <div style="text-align: left;">
+                    <div style="font-size: 0.72rem; opacity: 0.8; text-transform: uppercase;">Available</div>
+                    <div style="font-size: 1.1rem; font-weight: 700;">24/7 — 365 Days</div>
+                </div>
+            </div>
+            <div style="width: 1px; height: 32px; background: rgba(255,255,255,0.3);"></div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-gauge-high" style="font-size: 1.3rem;"></i>
+                <div style="text-align: left;">
+                    <div style="font-size: 0.72rem; opacity: 0.8; text-transform: uppercase;">Response Time</div>
+                    <div style="font-size: 1.1rem; font-weight: 700;">15 Min Average</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SECTION 3 — BENTO GRID SERVICES
+     ============================================================ -->
+<section class="section">
+    <div class="container">
+        <div class="text-center scroll-reveal" style="max-width: 600px; margin: 0 auto 48px;">
+            <span class="section-label"><i class="fa-solid fa-grid-2"></i> Our Services</span>
+            <h2 class="section-title">Complete Roadside Solutions</h2>
+            <p class="section-subtitle">From emergency towing to minor roadside fixes, we have you covered with professional service.</p>
+        </div>
+        <div class="bento-grid scroll-reveal">
+            <div class="bento-card large">
+                <img src="assets/images/emergency-towing.jpg" alt="Emergency towing service">
+                <div class="bento-card-overlay">
+                    <h3>Emergency Towing</h3>
+                    <p>Flatbed & wheel-lift for all vehicle types</p>
+                </div>
+            </div>
+            <div class="bento-card">
+                <img src="https://images.unsplash.com/photo-1558618047-f4b511b78dab?w=400&h=300&fit=crop" alt="Battery jump start">
+                <div class="bento-card-overlay">
+                    <h3>Battery Jump-Start</h3>
+                    <p>Quick charge to get you moving</p>
+                </div>
+            </div>
+            <div class="bento-card">
+                <img src="https://images.unsplash.com/photo-1612825173281-9a193378527e?w=400&h=300&fit=crop" alt="Fuel delivery">
+                <div class="bento-card-overlay">
+                    <h3>Fuel Delivery</h3>
+                    <p>Gas or diesel to your location</p>
+                </div>
+            </div>
+            <div class="bento-card">
+                <img src="https://images.unsplash.com/photo-1578844251758-2f71da64c96f?w=400&h=300&fit=crop" alt="Flat tire change">
+                <div class="bento-card-overlay">
+                    <h3>Tire Change</h3>
+                    <p>Quick swap with your spare</p>
+                </div>
+            </div>
+            <div class="bento-card">
+                <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?w=400&h=300&fit=crop" alt="Lockout help">
+                <div class="bento-card-overlay">
+                    <h3>Lockout Service</h3>
+                    <p>Non-damaging vehicle entry</p>
+                </div>
+            </div>
+            <div class="bento-card large">
+                <img src="https://images.unsplash.com/photo-1543465077-db45d34b88a5?w=800&h=600&fit=crop" alt="Accident recovery">
+                <div class="bento-card-overlay">
+                    <h3>Accident Recovery</h3>
+                    <p>Safe vehicle extraction & transport after collisions</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SECTION 4 — TRUST INDICATORS (Badges)
+     ============================================================ -->
+<section style="padding: 48px 0; background: var(--bg-alt);">
+    <div class="container">
+        <div class="trust-grid scroll-reveal">
+            <div class="trust-badge"><i class="fa-solid fa-shield-halved"></i><span>Fully Insured</span></div>
+            <div class="trust-badge"><i class="fa-solid fa-award"></i><span>AAA Certified</span></div>
+            <div class="trust-badge"><i class="fa-solid fa-clock"></i><span>24/7 Service</span></div>
+            <div class="trust-badge"><i class="fa-solid fa-dollar-sign"></i><span>Transparent Pricing</span></div>
+            <div class="trust-badge"><i class="fa-solid fa-id-badge"></i><span>Licensed Operators</span></div>
+            <div class="trust-badge"><i class="fa-solid fa-star"></i><span>4.9 Star Rating</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SECTION 5 — VERTICAL TIMELINE (Our History)
+     ============================================================ -->
+<section class="section">
+    <div class="container">
+        <div class="text-center scroll-reveal" style="max-width: 600px; margin: 0 auto 48px;">
+            <span class="section-label"><i class="fa-solid fa-timeline"></i> Our Journey</span>
+            <h2 class="section-title">A Decade of Roadside Excellence</h2>
+            <p class="section-subtitle">From humble beginnings to the region's most trusted roadside assistance provider.</p>
+        </div>
+        <div class="timeline scroll-reveal" style="max-width: 700px; margin: 0 auto;">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span style="font-size: 0.75rem; font-weight: 600; color: var(--primary);">2010</span>
+                    <h3>Founded with a Single Truck</h3>
+                    <p>Started operations with one flatbed tow truck and a vision to provide reliable roadside help.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span style="font-size: 0.75rem; font-weight: 600; color: var(--primary);">2014</span>
+                    <h3>Expanded to 25 Vehicles</h3>
+                    <p>Growing demand led us to expand our fleet and cover 10 more cities across the state.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span style="font-size: 0.75rem; font-weight: 600; color: var(--primary);">2018</span>
+                    <h3>AI-Powered Dispatch Launched</h3>
+                    <p>Introduced GPS tracking and intelligent routing, cutting average response time to 15 minutes.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span style="font-size: 0.75rem; font-weight: 600; color: var(--primary);">2022</span>
+                    <h3>50,000th Rescue Completed</h3>
+                    <p>Reached a major milestone with a 98% customer satisfaction rate and 120+ truck fleet.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span style="font-size: 0.75rem; font-weight: 600; color: var(--primary);">2024</span>
+                    <h3>Customer Dashboard & App</h3>
+                    <p>Launched online request tracking, real-time dispatch monitoring, and service history portal.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SECTION 6 — FLEET SHOWCASE (3 Cards with Images)
+     ============================================================ -->
+<section class="section" style="background: var(--bg-alt);">
+    <div class="container">
+        <div class="text-center scroll-reveal" style="max-width: 600px; margin: 0 auto 48px;">
+            <span class="section-label"><i class="fa-solid fa-truck-front"></i> Our Fleet</span>
+            <h2 class="section-title">Equipped for Any Situation</h2>
+            <p class="section-subtitle">Our diverse fleet ensures we have the right vehicle for every roadside scenario.</p>
+        </div>
+        <div class="fleet-grid scroll-reveal">
+            <div class="fleet-card">
+                <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=500&h=300&fit=crop" alt="Flatbed tow truck" class="fleet-card-img">
+                <div class="fleet-card-body">
+                    <h3>Flatbed Carriers</h3>
+                    <p>Our flatbed trucks safely transport all-wheel-drive, luxury, and low-clearance vehicles without any risk of damage.</p>
+                </div>
+            </div>
+            <div class="fleet-card">
+                <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=500&h=300&fit=crop" alt="Wheel lift tow truck" class="fleet-card-img">
+                <div class="fleet-card-body">
+                    <h3>Wheel-Lift Trucks</h3>
+                    <p>Quick and efficient for standard tows. These trucks can maneuver tight spaces and reach vehicles in parking structures.</p>
+                </div>
+            </div>
+            <div class="fleet-card">
+                <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=500&h=300&fit=crop" alt="Service response van" class="fleet-card-img">
+                <div class="fleet-card-body">
+                    <h3>Service Response Vans</h3>
+                    <p>Fully equipped mobile workshops for jump-starts, tire changes, lockouts, and fuel delivery on-the-spot.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SECTION 7 — TESTIMONIAL SPOTLIGHT (Large Format)
+     ============================================================ -->
+<section class="section">
+    <div class="container">
+        <div class="text-center scroll-reveal" style="max-width: 600px; margin: 0 auto 48px;">
+            <span class="section-label"><i class="fa-solid fa-quote-left"></i> Testimonial</span>
+            <h2 class="section-title">Hear From Our Customers</h2>
+        </div>
+        <div class="testimonial-spotlight scroll-reveal">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=500&fit=crop" alt="Happy customer" class="testimonial-spotlight-img">
+            <div class="testimonial-spotlight-content">
+                <div class="stars" style="margin-bottom: 16px;">
+                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                </div>
+                <blockquote>"I've been a RescueFleet member for 3 years now. Last month, my engine overheated on a bridge during rush hour. Within 10 minutes, their tow truck arrived, loaded my car, and took me straight to my mechanic. No stress, no hidden fees, just pure professionalism. I recommend them to everyone."</blockquote>
+                <div class="author">David Thompson</div>
+                <div class="role">Fleet Manager, Thompson Logistics — Member since 2021</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SECTION 8 — PRICING CARDS (3 Plans)
+     ============================================================ -->
+<section class="section" style="background: var(--bg-alt);">
+    <div class="container">
+        <div class="text-center scroll-reveal" style="max-width: 600px; margin: 0 auto 48px;">
+            <span class="section-label"><i class="fa-solid fa-tags"></i> Membership Plans</span>
+            <h2 class="section-title">Choose Your Protection Level</h2>
+            <p class="section-subtitle">From occasional drivers to fleet managers, we have a plan that fits your needs.</p>
+        </div>
+        <div class="pricing-grid scroll-reveal">
+            <!-- Basic -->
+            <div class="pricing-card">
+                <h3>Basic</h3>
+                <div class="pricing-price">$9</div>
+                <span class="pricing-period">per month</span>
+                <ul class="pricing-features">
+                    <li><i class="fa-solid fa-check"></i> Up to 3 service calls/year</li>
+                    <li><i class="fa-solid fa-check"></i> 10-mile towing included</li>
+                    <li><i class="fa-solid fa-check"></i> Battery jump-start</li>
+                    <li><i class="fa-solid fa-check"></i> Flat tire change</li>
+                    <li><i class="fa-solid fa-check"></i> Phone support</li>
+                </ul>
+                <a href="signup.html" class="btn btn-secondary" style="width: 100%; justify-content: center;">Get Started</a>
+            </div>
+            <!-- Pro (Popular) -->
+            <div class="pricing-card featured">
+                <span class="pricing-badge">Most Popular</span>
+                <h3>Pro</h3>
+                <div class="pricing-price">$19</div>
+                <span class="pricing-period">per month</span>
+                <ul class="pricing-features">
+                    <li><i class="fa-solid fa-check"></i> Unlimited service calls</li>
+                    <li><i class="fa-solid fa-check"></i> 25-mile towing included</li>
+                    <li><i class="fa-solid fa-check"></i> All Basic services</li>
+                    <li><i class="fa-solid fa-check"></i> Fuel delivery (3 gal)</li>
+                    <li><i class="fa-solid fa-check"></i> Lockout service</li>
+                    <li><i class="fa-solid fa-check"></i> Real-time GPS tracking</li>
+                    <li><i class="fa-solid fa-check"></i> Priority dispatch</li>
+                </ul>
+                <a href="signup.html" class="btn btn-primary" style="width: 100%; justify-content: center;">Get Started</a>
+            </div>
+            <!-- Fleet -->
+            <div class="pricing-card">
+                <h3>Fleet</h3>
+                <div class="pricing-price">$49</div>
+                <span class="pricing-period">per month</span>
+                <ul class="pricing-features">
+                    <li><i class="fa-solid fa-check"></i> Cover up to 10 vehicles</li>
+                    <li><i class="fa-solid fa-check"></i> Unlimited towing distance</li>
+                    <li><i class="fa-solid fa-check"></i> All Pro features</li>
+                    <li><i class="fa-solid fa-check"></i> Accident recovery</li>
+                    <li><i class="fa-solid fa-check"></i> Dedicated account manager</li>
+                    <li><i class="fa-solid fa-check"></i> Monthly reports</li>
+                </ul>
+                <a href="contact.html" class="btn btn-secondary" style="width: 100%; justify-content: center;">Contact Sales</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SECTION 9 — COVERAGE ZONES (3 Zone Cards)
+     ============================================================ -->
+<section class="section">
+    <div class="container">
+        <div class="text-center scroll-reveal" style="max-width: 600px; margin: 0 auto 48px;">
+            <span class="section-label"><i class="fa-solid fa-map-location-dot"></i> Coverage</span>
+            <h2 class="section-title">Our Service Zones</h2>
+            <p class="section-subtitle">Comprehensive coverage across urban centers, suburban areas, and major highway corridors.</p>
+        </div>
+        <div class="zone-grid scroll-reveal">
+            <div class="zone-card">
+                <div class="zone-card-icon"><i class="fa-solid fa-city"></i></div>
+                <h3>Urban Metro</h3>
+                <p>Full coverage across all major cities including Houston, Dallas, Austin, and San Antonio metro areas.</p>
+                <div style="margin-top: 16px;">
+                    <span style="display: inline-block; font-size: 0.75rem; font-weight: 600; color: var(--primary);">10-15 min response</span>
+                </div>
+            </div>
+            <div class="zone-card">
+                <div class="zone-card-icon"><i class="fa-solid fa-house-chimney"></i></div>
+                <h3>Suburban Areas</h3>
+                <p>Extended coverage reaching suburban communities, shopping districts, and residential neighborhoods.</p>
+                <div style="margin-top: 16px;">
+                    <span style="display: inline-block; font-size: 0.75rem; font-weight: 600; color: var(--primary);">15-25 min response</span>
+                </div>
+            </div>
+            <div class="zone-card">
+                <div class="zone-card-icon"><i class="fa-solid fa-road"></i></div>
+                <h3>Highway Corridors</h3>
+                <p>Coverage along all major interstate highways, toll roads, and state routes across the region.</p>
+                <div style="margin-top: 16px;">
+                    <span style="display: inline-block; font-size: 0.75rem; font-weight: 600; color: var(--primary);">20-30 min response</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SECTION 10 — STATS (2x2 Grid)
+     ============================================================ -->
+<section style="padding: 60px 0; background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%); color: #fff;">
+    <div class="container">
+        <div class="stats-grid scroll-reveal" style="max-width: 700px; margin: 0 auto; grid-template-columns: repeat(2, 1fr);">
+            <div class="stat-card" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.1);">
+                <div class="stat-icon" style="background: rgba(211,84,0,0.2);"><i class="fa-solid fa-thumbs-up" style="color: var(--primary-light);"></i></div>
+                <span class="stat-number counter" data-target="98" style="color: #fff;">0</span>
+                <span class="stat-label" style="color: rgba(255,255,255,0.7);">% Customer Satisfaction</span>
+            </div>
+            <div class="stat-card" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.1);">
+                <div class="stat-icon" style="background: rgba(211,84,0,0.2);"><i class="fa-solid fa-phone" style="color: var(--primary-light);"></i></div>
+                <span class="stat-number counter" data-target="1200" style="color: #fff;">0</span>
+                <span class="stat-label" style="color: rgba(255,255,255,0.7);">Calls Handled Monthly</span>
+            </div>
+            <div class="stat-card" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.1);">
+                <div class="stat-icon" style="background: rgba(211,84,0,0.2);"><i class="fa-solid fa-route" style="color: var(--primary-light);"></i></div>
+                <span class="stat-number counter" data-target="500" style="color: #fff;">0</span>
+                <span class="stat-label" style="color: rgba(255,255,255,0.7);">Mile Coverage Radius</span>
+            </div>
+            <div class="stat-card" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.1);">
+                <div class="stat-icon" style="background: rgba(211,84,0,0.2);"><i class="fa-solid fa-handshake" style="color: var(--primary-light);"></i></div>
+                <span class="stat-number counter" data-target="15" style="color: #fff;">0</span>
+                <span class="stat-label" style="color: rgba(255,255,255,0.7);">Insurance Partners</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SECTION 11 — APP DOWNLOAD CTA
+     ============================================================ -->
+<section class="section">
+    <div class="container">
+        <div class="app-cta-section scroll-reveal">
+            <div class="app-cta-content">
+                <span class="section-label" style="color: #fff; background: rgba(255,255,255,0.1);"><i class="fa-solid fa-mobile-screen"></i> Mobile App</span>
+                <h2>Help at Your Fingertips</h2>
+                <p>Download our app to request help, track your dispatch in real-time, and manage your service history — all from your phone.</p>
+                <div class="app-buttons">
+                    <a href="#" class="app-btn">
+                        <i class="fa-brands fa-apple"></i>
+                        <div class="app-btn-text"><small>Download on the</small><span>App Store</span></div>
+                    </a>
+                    <a href="#" class="app-btn">
+                        <i class="fa-brands fa-google-play"></i>
+                        <div class="app-btn-text"><small>Get it on</small><span>Google Play</span></div>
+                    </a>
+                </div>
+            </div>
+            <div class="app-cta-image">
+                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=500&fit=crop" alt="Mobile app preview">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SECTION 12 — NEWSLETTER
+     ============================================================ -->
+<section class="section" style="background: var(--bg-alt);">
+    <div class="container">
+        <div class="newsletter-section scroll-reveal">
+            <span class="section-label"><i class="fa-solid fa-envelope"></i> Stay Updated</span>
+            <h2>Get Road Safety Tips & Offers</h2>
+            <p>Subscribe to our newsletter for seasonal driving tips, exclusive member discounts, and service updates.</p>
+            <form class="newsletter-form" onsubmit="return false;">
+                <input class="form-input" type="email" placeholder="Enter your email address" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<div id="footer"></div>
+<div id="backToTop"></div>
+
+<script src="components.js"></script>
+</body>
+</html>

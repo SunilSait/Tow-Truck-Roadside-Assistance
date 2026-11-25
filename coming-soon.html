@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon — RescueFleet</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="coming-soon">
+
+<div class="fullscreen-page">
+    <!-- Top Bar -->
+    <div class="fullscreen-topbar">
+        <a href="index.html" id="fullscreenLogo"></a>
+        <div class="fullscreen-topbar-actions">
+            <button onclick="toggleDark()" title="Toggle Dark Mode"><i class="fa-solid fa-moon"></i></button>
+            <button onclick="toggleRTL()" title="Toggle RTL"><i class="fa-solid fa-right-left"></i></button>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="fullscreen-content">
+        <span class="section-label"><i class="fa-solid fa-clock"></i> Under Construction</span>
+
+        <h1 class="coming-title">Something Great is Coming</h1>
+        <p class="coming-desc">We're working hard to bring you an enhanced roadside assistance experience. Our new features and improved service platform will be launching soon.</p>
+
+        <!-- Countdown -->
+        <div class="countdown-grid" id="countdownGrid">
+            <div class="countdown-item">
+                <span class="countdown-value" id="cd-days">00</span>
+                <span class="countdown-label">Days</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-value" id="cd-hours">00</span>
+                <span class="countdown-label">Hours</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-value" id="cd-minutes">00</span>
+                <span class="countdown-label">Minutes</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-value" id="cd-seconds">00</span>
+                <span class="countdown-label">Seconds</span>
+            </div>
+        </div>
+
+        <!-- Subscribe -->
+        <form class="subscribe-form" onsubmit="return false;">
+            <input class="form-input" type="email" placeholder="Enter your email for updates" required>
+            <button type="submit" class="btn btn-primary">Notify Me</button>
+        </form>
+
+        <!-- Socials -->
+        <div class="coming-socials">
+            <a href="#" class="coming-social-link" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="coming-social-link" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="coming-social-link" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="coming-social-link" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+    </div>
+</div>
+
+<script src="components.js"></script>
+</body>
+</html>

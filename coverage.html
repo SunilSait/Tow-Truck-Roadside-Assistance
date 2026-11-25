@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coverage Areas — RescueFleet</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="inner">
+
+<div id="navbar"></div>
+
+<!-- SECTION 1 — PAGE BANNER -->
+<section class="page-banner">
+    <div class="container">
+        <div class="scroll-reveal" style="text-align: center;">
+            <span class="section-label"><i class="fa-solid fa-map-location-dot"></i> Coverage</span>
+            <h1 class="page-banner-title">Our Coverage Areas</h1>
+            <p class="page-banner-subtitle">We provide 24/7 roadside assistance across a wide network of cities, suburbs, and highway corridors.</p>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 2 — COVERAGE OVERVIEW (Split) -->
+<section class="section">
+    <div class="container">
+        <div class="split-section scroll-reveal">
+            <div class="split-content">
+                <span class="section-label"><i class="fa-solid fa-globe"></i> Service Network</span>
+                <h2 class="section-title" style="text-align: left;">35+ Cities, One Reliable Network</h2>
+                <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">
+                    RescueFleet has strategically positioned trucks and service centers across the state to ensure maximum coverage. Whether you're in a bustling downtown, a quiet suburb, or stranded on a remote highway, our GPS-tracked fleet can reach you quickly.
+                </p>
+                <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px;">
+                    Our AI-powered dispatch system identifies the nearest available truck and routes it to your location using real-time traffic data, ensuring the fastest possible response time.
+                </p>
+                <div style="display: flex; gap: 24px; flex-wrap: wrap;">
+                    <div style="text-align: center;">
+                        <span style="font-size: 1.8rem; font-weight: 700; color: var(--primary); display: block;" class="counter" data-target="35">0</span>
+                        <span style="font-size: 0.78rem; color: var(--text-muted);">Cities Covered</span>
+                    </div>
+                    <div style="text-align: center;">
+                        <span style="font-size: 1.8rem; font-weight: 700; color: var(--primary); display: block;" class="counter" data-target="120">0</span>
+                        <span style="font-size: 0.78rem; color: var(--text-muted);">Active Trucks</span>
+                    </div>
+                    <div style="text-align: center;">
+                        <span style="font-size: 1.8rem; font-weight: 700; color: var(--primary); display: block;" class="counter" data-target="500">0</span>
+                        <span style="font-size: 0.78rem; color: var(--text-muted);">Mile Radius</span>
+                    </div>
+                </div>
+            </div>
+            <div class="split-image">
+                <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=600&h=450&fit=crop" alt="Map view of service area" style="border-radius: var(--radius-lg); width: 100%; height: 420px; object-fit: cover;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 3 — ZONE CARDS (3 Zones) -->
+<section class="section" style="background: var(--bg-alt);">
+    <div class="container">
+        <div class="text-center scroll-reveal" style="max-width: 600px; margin: 0 auto 48px;">
+            <span class="section-label"><i class="fa-solid fa-layer-group"></i> Service Zones</span>
+            <h2 class="section-title">Coverage by Zone Type</h2>
+            <p class="section-subtitle">Different zones, same high-quality service. Response times vary based on location type.</p>
+        </div>
+        <div class="zone-grid scroll-reveal">
+            <div class="zone-card">
+                <div class="zone-card-icon"><i class="fa-solid fa-buildings"></i></div>
+                <h3>Downtown & Urban Core</h3>
+                <p>Full-service coverage in all major city centers. High truck density ensures the fastest response times of 10-15 minutes even during peak hours.</p>
+                <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
+                    <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 8px;">
+                        <span style="color: var(--text-muted);">Response Time</span>
+                        <span style="font-weight: 600; color: var(--primary);">10-15 min</span>
+                    </div>
+                    <div class="dash-progress-track"><div class="dash-progress-fill" style="width: 90%;"></div></div>
+                </div>
+            </div>
+            <div class="zone-card">
+                <div class="zone-card-icon"><i class="fa-solid fa-house-chimney"></i></div>
+                <h3>Suburban Communities</h3>
+                <p>Extended reach into suburban neighborhoods, shopping areas, and residential communities surrounding major metro areas.</p>
+                <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
+                    <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 8px;">
+                        <span style="color: var(--text-muted);">Response Time</span>
+                        <span style="font-weight: 600; color: var(--primary);">15-25 min</span>
+                    </div>
+                    <div class="dash-progress-track"><div class="dash-progress-fill" style="width: 70%;"></div></div>
+                </div>
+            </div>
+            <div class="zone-card">
+                <div class="zone-card-icon"><i class="fa-solid fa-road"></i></div>
+                <h3>Highways & Interstates</h3>
+                <p>Coverage along all major interstate corridors, toll roads, state highways, and rural routes connecting cities across the region.</p>
+                <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
+                    <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 8px;">
+                        <span style="color: var(--text-muted);">Response Time</span>
+                        <span style="font-weight: 600; color: var(--primary);">20-30 min</span>
+                    </div>
+                    <div class="dash-progress-track"><div class="dash-progress-fill" style="width: 55%;"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 4 — AREAS SERVED (Pills) -->
+<section class="section">
+    <div class="container">
+        <div class="text-center scroll-reveal" style="max-width: 600px; margin: 0 auto 48px;">
+            <span class="section-label"><i class="fa-solid fa-location-dot"></i> Cities & Towns</span>
+            <h2 class="section-title">All Areas We Serve</h2>
+            <p class="section-subtitle">Our network spans major cities, surrounding suburbs, and connecting highways.</p>
+        </div>
+        <div class="scroll-reveal" style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; max-width: 900px; margin: 0 auto;">
+            <span class="area-pill">Houston</span>
+            <span class="area-pill">Dallas</span>
+            <span class="area-pill">San Antonio</span>
+            <span class="area-pill">Austin</span>
+            <span class="area-pill">Fort Worth</span>
+            <span class="area-pill">El Paso</span>
+            <span class="area-pill">Arlington</span>
+            <span class="area-pill">Plano</span>
+            <span class="area-pill">Corpus Christi</span>
+            <span class="area-pill">Lubbock</span>
+            <span class="area-pill">Laredo</span>
+            <span class="area-pill">Irving</span>
+            <span class="area-pill">Garland</span>
+            <span class="area-pill">Frisco</span>
+            <span class="area-pill">McKinney</span>
+            <span class="area-pill">Amarillo</span>
+            <span class="area-pill">Grand Prairie</span>
+            <span class="area-pill">Brownsville</span>
+            <span class="area-pill">Pasadena</span>
+            <span class="area-pill">Mesquite</span>
+            <span class="area-pill">Killeen</span>
+            <span class="area-pill">McAllen</span>
+            <span class="area-pill">Waco</span>
+            <span class="area-pill">Denton</span>
+            <span class="area-pill">Carrollton</span>
+            <span class="area-pill">Round Rock</span>
+            <span class="area-pill">Midland</span>
+            <span class="area-pill">Pearland</span>
+            <span class="area-pill">Lewisville</span>
+            <span class="area-pill">Tyler</span>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 5 — HIGHWAY COVERAGE (Split Reverse) -->
+<section class="section" style="background: var(--bg-alt);">
+    <div class="container">
+        <div class="split-section reverse scroll-reveal">
+            <div class="split-content">
+                <span class="section-label"><i class="fa-solid fa-road"></i> Highway Coverage</span>
+                <h2 class="section-title" style="text-align: left;">Major Highway Corridors</h2>
+                <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">
+                    We maintain active coverage along all major interstate highways in the state. Our highway teams are specially trained for high-speed roadside situations and work closely with highway patrol for safe operations.
+                </p>
+                <div style="display: grid; gap: 10px; margin-bottom: 24px;">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-solid fa-road" style="color: var(--primary); font-size: 0.85rem; width: 16px; text-align: center;"></i>
+                        <span style="font-size: 0.9rem; font-weight: 500;">I-10 — Houston to El Paso</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-solid fa-road" style="color: var(--primary); font-size: 0.85rem; width: 16px; text-align: center;"></i>
+                        <span style="font-size: 0.9rem; font-weight: 500;">I-35 — Laredo to Dallas</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-solid fa-road" style="color: var(--primary); font-size: 0.85rem; width: 16px; text-align: center;"></i>
+                        <span style="font-size: 0.9rem; font-weight: 500;">I-45 — Houston to Dallas</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-solid fa-road" style="color: var(--primary); font-size: 0.85rem; width: 16px; text-align: center;"></i>
+                        <span style="font-size: 0.9rem; font-weight: 500;">I-20 — West Texas Corridor</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-solid fa-road" style="color: var(--primary); font-size: 0.85rem; width: 16px; text-align: center;"></i>
+                        <span style="font-size: 0.9rem; font-weight: 500;">US-290 — Houston to Austin</span>
+                    </div>
+                </div>
+            </div>
+            <div class="split-image">
+                <img src="https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?w=600&h=450&fit=crop" alt="Highway at sunset" style="border-radius: var(--radius-lg); width: 100%; height: 420px; object-fit: cover;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 6 — RESPONSE TIMES -->
+<section class="section">
+    <div class="container">
+        <div class="text-center scroll-reveal" style="max-width: 600px; margin: 0 auto 48px;">
+            <span class="section-label"><i class="fa-solid fa-gauge-high"></i> Response Times</span>
+            <h2 class="section-title">How Fast We Reach You</h2>
+            <p class="section-subtitle">Our AI-powered dispatch and GPS tracking ensure rapid response across all zones.</p>
+        </div>
+        <div class="response-grid scroll-reveal">
+            <div class="response-card">
+                <h3>Urban Metro</h3>
+                <div class="response-time">12 min</div>
+                <p style="font-size: 0.82rem; color: var(--text-muted);">Average in city centers</p>
+                <div class="response-bar"><div class="response-bar-fill" style="width: 95%;"></div></div>
+            </div>
+            <div class="response-card">
+                <h3>Suburban Areas</h3>
+                <div class="response-time">18 min</div>
+                <p style="font-size: 0.82rem; color: var(--text-muted);">Average in suburbs</p>
+                <div class="response-bar"><div class="response-bar-fill" style="width: 75%;"></div></div>
+            </div>
+            <div class="response-card">
+                <h3>Highway Corridors</h3>
+                <div class="response-time">22 min</div>
+                <p style="font-size: 0.82rem; color: var(--text-muted);">Average on highways</p>
+                <div class="response-bar"><div class="response-bar-fill" style="width: 60%;"></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 7 — FLEET INFO (Split) -->
+<section class="section" style="background: var(--bg-alt);">
+    <div class="container">
+        <div class="split-section scroll-reveal">
+            <div class="split-image">
+                <img src="https://images.unsplash.com/photo-1449965408869-ecd3f77b2735?w=600&h=450&fit=crop" alt="Tow truck fleet lineup" style="border-radius: var(--radius-lg); width: 100%; height: 420px; object-fit: cover;">
+            </div>
+            <div class="split-content">
+                <span class="section-label"><i class="fa-solid fa-truck-front"></i> Our Fleet</span>
+                <h2 class="section-title" style="text-align: left;">120+ Trucks, Always Ready</h2>
+                <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">
+                    Our fleet consists of flatbed carriers, wheel-lift trucks, and fully equipped service vans. Every vehicle is GPS-tracked and maintained to the highest standards.
+                </p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                    <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 16px; text-align: center;">
+                        <span style="font-size: 1.5rem; font-weight: 700; color: var(--primary); display: block;">45</span>
+                        <span style="font-size: 0.78rem; color: var(--text-muted);">Flatbed Carriers</span>
+                    </div>
+                    <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 16px; text-align: center;">
+                        <span style="font-size: 1.5rem; font-weight: 700; color: var(--primary); display: block;">40</span>
+                        <span style="font-size: 0.78rem; color: var(--text-muted);">Wheel-Lift Trucks</span>
+                    </div>
+                    <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 16px; text-align: center;">
+                        <span style="font-size: 1.5rem; font-weight: 700; color: var(--primary); display: block;">35</span>
+                        <span style="font-size: 0.78rem; color: var(--text-muted);">Service Vans</span>
+                    </div>
+                    <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 16px; text-align: center;">
+                        <span style="font-size: 1.5rem; font-weight: 700; color: var(--primary); display: block;">24/7</span>
+                        <span style="font-size: 0.78rem; color: var(--text-muted);">Active Dispatch</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 8 — CTA -->
+<section class="section">
+    <div class="container">
+        <div class="cta-banner scroll-reveal">
+            <h2>Not Sure if We Cover Your Area?</h2>
+            <p>Contact us and our team will confirm coverage for your specific location and provide response time estimates.</p>
+            <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-primary"><i class="fa-solid fa-headset"></i> Contact Us</a>
+                <a href="tel:+18005551234" class="btn btn-secondary" style="background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.3); color: #fff;"><i class="fa-solid fa-phone"></i> Call Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="footer"></div>
+<div id="backToTop"></div>
+<script src="components.js"></script>
+</body>
+</html>

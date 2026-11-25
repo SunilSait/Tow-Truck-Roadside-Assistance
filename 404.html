@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found — RescueFleet</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="404">
+
+<div class="fullscreen-page">
+    <!-- Top Bar -->
+    <div class="fullscreen-topbar">
+        <a href="index.html" id="fullscreenLogo"></a>
+        <div class="fullscreen-topbar-actions">
+            <button onclick="toggleDark()" title="Toggle Dark Mode"><i class="fa-solid fa-moon"></i></button>
+            <button onclick="toggleRTL()" title="Toggle RTL"><i class="fa-solid fa-right-left"></i></button>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="fullscreen-content">
+        <div class="error-illustration">
+            <div class="error-code">404</div>
+            <div class="error-spin-bg"></div>
+            <i class="fa-solid fa-truck-pickup error-icon-center"></i>
+        </div>
+
+        <h1 class="error-subtitle">Looks Like You're Off Route</h1>
+        <p class="error-desc">The page you're looking for has either been moved, removed, or doesn't exist. Don't worry — our team is always on standby to help you find your way back.</p>
+
+        <div class="fullscreen-actions">
+            <a href="index.html" class="btn btn-primary"><i class="fa-solid fa-house"></i> Back to Home</a>
+            <a href="contact.html" class="btn btn-secondary"><i class="fa-solid fa-headset"></i> Contact Support</a>
+        </div>
+
+        <div class="error-quick-links">
+            <a href="services.html"><i class="fa-solid fa-wrench"></i> Our Services</a>
+            <a href="coverage.html"><i class="fa-solid fa-map-location-dot"></i> Coverage Areas</a>
+            <a href="about.html"><i class="fa-solid fa-circle-info"></i> About Us</a>
+            <a href="login.html"><i class="fa-solid fa-right-to-bracket"></i> Sign In</a>
+        </div>
+    </div>
+</div>
+
+<script src="components.js"></script>
+</body>
+</html>
