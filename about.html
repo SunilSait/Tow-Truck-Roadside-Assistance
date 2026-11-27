@@ -16,7 +16,9 @@
 <div id="navbar"></div>
 
 <!-- SECTION 1 — PAGE BANNER -->
-<section class="page-banner">
+<section class="page-banner page-banner--photo">
+    <img src="assets/images/banner-about.jpg" alt="Aerial view of RescueFleet tow trucks and service bay at dusk" class="page-banner-bg">
+    <div class="page-banner-overlay" aria-hidden="true"></div>
     <div class="container">
         <div class="scroll-reveal" style="text-align: center;">
             <span class="section-label"><i class="fa-solid fa-building"></i> About Us</span>
@@ -31,11 +33,11 @@
     <div class="container">
         <div class="split-section scroll-reveal">
             <div class="split-image">
-                <img src="https://images.unsplash.com/photo-1504222490345-c075b6008014?w=600&h=450&fit=crop" alt="Founder and tow truck" style="border-radius: var(--radius-lg); width: 100%; height: 420px; object-fit: cover;">
+                <img src="assets/images/about-founder-truck.jpg" alt="Founder and tow truck">
             </div>
             <div class="split-content">
                 <span class="section-label"><i class="fa-solid fa-book-open"></i> Our Story</span>
-                <h2 class="section-title" style="text-align: left;">From One Truck to 120+</h2>
+                <h2 class="section-title">From One Truck to 120+</h2>
                 <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">
                     RescueFleet was founded in 2010 by a former mechanic who understood the frustration and anxiety of being stranded on the road. With a single flatbed tow truck and a commitment to honest, fast service, the company was born.
                 </p>
@@ -88,22 +90,22 @@
         </div>
         <div class="team-grid scroll-reveal">
             <div class="team-card">
-                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&fit=crop&crop=face" alt="CEO" class="team-card-img">
+                <img src="assets/images/team-ceo-robert.jpg" alt="CEO" class="team-card-img">
                 <h3>Robert Mitchell</h3>
                 <p>Founder & CEO</p>
             </div>
             <div class="team-card">
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop&crop=face" alt="COO" class="team-card-img">
+                <img src="assets/images/team-coo-amanda.jpg" alt="COO" class="team-card-img">
                 <h3>Amanda Chen</h3>
                 <p>Chief Operations Officer</p>
             </div>
             <div class="team-card">
-                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" alt="Head of Fleet" class="team-card-img">
+                <img src="assets/images/team-fleet-marcus.jpg" alt="Head of Fleet" class="team-card-img">
                 <h3>Marcus Johnson</h3>
                 <p>Head of Fleet Management</p>
             </div>
             <div class="team-card">
-                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop&crop=face" alt="Customer Success" class="team-card-img">
+                <img src="assets/images/team-success-lisa.jpg" alt="Customer Success" class="team-card-img">
                 <h3>Lisa Hernandez</h3>
                 <p>Customer Success Director</p>
             </div>
@@ -165,28 +167,28 @@
 </section>
 
 <!-- SECTION 6 — STATS COUNTERS -->
-<section style="padding: 60px 0; background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%); color: #fff;">
+<section class="stats-section">
     <div class="container">
         <div class="stats-grid scroll-reveal">
-            <div class="stat-card" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.1);">
-                <div class="stat-icon" style="background: rgba(211,84,0,0.2);"><i class="fa-solid fa-calendar-check" style="color: var(--primary-light);"></i></div>
-                <span class="stat-number counter" data-target="14" style="color: #fff;">0</span>
-                <span class="stat-label" style="color: rgba(255,255,255,0.7);">Years in Business</span>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                <span class="stat-number counter" data-target="14">0</span>
+                <span class="stat-label">Years in Business</span>
             </div>
-            <div class="stat-card" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.1);">
-                <div class="stat-icon" style="background: rgba(211,84,0,0.2);"><i class="fa-solid fa-truck" style="color: var(--primary-light);"></i></div>
-                <span class="stat-number counter" data-target="120" style="color: #fff;">0</span>
-                <span class="stat-label" style="color: rgba(255,255,255,0.7);">Vehicles in Fleet</span>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fa-solid fa-truck"></i></div>
+                <span class="stat-number counter" data-target="120">0</span>
+                <span class="stat-label">Vehicles in Fleet</span>
             </div>
-            <div class="stat-card" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.1);">
-                <div class="stat-icon" style="background: rgba(211,84,0,0.2);"><i class="fa-solid fa-users" style="color: var(--primary-light);"></i></div>
-                <span class="stat-number counter" data-target="250" style="color: #fff;">0</span>
-                <span class="stat-label" style="color: rgba(255,255,255,0.7);">Team Members</span>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+                <span class="stat-number counter" data-target="250">0</span>
+                <span class="stat-label">Team Members</span>
             </div>
-            <div class="stat-card" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.1);">
-                <div class="stat-icon" style="background: rgba(211,84,0,0.2);"><i class="fa-solid fa-face-smile" style="color: var(--primary-light);"></i></div>
-                <span class="stat-number counter" data-target="50000" style="color: #fff;">0</span>
-                <span class="stat-label" style="color: rgba(255,255,255,0.7);">Happy Customers</span>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fa-solid fa-face-smile"></i></div>
+                <span class="stat-number counter" data-target="50000">0</span>
+                <span class="stat-label">Happy Customers</span>
             </div>
         </div>
     </div>
@@ -225,15 +227,126 @@
     </div>
 </section>
 
-<!-- SECTION 8 — CTA -->
+<!-- SECTION 8 — TRAINING & COMMUNITY STANDARDS -->
 <section class="section" style="background: var(--bg-alt);">
     <div class="container">
-        <div class="cta-banner scroll-reveal">
-            <h2>Ready to Experience Better Roadside Assistance?</h2>
-            <p>Join thousands of drivers who trust RescueFleet for fast, reliable, and transparent roadside help.</p>
-            <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-                <a href="signup.html" class="btn btn-primary"><i class="fa-solid fa-user-plus"></i> Join RescueFleet</a>
-                <a href="contact.html" class="btn btn-secondary" style="background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.3); color: #fff;"><i class="fa-solid fa-envelope"></i> Get in Touch</a>
+        <div class="text-center scroll-reveal" style="max-width: 620px; margin: 0 auto 48px;">
+            <span class="section-label"><i class="fa-solid fa-user-shield"></i> Our Standards</span>
+            <h2 class="section-title">How We Vet, Train &amp; Operate</h2>
+            <p class="section-subtitle">Behind every fast ETA is strict hiring, continuous equipment audits, and a people-first culture built across 14+ years on Texas highways.</p>
+        </div>
+        <div class="about-pillars-card scroll-reveal" id="aboutPillarsCard">
+            <div class="about-pillar-tabs" role="tablist" aria-label="Company operating standards">
+                <button type="button" class="about-pillar-tab active" role="tab" aria-selected="true" data-pillar="vetting">
+                    <span class="pillar-tab-num">01</span>
+                    <div>
+                        <strong>Driver Vetting &amp; Training</strong>
+                        <span>Background checks &amp; hands-on academy</span>
+                    </div>
+                </button>
+                <button type="button" class="about-pillar-tab" role="tab" aria-selected="false" data-pillar="safety">
+                    <span class="pillar-tab-num">02</span>
+                    <div>
+                        <strong>Zero-Damage Equipment</strong>
+                        <span>Daily deck, strap &amp; winch audits</span>
+                    </div>
+                </button>
+                <button type="button" class="about-pillar-tab" role="tab" aria-selected="false" data-pillar="community">
+                    <span class="pillar-tab-num">03</span>
+                    <div>
+                        <strong>Storm &amp; Community Relief</strong>
+                        <span>Flood response &amp; motorist safety drives</span>
+                    </div>
+                </button>
+                <button type="button" class="about-pillar-tab" role="tab" aria-selected="false" data-pillar="ev">
+                    <span class="pillar-tab-num">04</span>
+                    <div>
+                        <strong>EV &amp; Clean Fleet Care</strong>
+                        <span>High-voltage certification &amp; idle reduction</span>
+                    </div>
+                </button>
+            </div>
+            <div class="about-pillar-panels">
+                <div class="about-pillar-panel active" data-panel="vetting">
+                    <span class="pillar-panel-badge"><i class="fa-solid fa-graduation-cap"></i> RescueFleet Academy</span>
+                    <h3>Every Operator Completes 40+ Hours Before Solo Dispatch</h3>
+                    <p>We never treat roadside work as entry-level hauling. Every technician clears FBI fingerprint background checks, clean DOT driving abstracts, and supervised night-highway safety drills before taking their first call.</p>
+                    <ul class="pillar-checklist">
+                        <li><i class="fa-solid fa-check"></i> Criminal, drug &amp; annual motor-vehicle record screening</li>
+                        <li><i class="fa-solid fa-check"></i> TRAA &amp; OSHA roadside perimeter safety certification</li>
+                        <li><i class="fa-solid fa-check"></i> De-escalation, medical first-aid &amp; extreme-weather training</li>
+                    </ul>
+                    <div class="pillar-kpis">
+                        <div class="pillar-kpi"><strong>40+ hrs</strong><span>Academy &amp; Ride-Along Hours</span></div>
+                        <div class="pillar-kpi"><strong>100%</strong><span>Vetted &amp; Background Cleared</span></div>
+                    </div>
+                </div>
+                <div class="about-pillar-panel" data-panel="safety">
+                    <span class="pillar-panel-badge"><i class="fa-solid fa-screwdriver-wrench"></i> Daily Pre-Trip Inspections</span>
+                    <h3>6-Point Carrier &amp; Soft-Strap Audit Every Morning</h3>
+                    <p>Modern sedans, EVs, and luxury SUVs cannot tolerate steel J-hooks or steep deck angles. Every carrier goes through morning hydraulic, lighting, and strap-fray checks to guarantee damage-free loading.</p>
+                    <ul class="pillar-checklist">
+                        <li><i class="fa-solid fa-check"></i> Low-angle 11° hydraulic beds tested under load daily</li>
+                        <li><i class="fa-solid fa-check"></i> Over-the-tire nylon straps replace axle chains everywhere</li>
+                        <li><i class="fa-solid fa-check"></i> Digital photo walkaround logged before hookup begins</li>
+                    </ul>
+                    <div class="pillar-kpis">
+                        <div class="pillar-kpi"><strong>0</strong><span>Metal Axle Hooks Used</span></div>
+                        <div class="pillar-kpi"><strong>6-Pt</strong><span>Mandatory Pre-Tow Check</span></div>
+                    </div>
+                </div>
+                <div class="about-pillar-panel" data-panel="community">
+                    <span class="pillar-panel-badge"><i class="fa-solid fa-hand-holding-heart"></i> Texas Neighbor Program</span>
+                    <h3>Standing By Local Drivers Through Severe Weather &amp; Events</h3>
+                    <p>When Gulf Coast storms, freezes, or major interstate closures hit, our crews coordinate directly with local emergency responders to clear lanes fast and escort stranded families to safety.</p>
+                    <ul class="pillar-checklist">
+                        <li><i class="fa-solid fa-check"></i> Priority storm staging along I-10, I-35, and Houston beltways</li>
+                        <li><i class="fa-solid fa-check"></i> Annual free winter battery &amp; tire checks at community clinics</li>
+                        <li><i class="fa-solid fa-check"></i> Complimentary warm-cab escort to nearby safe waiting zones</li>
+                    </ul>
+                    <div class="pillar-kpis">
+                        <div class="pillar-kpi"><strong>35+</strong><span>Cities Supported Year-Round</span></div>
+                        <div class="pillar-kpi"><strong>24/7</strong><span>Severe-Weather Reserve Crews</span></div>
+                    </div>
+                </div>
+                <div class="about-pillar-panel" data-panel="ev">
+                    <span class="pillar-panel-badge"><i class="fa-solid fa-leaf"></i> Next-Gen Readiness</span>
+                    <h3>Certified High-Voltage Handling &amp; Smart Routing</h3>
+                    <p>Electric drivetrains and hybrid battery packs require specialized lockdown procedures and full-flatbed recovery. Our AI routing also eliminates empty deadhead miles across metro corridors.</p>
+                    <ul class="pillar-checklist">
+                        <li><i class="fa-solid fa-check"></i> High-voltage lockout gear &amp; transport-mode protocols</li>
+                        <li><i class="fa-solid fa-check"></i> Free-rolling polymer wheel skates for seized EV drive units</li>
+                        <li><i class="fa-solid fa-check"></i> Idle-cutting dynamic staging cuts response wait &amp; fuel waste</li>
+                    </ul>
+                    <div class="pillar-kpis">
+                        <div class="pillar-kpi"><strong>-40%</strong><span>Wasted Empty Dispatch Miles</span></div>
+                        <div class="pillar-kpi"><strong>EV Ready</strong><span>Certified All-Model Transport</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 9 — CTA -->
+<section class="section">
+    <div class="container">
+        <div class="cta-spotlight-banner scroll-reveal">
+            <div class="cta-spotlight-copy">
+                <span class="section-label"><i class="fa-solid fa-shield-halved"></i> RescueFleet Membership · Since 2010</span>
+                <h2>Ready to Experience Better Roadside Assistance?</h2>
+                <p>Join thousands of drivers across 35 cities who count on RescueFleet for transparent rates, vetted technicians, and under-15-minute urban dispatch.</p>
+                <div class="cta-spotlight-proof">
+                    <div class="cta-proof-chip"><strong>98%</strong><span>Satisfaction Rate</span></div>
+                    <div class="cta-proof-chip"><strong>15 min</strong><span>Avg Urban ETA</span></div>
+                    <div class="cta-proof-chip"><strong>120+</strong><span>Active Carriers</span></div>
+                </div>
+            </div>
+            <div class="cta-spotlight-dock">
+                <span class="cta-dock-eyebrow">24/7 Priority Dispatch Access</span>
+                <a href="signup.html" class="btn cta-btn-white"><i class="fa-solid fa-user-plus"></i> Join RescueFleet</a>
+                <a href="contact.html" class="btn cta-btn-ghost"><i class="fa-solid fa-envelope"></i> Get in Touch</a>
+                <span class="cta-dock-note">No long-term lock-in · Cancel anytime</span>
             </div>
         </div>
     </div>

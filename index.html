@@ -17,57 +17,392 @@
 <div id="navbar"></div>
 
 <!-- ============================================================
-     SECTION 1 — HERO (Two-Column with Floating Stats)
+     SECTION 1 — HERO BANNER (Interactive Highway Rescue)
      ============================================================ -->
-<section class="hero" style="padding: 100px 0 60px;">
-    <div class="container">
-        <div class="split-section" style="gap: 48px;">
-            <div class="split-content scroll-reveal">
-                <span class="section-label"><i class="fa-solid fa-bolt"></i> 24/7 Emergency Service</span>
-                <h1 style="font-size: 2.8rem; font-weight: 800; line-height: 1.15; margin-bottom: 20px;">
-                    Stranded? We'll Get<br>You <span style="color: var(--primary);">Back on Track</span>
-                </h1>
-                <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 32px; max-width: 500px;">
-                    Fast, reliable towing and roadside assistance across the region. From flat tires to engine breakdowns — we're just one call away, day or night.
-                </p>
-                <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 32px;">
-                    <a href="contact.html" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Call for Help</a>
-                    <a href="services.html" class="btn btn-secondary"><i class="fa-solid fa-list-check"></i> Our Services</a>
-                </div>
-                <div style="display: flex; gap: 32px; flex-wrap: wrap;">
-                    <div style="text-align: center;">
-                        <span style="font-size: 1.6rem; font-weight: 700; color: var(--primary); display: block;" class="counter" data-target="15">0</span>
-                        <span style="font-size: 0.78rem; color: var(--text-muted);">Min Avg. Response</span>
-                    </div>
-                    <div style="text-align: center;">
-                        <span style="font-size: 1.6rem; font-weight: 700; color: var(--primary); display: block;" class="counter" data-target="50000">0</span>
-                        <span style="font-size: 0.78rem; color: var(--text-muted);">Vehicles Rescued</span>
-                    </div>
-                    <div style="text-align: center;">
-                        <span style="font-size: 1.6rem; font-weight: 700; color: var(--primary); display: block;" class="counter" data-target="98">0</span>
-                        <span style="font-size: 0.78rem; color: var(--text-muted);">% Satisfaction</span>
-                    </div>
-                </div>
+<section class="hero-slider hero-slider--photo" id="heroSlider">
+    <div class="hero-slide active" aria-hidden="false">
+        <img src="assets/images/hero-slide-1.jpg" alt="Burnt-orange flatbed tow truck stationed on a twilight highway shoulder" class="hero-slide-bg">
+        <div class="hero-slide-overlay"></div>
+        <div class="hero-slide-content">
+            <span class="section-label"><i class="fa-solid fa-bolt"></i> 24/7 Emergency</span>
+            <h1>Roadside Rescue<br>When You Need It Most</h1>
+            <p>Professional towing & roadside assistance available around the clock, across the entire state.</p>
+            <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Get Help Now</a>
+                <a href="services.html" class="btn btn-secondary"><i class="fa-solid fa-arrow-right"></i> Explore Services</a>
             </div>
-            <div class="split-image scroll-reveal">
-                <img src="https://images.unsplash.com/photo-1562065198-8549d0de1687?w=700&h=500&fit=crop" alt="Tow truck on highway at sunset" style="border-radius: var(--radius-lg); width: 100%; height: 480px; object-fit: cover; box-shadow: var(--shadow-xl);">
+        </div>
+    </div>
+    <div class="hero-slide" aria-hidden="true">
+        <img src="assets/images/hero-slide-2.jpg" alt="Rapid-response orange service truck moving along a dusk city avenue" class="hero-slide-bg">
+        <div class="hero-slide-overlay"></div>
+        <div class="hero-slide-content">
+            <span class="section-label"><i class="fa-solid fa-satellite-dish"></i> 15-Min Urban Dispatch</span>
+            <h2 class="hero-h1">GPS-Tracked Arrival,<br>Straight to Your Lane</h2>
+            <p>Intelligent dispatch pairs your stalled vehicle with the closest flatbed or mobile repair van with live SMS ETA updates.</p>
+            <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+                <a href="dashboard.html" class="btn btn-primary"><i class="fa-solid fa-location-dot"></i> Track Live Dispatch</a>
+                <a href="#quoteEstimator" class="btn btn-secondary"><i class="fa-solid fa-calculator"></i> Estimate Rate</a>
+            </div>
+        </div>
+    </div>
+    <div class="hero-slide" aria-hidden="true">
+        <img src="assets/images/hero-slide-3.jpg" alt="Silver luxury SUV safely strapped on an orange flatbed carrier along a coastal highway" class="hero-slide-bg">
+        <div class="hero-slide-overlay"></div>
+        <div class="hero-slide-content">
+            <span class="section-label"><i class="fa-solid fa-shield-halved"></i> Zero-Damage Guarantee</span>
+            <h2 class="hero-h1">Flatbed &amp; Soft-Strap<br>Care for Every Vehicle</h2>
+            <p>Low-angle 11° hydraulic beds and nylon wheel straps protect luxury sedans, EVs, motorcycles, and AWD drivetrains.</p>
+            <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+                <a href="coverage.html" class="btn btn-primary"><i class="fa-solid fa-map-location-dot"></i> Coverage Zones</a>
+                <a href="tel:+18005551234" class="btn btn-secondary"><i class="fa-solid fa-phone"></i> 1-800-555-1234</a>
+            </div>
+        </div>
+    </div>
+    <div class="hero-slider-nav">
+        <button type="button" class="hero-slider-btn" id="heroPrevBtn" aria-label="Previous slide"><i class="fa-solid fa-chevron-left"></i></button>
+        <button type="button" class="hero-slider-btn" id="heroNextBtn" aria-label="Next slide"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="hero-slide-fx" aria-hidden="true">
+            <div class="hero-patrol-road">
+                <div class="hero-patrol-lane"></div>
+            </div>
+            <div class="hero-patrol-truck" id="heroPatrolTruck">
+                <div class="hero-patrol-beam" id="heroPatrolBeam">
+                    <span class="beam-outer"></span>
+                    <span class="beam-core"></span>
+                    <span class="beam-road"></span>
+                </div>
+                <div class="hero-patrol-rig" id="heroPatrolRig">
+                    <svg class="patrol-truck-svg" id="patrolRescueSvg" viewBox="0 0 360 142" width="320" height="126" shape-rendering="geometricPrecision">
+                        <defs>
+                            <linearGradient id="rtCabOrange" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#F59E0B"/>
+                                <stop offset="22%" stop-color="#EA580C"/>
+                                <stop offset="72%" stop-color="#C2410C"/>
+                                <stop offset="100%" stop-color="#7C2D12"/>
+                            </linearGradient>
+                            <linearGradient id="rtCabHoodSheen" x1="0" y1="0" x2="1" y2="0.4">
+                                <stop offset="0%" stop-color="#FFEDD5" stop-opacity="0.5"/>
+                                <stop offset="55%" stop-color="#FB923C" stop-opacity="0.16"/>
+                                <stop offset="100%" stop-color="#EA580C" stop-opacity="0"/>
+                            </linearGradient>
+                            <linearGradient id="rtGlass" x1="0" y1="0" x2="0.3" y2="1">
+                                <stop offset="0%" stop-color="#475569"/>
+                                <stop offset="42%" stop-color="#0F172A"/>
+                                <stop offset="100%" stop-color="#060A10"/>
+                            </linearGradient>
+                            <linearGradient id="rtDeckSteel" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#475569"/>
+                                <stop offset="45%" stop-color="#1E293B"/>
+                                <stop offset="100%" stop-color="#0F172A"/>
+                            </linearGradient>
+                            <linearGradient id="rtChrome" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#F8FAFC"/>
+                                <stop offset="28%" stop-color="#CBD5E1"/>
+                                <stop offset="55%" stop-color="#475569"/>
+                                <stop offset="82%" stop-color="#E2E8F0"/>
+                                <stop offset="100%" stop-color="#64748B"/>
+                            </linearGradient>
+                            <linearGradient id="rtCarSilver" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#F8FAFC"/>
+                                <stop offset="30%" stop-color="#CBD5E1"/>
+                                <stop offset="72%" stop-color="#64748B"/>
+                                <stop offset="100%" stop-color="#334155"/>
+                            </linearGradient>
+                            <radialGradient id="rtTireRubber" cx="50%" cy="50%" r="50%">
+                                <stop offset="52%" stop-color="#0A0D12"/>
+                                <stop offset="76%" stop-color="#1E242E"/>
+                                <stop offset="92%" stop-color="#11161E"/>
+                                <stop offset="100%" stop-color="#05070A"/>
+                            </radialGradient>
+                            <radialGradient id="rtRimAlloy" cx="44%" cy="40%" r="60%">
+                                <stop offset="0%" stop-color="#F8FAFC"/>
+                                <stop offset="48%" stop-color="#94A3B8"/>
+                                <stop offset="82%" stop-color="#475569"/>
+                                <stop offset="100%" stop-color="#1E293B"/>
+                            </radialGradient>
+                            <radialGradient id="rtRoadShadow" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#020407" stop-opacity="0.88"/>
+                                <stop offset="68%" stop-color="#04070B" stop-opacity="0.48"/>
+                                <stop offset="100%" stop-color="#04070B" stop-opacity="0"/>
+                            </radialGradient>
+                            <radialGradient id="rtStrobeHalo" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#FEF3C7" stop-opacity="0.85"/>
+                                <stop offset="38%" stop-color="#F59E0B" stop-opacity="0.42"/>
+                                <stop offset="100%" stop-color="#EA580C" stop-opacity="0"/>
+                            </radialGradient>
+                            <radialGradient id="rtRedGlow" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#EF4444" stop-opacity="0.85"/>
+                                <stop offset="55%" stop-color="#EF4444" stop-opacity="0.28"/>
+                                <stop offset="100%" stop-color="#EF4444" stop-opacity="0"/>
+                            </radialGradient>
+                            <radialGradient id="rtAmberGlow" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#FEF3C7" stop-opacity="0.9"/>
+                                <stop offset="45%" stop-color="#F59E0B" stop-opacity="0.38"/>
+                                <stop offset="100%" stop-color="#F59E0B" stop-opacity="0"/>
+                            </radialGradient>
+                            <radialGradient id="rtWhiteGlow" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+                                <stop offset="50%" stop-color="#E2E8F0" stop-opacity="0.35"/>
+                                <stop offset="100%" stop-color="#E2E8F0" stop-opacity="0"/>
+                            </radialGradient>
+                            <linearGradient id="rtWorkFlood" x1="1" y1="0" x2="0" y2="0.8">
+                                <stop offset="0%" stop-color="#E2E8F0" stop-opacity="0.24"/>
+                                <stop offset="100%" stop-color="#94A3B8" stop-opacity="0"/>
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Tight grounded road contact shade & crisp lamp reflections -->
+                        <ellipse cx="182" cy="128.5" rx="146" ry="3.6" fill="url(#rtRoadShadow)"/>
+                        <ellipse cx="88" cy="128.2" rx="20" ry="2.2" fill="#020407" opacity="0.92"/>
+                        <ellipse cx="293" cy="128.2" rx="20" ry="2.2" fill="#020407" opacity="0.92"/>
+                        <ellipse cx="226" cy="130" rx="34" ry="2.2" fill="url(#rtAmberGlow)" opacity="0.32" class="beacon-glow"/>
+                        <ellipse cx="17" cy="130" rx="13" ry="2" fill="url(#rtRedGlow)" opacity="0.38"/>
+
+                        <!-- Inner wheel well shadows & structural I-beam frame -->
+                        <path d="M56 122 C56 80 120 80 120 122 Z" fill="#05080D"/>
+                        <path d="M261 122 C261 80 325 80 325 122 Z" fill="#05080D"/>
+                        <rect x="26" y="95" width="292" height="10" rx="2" fill="#0D141F"/>
+
+                        <!-- Hydraulic tilt cylinder (dynamic), vertical exhaust stack, diesel tank & boarding step -->
+                        <line id="rtHydraulicBase" x1="138" y1="103" x2="160" y2="97" stroke="#475569" stroke-width="3.2" stroke-linecap="round"/>
+                        <line id="rtHydraulicRod" x1="154" y1="98.5" x2="178" y2="93" stroke="#CBD5E1" stroke-width="1.7" stroke-linecap="round"/>
+                        <path d="M206 96 L206 44 Q206 38 201 36" fill="none" stroke="url(#rtChrome)" stroke-width="3.2" stroke-linecap="round"/>
+                        <rect x="203.5" y="54" width="4.8" height="28" rx="1.5" fill="#1E293B" stroke="#64748B" stroke-width="0.6"/>
+                        <rect x="196" y="98" width="38" height="14" rx="5" fill="url(#rtChrome)" stroke="#334155" stroke-width="0.6"/>
+                        <rect x="204" y="98" width="2.8" height="14" fill="#0F172A"/>
+                        <rect x="223" y="98" width="2.8" height="14" fill="#0F172A"/>
+                        <rect x="241" y="109" width="18" height="4.5" rx="1" fill="url(#rtChrome)"/>
+
+                        <!-- Rear rubber mudflap & ICC taillight assembly -->
+                        <rect x="46" y="95" width="5" height="26" rx="1" fill="#0B0E14"/>
+                        <rect x="46" y="114" width="5" height="3" fill="#EA580C"/>
+                        <path d="M15 88 L26 88 L26 98 L14 98 Z" fill="#111827"/>
+                        <rect x="13.5" y="89" width="3.8" height="4.2" rx="1" fill="#EF4444"/>
+                        <rect x="13.5" y="94" width="3.6" height="3" rx="0.8" fill="#F8FAFC" opacity="0.25"/>
+                        <ellipse id="rtBrakeLampGlow" cx="14" cy="91" rx="8" ry="6" fill="url(#rtRedGlow)" opacity="0.45"/>
+                        <ellipse id="rtBackupGlow" cx="13" cy="95.5" rx="10" ry="6" fill="url(#rtWhiteGlow)" opacity="0"/>
+
+                        <!-- Stranded sedan (waits empty-lane -> winches up tilted flatbed -> rides off loaded) -->
+                        <g id="rtRescueCar" class="loaded-sedan">
+                            <ellipse id="rtCarRoadShadow" cx="100" cy="86.2" rx="64" ry="2.8" fill="url(#rtRoadShadow)" opacity="0.88"/>
+                            <path d="M31 76 Q30 68 35 64 L48 62 C62 50 76 47 104 47 C120 47 130 56 138 61 C152 63 166 66 169 72 Q170 76 167 79 L158 79 A11 11 0 0 1 136 79 L72 79 A11 11 0 0 1 50 79 L35 79 Q31 78 31 76 Z" fill="url(#rtCarSilver)" stroke="#475569" stroke-width="0.65"/>
+                            <path d="M55 61 C67 51 79 49 102 49 C116 49 125 56 132 61 Z" fill="url(#rtGlass)"/>
+                            <line x1="89" y1="49.5" x2="88" y2="61" stroke="#0F172A" stroke-width="2.2"/>
+                            <path d="M62 54 L106 50.5 L122 57" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="0.9"/>
+                            <path d="M40 69 L154 69" stroke="#475569" stroke-width="0.6" opacity="0.7"/>
+                            <rect x="92" y="65.5" width="7" height="1.8" rx="0.8" fill="#334155"/>
+                            <rect x="119" y="59.5" width="6.5" height="3.5" rx="1.2" fill="#E2E8F0" stroke="#475569" stroke-width="0.5"/>
+                            <!-- Sedan rotating wheels -->
+                            <g transform="translate(61, 76)">
+                                <circle cx="0" cy="0" r="9" fill="url(#rtTireRubber)"/>
+                                <g id="rtCarWheelRear">
+                                    <circle cx="0" cy="0" r="5.3" fill="url(#rtRimAlloy)"/>
+                                    <line x1="-4.2" y1="0" x2="4.2" y2="0" stroke="#1E293B" stroke-width="0.9"/>
+                                    <line x1="0" y1="-4.2" x2="0" y2="4.2" stroke="#1E293B" stroke-width="0.9"/>
+                                    <circle cx="0" cy="0" r="1.9" fill="#1E293B"/>
+                                </g>
+                            </g>
+                            <g transform="translate(147, 76)">
+                                <circle cx="0" cy="0" r="9" fill="url(#rtTireRubber)"/>
+                                <g id="rtCarWheelFront">
+                                    <circle cx="0" cy="0" r="5.3" fill="url(#rtRimAlloy)"/>
+                                    <line x1="-4.2" y1="0" x2="4.2" y2="0" stroke="#1E293B" stroke-width="0.9"/>
+                                    <line x1="0" y1="-4.2" x2="0" y2="4.2" stroke="#1E293B" stroke-width="0.9"/>
+                                    <circle cx="0" cy="0" r="1.9" fill="#1E293B"/>
+                                </g>
+                            </g>
+                            <!-- High-vis ratchet tie-down straps (fade in once seated on deck) -->
+                            <g id="rtCarStraps" opacity="0">
+                                <path d="M51 85 L57 73 L66 73 L71 85" fill="none" stroke="#F59E0B" stroke-width="1.6" stroke-linecap="round"/>
+                                <path d="M137 85 L143 73 L152 73 L157 85" fill="none" stroke="#F59E0B" stroke-width="1.6" stroke-linecap="round"/>
+                            </g>
+                            <!-- Stranded sedan front & rear emergency hazard flashers -->
+                            <circle cx="33" cy="68" r="5.5" fill="url(#rtRedGlow)" class="hazard-pulse"/>
+                            <rect x="31.5" y="66.5" width="3.8" height="2.8" rx="0.8" fill="#EF4444" class="hazard-pulse"/>
+                            <circle cx="165" cy="72" r="5.5" fill="url(#rtAmberGlow)" class="hazard-pulse"/>
+                            <circle cx="165" cy="72" r="2" fill="#FBBF24" class="hazard-pulse"/>
+                        </g>
+
+                        <!-- Tilting/Sliding Rollback Flatbed + Headache Rack + Winch -->
+                        <g id="rtDeckGroup">
+                            <path d="M190 85 L193.5 47 L201 47 L203 85 Z" fill="#1E293B" stroke="#475569" stroke-width="0.7"/>
+                            <rect x="193" y="52" width="5" height="16" fill="#0B111A" opacity="0.7"/>
+                            <rect x="187" y="48" width="5" height="4" rx="1" fill="#F8FAFC"/>
+                            <polygon id="rtFloodBeam" points="188,50 112,85 188,85" fill="url(#rtWorkFlood)" opacity="0"/>
+                            <rect x="181" y="79" width="10" height="6" rx="1.5" fill="#334155" stroke="#64748B" stroke-width="0.6"/>
+                            <path d="M14 94 L30 85 L202 85 L202 95 L26 95 Z" fill="url(#rtDeckSteel)" stroke="#334155" stroke-width="0.6"/>
+                            <line x1="30" y1="85.6" x2="202" y2="85.6" stroke="#94A3B8" stroke-width="1.1" opacity="0.75"/>
+                            <line x1="30" y1="90.5" x2="200" y2="90.5" stroke="#090E14" stroke-width="1.3"/>
+                            <circle cx="44" cy="90.5" r="1.4" fill="#F59E0B"/>
+                            <circle cx="98" cy="90.5" r="1.4" fill="#F59E0B"/>
+                            <circle cx="148" cy="90.5" r="1.4" fill="#F59E0B"/>
+                            <circle cx="192" cy="90.5" r="1.4" fill="#F59E0B"/>
+                        </g>
+
+                        <!-- Live steel winch cable -->
+                        <line id="rtWinchLine" x1="181" y1="82" x2="168" y2="77" stroke="#E2E8F0" stroke-width="1.3" stroke-linecap="round" opacity="0"/>
+
+                        <!-- Heavy commercial flatbed tow cab -->
+                        <path d="M208 96 L208 42 Q209 36 218 36 L252 36 Q262 36 270 46 L286 64 Q310 66 330 71 Q336 73 336 82 L336 96 L318 96 A25 25 0 0 1 268 96 L208 96 Z" fill="url(#rtCabOrange)"/>
+                        <path d="M214 66 C248 66 292 67 327 72 L286 64 L270 46 Q262 38 250 38 L216 38 Z" fill="url(#rtCabHoodSheen)"/>
+                        <path d="M267 96 A26 26 0 0 1 319 96" fill="none" stroke="#111827" stroke-width="3" stroke-linecap="round"/>
+
+                        <!-- Glasshouse: side door window + raked windshield + glare -->
+                        <path d="M214 42 L248 42 L256 62 L214 62 Z" fill="url(#rtGlass)" stroke="#1E293B" stroke-width="0.6"/>
+                        <path d="M218 61 L218 52 Q220 48 225 48 L228 61 Z" fill="#0B111A" opacity="0.65"/>
+                        <path d="M254 42 L263 42 L281 63 L262 63 Z" fill="url(#rtGlass)"/>
+                        <line x1="258" y1="44" x2="270" y2="61" stroke="rgba(255,255,255,0.28)" stroke-width="1.2"/>
+
+                        <!-- Door shut lines, handle, livery accent, turn signal & wing mirror -->
+                        <path d="M213 40 L250 40 L259 63 L259 93 L213 93 Z" fill="none" stroke="#451603" stroke-width="0.8" opacity="0.65"/>
+                        <rect x="218" y="72.5" width="7" height="2.4" rx="1" fill="#0F172A"/>
+                        <path d="M220 79.5 L254 79.5 L251 82.5 L220 82.5 Z" fill="#F0D9C4" opacity="0.88"/>
+                        <rect x="266" y="80.5" width="5" height="2.6" rx="1" fill="#F59E0B"/>
+                        <path d="M254 46 L263 46 L263 60 L254 60" fill="none" stroke="#1E293B" stroke-width="1.3"/>
+                        <rect x="259" y="45" width="5.5" height="14" rx="1.6" fill="#1E293B" stroke="#64748B" stroke-width="0.7"/>
+
+                        <!-- Front grille, heavy chrome bumper, fog lamp & projector headlight -->
+                        <rect x="326" y="73" width="10" height="17" rx="1.5" fill="#0F172A"/>
+                        <line x1="327" y1="76.5" x2="335.5" y2="76.5" stroke="#94A3B8" stroke-width="1"/>
+                        <line x1="327" y1="80" x2="335.5" y2="80" stroke="#94A3B8" stroke-width="1"/>
+                        <line x1="327" y1="83.5" x2="335.5" y2="83.5" stroke="#94A3B8" stroke-width="1"/>
+                        <line x1="327" y1="87" x2="335.5" y2="87" stroke="#94A3B8" stroke-width="1"/>
+                        <path d="M316 93 L338 93 Q341 93 341 98 L338 103 L315 103 Z" fill="url(#rtChrome)" stroke="#334155" stroke-width="0.6"/>
+                        <rect x="320" y="102.5" width="16" height="2.8" rx="1" fill="#0B111A"/>
+                        <circle cx="331" cy="81.8" r="8.5" fill="url(#rtWhiteGlow)" opacity="0.55"/>
+                        <rect x="323" y="79" width="10" height="5.5" rx="2" fill="#1E293B" stroke="#94A3B8" stroke-width="0.5"/>
+                        <circle cx="330.5" cy="81.8" r="2.2" fill="#FFFBEB"/>
+                        <circle cx="335" cy="97.5" r="6" fill="url(#rtAmberGlow)" opacity="0.5"/>
+                        <circle cx="334" cy="97.5" r="2" fill="#FEF08A"/>
+
+                        <!-- Cab roof clearance markers & aerodynamic LED strobe lightbar -->
+                        <circle cx="261" cy="36.5" r="1.3" fill="#FBBF24"/>
+                        <circle cx="266" cy="38" r="1.3" fill="#FBBF24"/>
+                        <ellipse cx="237" cy="33" rx="22" ry="9" fill="url(#rtStrobeHalo)" class="beacon-glow"/>
+                        <rect x="220" y="31.5" width="34" height="4.8" rx="2" fill="#1E293B" stroke="#475569" stroke-width="0.6"/>
+                        <rect x="222" y="32" width="10" height="3.8" rx="1" fill="#FBBF24" class="beacon-glow"/>
+                        <rect x="234" y="32" width="6" height="3.8" rx="0.8" fill="#CBD5E1"/>
+                        <rect x="242" y="32" width="10" height="3.8" rx="1" fill="#F59E0B" class="beacon-glow"/>
+
+                        <!-- Rear Commercial Drive Wheel (88, 107) — centered rotation around (0,0) -->
+                        <g transform="translate(88, 107)">
+                            <circle cx="0" cy="0" r="13.5" fill="#1E293B"/>
+                            <path d="M5 -10 A11 11 0 0 1 11 -3" fill="none" stroke="#DC2626" stroke-width="3" stroke-linecap="round"/>
+                            <circle cx="0" cy="0" r="21" fill="url(#rtTireRubber)"/>
+                            <circle cx="0" cy="0" r="17.5" fill="none" stroke="#28313E" stroke-width="0.9"/>
+                            <g id="rtWheelRearRot">
+                                <circle cx="0" cy="0" r="13.5" fill="url(#rtRimAlloy)" stroke="#94A3B8" stroke-width="0.8"/>
+                                <circle cx="0" cy="0" r="10.4" fill="none" stroke="#475569" stroke-width="0.7"/>
+                                <circle cx="8" cy="0" r="2.1" fill="#0B111A"/>
+                                <circle cx="4" cy="6.93" r="2.1" fill="#0B111A"/>
+                                <circle cx="-4" cy="6.93" r="2.1" fill="#0B111A"/>
+                                <circle cx="-8" cy="0" r="2.1" fill="#0B111A"/>
+                                <circle cx="-4" cy="-6.93" r="2.1" fill="#0B111A"/>
+                                <circle cx="4" cy="-6.93" r="2.1" fill="#0B111A"/>
+                                <circle cx="0" cy="0" r="4.2" fill="url(#rtChrome)" stroke="#334155" stroke-width="0.6"/>
+                                <circle cx="4.8" cy="2.8" r="0.75" fill="#E2E8F0"/>
+                                <circle cx="0" cy="5.5" r="0.75" fill="#E2E8F0"/>
+                                <circle cx="-4.8" cy="2.8" r="0.75" fill="#E2E8F0"/>
+                                <circle cx="-4.8" cy="-2.8" r="0.75" fill="#E2E8F0"/>
+                                <circle cx="0" cy="-5.5" r="0.75" fill="#E2E8F0"/>
+                                <circle cx="4.8" cy="-2.8" r="0.75" fill="#E2E8F0"/>
+                                <circle cx="0" cy="0" r="1.6" fill="#334155"/>
+                            </g>
+                        </g>
+
+                        <!-- Front Commercial Steer Wheel (293, 107) — centered rotation around (0,0) -->
+                        <g transform="translate(293, 107)">
+                            <circle cx="0" cy="0" r="13.5" fill="#1E293B"/>
+                            <path d="M5 -10 A11 11 0 0 1 11 -3" fill="none" stroke="#DC2626" stroke-width="3" stroke-linecap="round"/>
+                            <circle cx="0" cy="0" r="21" fill="url(#rtTireRubber)"/>
+                            <circle cx="0" cy="0" r="17.5" fill="none" stroke="#28313E" stroke-width="0.9"/>
+                            <g id="rtWheelFrontRot">
+                                <circle cx="0" cy="0" r="13.5" fill="url(#rtRimAlloy)" stroke="#94A3B8" stroke-width="0.8"/>
+                                <circle cx="0" cy="0" r="10.4" fill="none" stroke="#475569" stroke-width="0.7"/>
+                                <circle cx="8" cy="0" r="2.1" fill="#0B111A"/>
+                                <circle cx="4" cy="6.93" r="2.1" fill="#0B111A"/>
+                                <circle cx="-4" cy="6.93" r="2.1" fill="#0B111A"/>
+                                <circle cx="-8" cy="0" r="2.1" fill="#0B111A"/>
+                                <circle cx="-4" cy="-6.93" r="2.1" fill="#0B111A"/>
+                                <circle cx="4" cy="-6.93" r="2.1" fill="#0B111A"/>
+                                <circle cx="0" cy="0" r="4.2" fill="url(#rtChrome)" stroke="#334155" stroke-width="0.6"/>
+                                <circle cx="4.8" cy="2.8" r="0.75" fill="#E2E8F0"/>
+                                <circle cx="0" cy="5.5" r="0.75" fill="#E2E8F0"/>
+                                <circle cx="-4.8" cy="2.8" r="0.75" fill="#E2E8F0"/>
+                                <circle cx="-4.8" cy="-2.8" r="0.75" fill="#E2E8F0"/>
+                                <circle cx="0" cy="-5.5" r="0.75" fill="#E2E8F0"/>
+                                <circle cx="4.8" cy="-2.8" r="0.75" fill="#E2E8F0"/>
+                                <circle cx="0" cy="0" r="1.6" fill="#334155"/>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
 <!-- ============================================================
-     SECTION 2 — TRUSTED BY (Logo Row)
+     SECTION 2 — EMERGENCY BANNER
      ============================================================ -->
-<section style="padding: 32px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+<section style="background: var(--primary); padding: 20px 0;">
     <div class="container">
-        <div class="partners-row">
-            <span class="partner-logo">AAA Partner</span>
-            <span class="partner-logo">AutoGuard</span>
-            <span class="partner-logo">SafeDrive</span>
-            <span class="partner-logo">RoadShield</span>
-            <span class="partner-logo">FleetPro</span>
-            <span class="partner-logo">MotorCare</span>
+        <div class="hotline-bar">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-phone-volume" style="font-size: 1.3rem;"></i>
+                <div style="text-align: left;">
+                    <div style="font-size: 0.72rem; opacity: 0.8; text-transform: uppercase;">Emergency Hotline</div>
+                    <div style="font-size: 1.1rem; font-weight: 700;">1-800-555-1234</div>
+                </div>
+            </div>
+            <div class="hotline-divider"></div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-clock" style="font-size: 1.3rem;"></i>
+                <div style="text-align: left;">
+                    <div style="font-size: 0.72rem; opacity: 0.8; text-transform: uppercase;">Available</div>
+                    <div style="font-size: 1.1rem; font-weight: 700;">24/7 — 365 Days</div>
+                </div>
+            </div>
+            <div class="hotline-divider"></div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-gauge-high" style="font-size: 1.3rem;"></i>
+                <div style="text-align: left;">
+                    <div style="font-size: 0.72rem; opacity: 0.8; text-transform: uppercase;">Response Time</div>
+                    <div style="font-size: 1.1rem; font-weight: 700;">15 Min Average</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SECTION 3 — STATS COUNTERS
+     ============================================================ -->
+<section class="stats-section">
+    <div class="container">
+        <div class="stats-grid scroll-reveal">
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                <span class="stat-number counter" data-target="120">0</span>
+                <span class="stat-label">Trucks in Fleet</span>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fa-solid fa-map-marked-alt"></i></div>
+                <span class="stat-number counter" data-target="35">0</span>
+                <span class="stat-label">Cities Covered</span>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+                <span class="stat-number counter" data-target="250">0</span>
+                <span class="stat-label">Expert Technicians</span>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fa-solid fa-star"></i></div>
+                <span class="stat-number counter" data-target="4.9">0</span>
+                <span class="stat-label">Average Rating (4.9)</span>
+            </div>
         </div>
     </div>
 </section>
@@ -84,32 +419,44 @@
         </div>
         <div class="service-grid scroll-reveal">
             <div class="service-card">
-                <div class="service-card-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
+                <div class="service-card-media">
+                    <img src="assets/images/home1-svc-towing.jpg" alt="Emergency flatbed tow truck securing a silver SUV" class="service-card-img">
+                </div>
                 <h3>Emergency Towing</h3>
                 <p>Fast flatbed and wheel-lift towing for vehicles of all sizes. We handle cars, SUVs, motorcycles, and light trucks with care.</p>
             </div>
             <div class="service-card">
-                <div class="service-card-icon"><i class="fa-solid fa-car-battery"></i></div>
+                <div class="service-card-media">
+                    <img src="assets/images/home1-svc-battery.jpg" alt="Technician attaching commercial jumper clamps to a car battery" class="service-card-img">
+                </div>
                 <h3>Battery Jump-Start</h3>
                 <p>Dead battery? Our technicians arrive with professional-grade jump-start equipment to get you moving again quickly.</p>
             </div>
             <div class="service-card">
-                <div class="service-card-icon"><i class="fa-solid fa-gas-pump"></i></div>
+                <div class="service-card-media">
+                    <img src="assets/images/home1-svc-fuel.jpg" alt="Roadside specialist delivering fuel along a highway shoulder" class="service-card-img">
+                </div>
                 <h3>Fuel Delivery</h3>
                 <p>Ran out of gas on the road? We deliver gasoline or diesel directly to your location so you can reach the nearest station.</p>
             </div>
             <div class="service-card">
-                <div class="service-card-icon"><i class="fa-solid fa-tire"></i></div>
+                <div class="service-card-media">
+                    <img src="assets/images/home1-svc-tire.jpg" alt="Technician tightening wheel lug nuts with a torque wrench beside a spare tire" class="service-card-img">
+                </div>
                 <h3>Flat Tire Change</h3>
                 <p>We'll swap your flat with the spare quickly and safely, right where you are. No need to wait for a shop.</p>
             </div>
             <div class="service-card">
-                <div class="service-card-icon"><i class="fa-solid fa-lock-open"></i></div>
+                <div class="service-card-media">
+                    <img src="assets/images/home1-svc-lockout.jpg" alt="Lockout specialist opening a sedan door with an air-wedge and reach tool" class="service-card-img">
+                </div>
                 <h3>Lockout Service</h3>
                 <p>Locked your keys inside? Our trained specialists use non-damaging tools to get you back into your vehicle.</p>
             </div>
             <div class="service-card">
-                <div class="service-card-icon"><i class="fa-solid fa-road"></i></div>
+                <div class="service-card-media">
+                    <img src="assets/images/home1-svc-accident.jpg" alt="Wrecker truck winching an SUV onto angled recovery ramps at sunset" class="service-card-img">
+                </div>
                 <h3>Accident Recovery</h3>
                 <p>After a collision, we safely recover and transport your vehicle. We coordinate with insurance and body shops.</p>
             </div>
@@ -124,11 +471,11 @@
     <div class="container">
         <div class="split-section scroll-reveal">
             <div class="split-image">
-                <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=600&h=450&fit=crop" alt="Mechanic helping driver" style="border-radius: var(--radius-lg); width: 100%; height: 420px; object-fit: cover;">
+                <img src="assets/images/why-choose-mechanic.jpg" alt="Mechanic helping driver">
             </div>
             <div class="split-content">
                 <span class="section-label"><i class="fa-solid fa-shield-halved"></i> Why Choose Us</span>
-                <h2 class="section-title" style="text-align: left;">Trusted by Thousands of Drivers</h2>
+                <h2 class="section-title">Trusted by Thousands of Drivers</h2>
                 <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px;">
                     With over a decade of experience, RescueFleet has built a reputation for fast response times, transparent pricing, and courteous service. We treat every call as an emergency.
                 </p>
@@ -161,36 +508,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ============================================================
-     SECTION 5 — STATS COUNTERS
-     ============================================================ -->
-<section style="padding: 60px 0; background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%); color: #fff;">
-    <div class="container">
-        <div class="stats-grid scroll-reveal">
-            <div class="stat-card" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.1);">
-                <div class="stat-icon" style="background: rgba(211,84,0,0.2);"><i class="fa-solid fa-truck-fast" style="color: var(--primary-light);"></i></div>
-                <span class="stat-number counter" data-target="120" style="color: #fff;">0</span>
-                <span class="stat-label" style="color: rgba(255,255,255,0.7);">Trucks in Fleet</span>
-            </div>
-            <div class="stat-card" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.1);">
-                <div class="stat-icon" style="background: rgba(211,84,0,0.2);"><i class="fa-solid fa-map-marked-alt" style="color: var(--primary-light);"></i></div>
-                <span class="stat-number counter" data-target="35" style="color: #fff;">0</span>
-                <span class="stat-label" style="color: rgba(255,255,255,0.7);">Cities Covered</span>
-            </div>
-            <div class="stat-card" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.1);">
-                <div class="stat-icon" style="background: rgba(211,84,0,0.2);"><i class="fa-solid fa-users" style="color: var(--primary-light);"></i></div>
-                <span class="stat-number counter" data-target="250" style="color: #fff;">0</span>
-                <span class="stat-label" style="color: rgba(255,255,255,0.7);">Expert Technicians</span>
-            </div>
-            <div class="stat-card" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.1);">
-                <div class="stat-icon" style="background: rgba(211,84,0,0.2);"><i class="fa-solid fa-star" style="color: var(--primary-light);"></i></div>
-                <span class="stat-number counter" data-target="4" style="color: #fff;">0</span>
-                <span class="stat-label" style="color: rgba(255,255,255,0.7);">Average Rating (4.9)</span>
             </div>
         </div>
     </div>
@@ -237,7 +554,7 @@
         <div class="split-section reverse scroll-reveal">
             <div class="split-content">
                 <span class="section-label"><i class="fa-solid fa-building"></i> About RescueFleet</span>
-                <h2 class="section-title" style="text-align: left;">Serving Communities Since 2010</h2>
+                <h2 class="section-title">Serving Communities Since 2010</h2>
                 <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">
                     What started as a single tow truck operation has grown into a trusted network of over 120 vehicles and 250 skilled professionals. We're driven by a simple mission: no one should feel helpless on the road.
                 </p>
@@ -246,17 +563,76 @@
                 </p>
                 <a href="about.html" class="btn btn-primary"><i class="fa-solid fa-arrow-right"></i> Learn More About Us</a>
             </div>
-            <div class="split-image">
-                <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=600&h=450&fit=crop" alt="Tow truck fleet" style="border-radius: var(--radius-lg); width: 100%; height: 420px; object-fit: cover;">
+            <div class="split-image split-image-compact">
+                <img src="assets/images/about-fleet-yard.jpg" alt="Tow truck fleet">
             </div>
         </div>
     </div>
 </section>
 
 <!-- ============================================================
-     SECTION 8 — TESTIMONIALS (3 Cards)
+     SECTION 8 — SPECIALIZED VEHICLE CARE (NEW)
      ============================================================ -->
 <section class="section" style="background: var(--bg-alt);">
+    <div class="container">
+        <div class="text-center scroll-reveal" style="max-width: 600px; margin: 0 auto 48px;">
+            <span class="section-label"><i class="fa-solid fa-shield-halved"></i> Vehicle Readiness</span>
+            <h2 class="section-title">Vehicles We Protect</h2>
+            <p class="section-subtitle">Purpose-built carriers and non-damaging recovery gear matched to your exact vehicle drivetrain and clearance.</p>
+        </div>
+        <div class="vehicle-grid scroll-reveal">
+            <div class="vehicle-card">
+                <div class="vehicle-media">
+                    <img src="assets/images/vehicle-sedan-loading.jpg" alt="Low-clearance sedan secured with wheel straps on lowered hydraulic tilt ramp" class="vehicle-card-img">
+                </div>
+                <div class="vehicle-card-body">
+                    <div class="vehicle-icon"><i class="fa-solid fa-car-side"></i></div>
+                    <h3>Sedans & Low-Clearance</h3>
+                    <p>Extended hydraulic ramp angles and nylon soft-straps protect front splitters, spoilers, and alloy rims during loading.</p>
+                    <span class="vehicle-tag"><i class="fa-solid fa-check"></i> Zero Metal Hooks</span>
+                </div>
+            </div>
+            <div class="vehicle-card">
+                <div class="vehicle-media">
+                    <img src="assets/images/vehicle-suv-flatbed.jpg" alt="Dark AWD SUV transported with all four wheels secured on flatbed deck" class="vehicle-card-img">
+                </div>
+                <div class="vehicle-card-body">
+                    <div class="vehicle-icon"><i class="fa-solid fa-truck-pickup"></i></div>
+                    <h3>AWD SUVs & 4x4 Trucks</h3>
+                    <p>Full-deck flatbed transport lifts all four wheels off the pavement to protect sensitive transfer cases and transmissions.</p>
+                    <span class="vehicle-tag"><i class="fa-solid fa-check"></i> Drivetrain Safe</span>
+                </div>
+            </div>
+            <div class="vehicle-card">
+                <div class="vehicle-media">
+                    <img src="assets/images/vehicle-ev-roadside.jpg" alt="Roadside technician servicing electric crossover with portable EV boost unit" class="vehicle-card-img">
+                </div>
+                <div class="vehicle-card-body">
+                    <div class="vehicle-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>EVs & Hybrids</h3>
+                    <p>Operators certified in high-voltage shutdown protocols, transport-mode engagement, and portable fast-boost charging packs.</p>
+                    <span class="vehicle-tag"><i class="fa-solid fa-check"></i> EV Certified</span>
+                </div>
+            </div>
+            <div class="vehicle-card">
+                <div class="vehicle-media">
+                    <img src="assets/images/vehicle-motorcycle-van.jpg" alt="Touring motorcycle locked upright in steel wheel chock on hydraulic recovery carrier" class="vehicle-card-img">
+                </div>
+                <div class="vehicle-card-body">
+                    <div class="vehicle-icon"><i class="fa-solid fa-motorcycle"></i></div>
+                    <h3>Motorcycles & Vans</h3>
+                    <p>Locking front wheel chocks for motorcycles and reinforced wheel-lift cradles sized for commercial delivery vans.</p>
+                    <span class="vehicle-tag"><i class="fa-solid fa-check"></i> Custom Cradles</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SECTION 9 — TESTIMONIALS (3 Cards)
+     ============================================================ -->
+<section class="section">
     <div class="container">
         <div class="text-center scroll-reveal" style="max-width: 600px; margin: 0 auto 48px;">
             <span class="section-label"><i class="fa-solid fa-quote-left"></i> Testimonials</span>
@@ -270,7 +646,7 @@
                 </div>
                 <p class="testimonial-text">"My car broke down on the highway at 2 AM. RescueFleet arrived in just 12 minutes. The driver was professional and got me towed safely to the nearest shop. Incredible service!"</p>
                 <div class="testimonial-author">
-                    <div class="testimonial-avatar" style="background: #D35400;">MK</div>
+                    <div class="testimonial-avatar"><img src="assets/images/cust-home1-michael.jpg" alt="Michael Kennedy"></div>
                     <div>
                         <strong>Michael Kennedy</strong>
                         <span>Houston, TX</span>
@@ -283,7 +659,7 @@
                 </div>
                 <p class="testimonial-text">"Locked myself out of my car with groceries inside. Called RescueFleet and they had a technician at my location within 15 minutes. No damage to the car at all. Highly recommend!"</p>
                 <div class="testimonial-author">
-                    <div class="testimonial-avatar" style="background: #1A252F;">SP</div>
+                    <div class="testimonial-avatar"><img src="assets/images/cust-home1-sarah.jpg" alt="Sarah Patterson"></div>
                     <div>
                         <strong>Sarah Patterson</strong>
                         <span>Dallas, TX</span>
@@ -296,7 +672,7 @@
                 </div>
                 <p class="testimonial-text">"Ran out of fuel on a rural road late at night. Within 20 minutes, a RescueFleet driver brought me 3 gallons. Fair pricing and genuinely kind service. They've earned a loyal customer."</p>
                 <div class="testimonial-author">
-                    <div class="testimonial-avatar" style="background: #A04000;">JR</div>
+                    <div class="testimonial-avatar"><img src="assets/images/cust-home1-james.jpg" alt="James Rodriguez"></div>
                     <div>
                         <strong>James Rodriguez</strong>
                         <span>Austin, TX</span>
@@ -308,7 +684,97 @@
 </section>
 
 <!-- ============================================================
-     SECTION 9 — COVERAGE AREAS (Pills)
+     SECTION 10 — INSTANT QUOTE ESTIMATOR (NEW)
+     ============================================================ -->
+<section class="section" style="background: var(--bg-alt);">
+    <div class="container">
+        <div class="text-center scroll-reveal" style="max-width: 600px; margin: 0 auto 48px;">
+            <span class="section-label"><i class="fa-solid fa-calculator"></i> Transparent Pricing</span>
+            <h2 class="section-title">Instant Service Cost Estimator</h2>
+            <p class="section-subtitle">Select your service type and distance to preview upfront rates before you call.</p>
+        </div>
+        <div class="estimator-card scroll-reveal" id="quoteEstimator">
+            <div class="estimator-grid">
+                <div class="estimator-controls">
+                    <div class="estimator-intro">
+                        <span class="estimator-badge"><i class="fa-solid fa-shield-halved"></i> No Surge Pricing · 24/7 Flat Dispatch</span>
+                        <h3>Configure Your Dispatch Estimate</h3>
+                        <p>Choose your emergency service, vehicle class, and route distance for a transparent live rate before a truck rolls.</p>
+                    </div>
+                    <div>
+                        <span class="estimator-label">1. Select Roadside Service</span>
+                        <div class="estimator-options">
+                            <button type="button" class="estimator-option active" data-base="75" data-rate="4" data-eta="15 min avg ETA" data-unit="Flatbed Carrier">
+                                <i class="fa-solid fa-truck-ramp-box"></i> Emergency Towing
+                            </button>
+                            <button type="button" class="estimator-option" data-base="55" data-rate="0" data-eta="12 min avg ETA" data-unit="Rapid Response Van">
+                                <i class="fa-solid fa-car-battery"></i> Battery Jump-Start
+                            </button>
+                            <button type="button" class="estimator-option" data-base="65" data-rate="0" data-eta="18 min avg ETA" data-unit="Mobile Fuel Unit">
+                                <i class="fa-solid fa-gas-pump"></i> Fuel Delivery (3 gal)
+                            </button>
+                            <button type="button" class="estimator-option" data-base="50" data-rate="0" data-eta="14 min avg ETA" data-unit="Lockout Specialist">
+                                <i class="fa-solid fa-lock-open"></i> Lockout Service
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="estimator-label">2. Select Vehicle Type</span>
+                        <div class="estimator-vehicle-pills">
+                            <button type="button" class="estimator-vehicle-pill active" data-surcharge="0">
+                                <i class="fa-solid fa-car"></i> Sedan / Coupe
+                            </button>
+                            <button type="button" class="estimator-vehicle-pill" data-surcharge="10">
+                                <i class="fa-solid fa-truck-pickup"></i> AWD / SUV (+$10)
+                            </button>
+                            <button type="button" class="estimator-vehicle-pill" data-surcharge="15">
+                                <i class="fa-solid fa-bolt"></i> EV / Pickup (+$15)
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="estimator-slider-row">
+                            <label class="estimator-label" for="estMilesSlider" style="margin-bottom: 0;">3. Estimated Tow Distance</label>
+                            <span class="estimator-miles-val" id="estMilesLabel">10 miles</span>
+                        </div>
+                        <input type="range" id="estMilesSlider" class="estimator-range" min="1" max="50" value="10">
+                        <div class="estimator-scale">
+                            <span>1 mi (Local)</span>
+                            <span>25 mi (Regional)</span>
+                            <span>50 mi (Extended)</span>
+                        </div>
+                    </div>
+                    <div class="estimator-guarantees">
+                        <div class="estimator-guarantee"><i class="fa-solid fa-check"></i> First 5 miles included in tow base</div>
+                        <div class="estimator-guarantee"><i class="fa-solid fa-check"></i> Zero hidden hookup fees</div>
+                        <div class="estimator-guarantee"><i class="fa-solid fa-check"></i> Live GPS arrival tracking link</div>
+                        <div class="estimator-guarantee"><i class="fa-solid fa-check"></i> Digital receipt for insurer claims</div>
+                    </div>
+                </div>
+                <div class="estimator-summary">
+                    <div class="dispatch-stage" id="estDispatchStage">
+                        <img src="assets/images/estimator-dispatch-carrier.jpg" alt="Burnt-orange flatbed tow carrier rolling along highway dispatch corridor" class="dispatch-stage-img">
+                        <div class="dispatch-stage-hud">
+                            <span class="dispatch-live-pill"><span class="dispatch-live-dot"></span> Dispatch Track</span>
+                            <span id="estStageMiles">10 mi route</span>
+                        </div>
+                    </div>
+                    <span class="estimator-summary-tag">Estimated Dispatch Rate</span>
+                    <div class="estimator-price" id="estTotalPrice">$95</div>
+                    <p>Upfront quote with zero surprise fees. Includes dispatch, hooking, and safety check.</p>
+                    <div class="estimator-meta">
+                        <span><i class="fa-solid fa-clock"></i> <strong id="estEtaLabel" style="font-weight: 600;">15 min avg ETA</strong></span>
+                        <span><i class="fa-solid fa-truck-front"></i> <strong id="estUnitLabel" style="font-weight: 600;">Flatbed Carrier</strong></span>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary" style="width: 100%; justify-content: center;"><i class="fa-solid fa-phone"></i> Lock In This Rate</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SECTION 11 — COVERAGE AREAS (Pills)
      ============================================================ -->
 <section class="section">
     <div class="container">
@@ -341,9 +807,67 @@
 </section>
 
 <!-- ============================================================
-     SECTION 10 — FAQ ACCORDION
+     SECTION 12 — ROADSIDE SAFETY & INSURANCE BILLING (NEW)
      ============================================================ -->
 <section class="section" style="background: var(--bg-alt);">
+    <div class="container">
+        <div class="text-center scroll-reveal" style="max-width: 600px; margin: 0 auto 48px;">
+            <span class="section-label"><i class="fa-solid fa-clipboard-check"></i> Safety First</span>
+            <h2 class="section-title">What to Do While You Wait</h2>
+            <p class="section-subtitle">Follow these essential safety steps while our operator tracks to your exact roadside location.</p>
+        </div>
+        <div class="safety-layout">
+            <div class="safety-stage scroll-reveal" id="safetyStage" data-step="1">
+                <div class="safety-stage-top">
+                    <span class="safety-stage-badge"><i class="fa-solid fa-truck-fast"></i> Live Roadside Protocol</span>
+                    <span class="safety-stage-status" id="safetyStageStatus">Step 1: Hazard flashers active</span>
+                </div>
+                <div class="safety-stage-media">
+                    <img src="assets/images/safety-roadside-protocol.jpg" alt="Stranded sedan parked inside highway shoulder behind orange safety cones with burnt-orange flatbed carrier arriving" class="safety-stage-img">
+                </div>
+                <div class="safety-stage-tabs">
+                    <button type="button" class="safety-stage-tab active" data-step="1">01 Flashers</button>
+                    <button type="button" class="safety-stage-tab" data-step="2">02 Perimeter</button>
+                    <button type="button" class="safety-stage-tab" data-step="3">03 GPS Pin</button>
+                    <button type="button" class="safety-stage-tab" data-step="4">04 Unit #42</button>
+                </div>
+            </div>
+            <div class="safety-grid-2 scroll-reveal" id="safetyCards">
+                <div class="safety-card active" data-safety-step="1">
+                    <span class="safety-num">01</span>
+                    <h3>Pull Over & Flashers</h3>
+                    <p>Steer gently onto a flat paved shoulder, turn wheels away from traffic, and switch on hazard lights immediately.</p>
+                </div>
+                <div class="safety-card" data-safety-step="2">
+                    <span class="safety-num">02</span>
+                    <h3>Stay Out of Lanes</h3>
+                    <p>Keep seatbelts fastened inside the vehicle on busy highways, or exit on the passenger side behind the guardrail.</p>
+                </div>
+            </div>
+        </div>
+        <div class="insurer-strip scroll-reveal">
+            <div class="insurer-strip-title">
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+                <div>
+                    <h3>Direct Insurance Billing & Digital Claim Receipts</h3>
+                    <p>We submit itemized GPS receipts directly to major providers or email claim-ready invoices immediately.</p>
+                </div>
+            </div>
+            <div class="insurer-pills">
+                <span class="insurer-pill">State Farm</span>
+                <span class="insurer-pill">GEICO</span>
+                <span class="insurer-pill">Progressive</span>
+                <span class="insurer-pill">Allstate</span>
+                <span class="insurer-pill">USAA</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SECTION 13 — FAQ ACCORDION
+     ============================================================ -->
+<section class="section">
     <div class="container">
         <div class="text-center scroll-reveal" style="max-width: 600px; margin: 0 auto 48px;">
             <span class="section-label"><i class="fa-solid fa-circle-question"></i> FAQ</span>
@@ -401,16 +925,44 @@
 </section>
 
 <!-- ============================================================
-     SECTION 11 — CTA BANNER
+     SECTION 14 — CTA BANNER
      ============================================================ -->
-<section class="section">
+<section class="section" style="background: var(--bg-alt);">
     <div class="container">
-        <div class="cta-banner scroll-reveal">
-            <h2>Need Immediate Roadside Help?</h2>
-            <p>Our dispatchers are standing by 24/7. One call is all it takes to get a professional tow truck or roadside technician to your location.</p>
-            <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-                <a href="tel:+18005551234" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Call 1-800-555-1234</a>
-                <a href="login.html" class="btn btn-secondary" style="background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.3); color: #fff;"><i class="fa-solid fa-right-to-bracket"></i> Request Online</a>
+        <div class="cta-command scroll-reveal">
+            <div class="cta-command-hero">
+                <span class="cta-command-pill"><span class="cta-live-dot" aria-hidden="true"></span> Dispatch Standing By 24/7</span>
+                <h2>Need Immediate Roadside Help?</h2>
+                <p>No app waitlists and no surge pricing. Call our emergency desk or request online to dispatch the closest carrier straight to your pin.</p>
+                <div class="cta-command-actions">
+                    <a href="tel:+18005551234" class="btn cta-btn-white"><i class="fa-solid fa-phone-volume"></i> Call 1-800-555-1234</a>
+                    <a href="login.html" class="btn cta-btn-ghost"><i class="fa-solid fa-right-to-bracket"></i> Request Online</a>
+                </div>
+            </div>
+            <div class="cta-command-steps">
+                <div class="cta-steps-header">What Happens When You Reach Out</div>
+                <div class="cta-step-row">
+                    <span class="cta-step-num">01</span>
+                    <div>
+                        <strong>Call or Tap Dispatch</strong>
+                        <span>Confirm vehicle & roadside location in seconds</span>
+                    </div>
+                </div>
+                <div class="cta-step-row">
+                    <span class="cta-step-num">02</span>
+                    <div>
+                        <strong>Nearest Unit Assigned</strong>
+                        <span>GPS routes closest flatbed or mobile workshop</span>
+                    </div>
+                </div>
+                <div class="cta-step-row">
+                    <span class="cta-step-num">03</span>
+                    <div>
+                        <strong>15-Minute Target Arrival</strong>
+                        <span>Follow truck ETA on a live SMS tracking link</span>
+                    </div>
+                </div>
+                <div class="cta-command-foot"><i class="fa-solid fa-shield-halved"></i> No membership required · Direct insurer billing</div>
             </div>
         </div>
     </div>

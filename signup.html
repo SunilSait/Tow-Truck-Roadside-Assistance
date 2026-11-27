@@ -16,7 +16,6 @@
 <div class="auth-page">
     <!-- Top Bar -->
     <div class="auth-topbar">
-        <a href="index.html" class="auth-topbar-logo" id="authLogo"></a>
         <div class="auth-topbar-actions">
             <button onclick="toggleDark()" title="Toggle Dark Mode"><i class="fa-solid fa-moon"></i></button>
             <button onclick="toggleRTL()" title="Toggle RTL"><i class="fa-solid fa-right-left"></i></button>
@@ -45,43 +44,45 @@
 
         <!-- Form -->
         <form onsubmit="return false;">
-            <div class="form-group">
-                <label class="form-label" for="firstName">First Name</label>
-                <input class="form-input" type="text" id="firstName" placeholder="John" required>
-            </div>
-
-            <div class="form-group">
-                <label class="form-label" for="lastName">Last Name</label>
-                <input class="form-input" type="text" id="lastName" placeholder="Doe" required>
-            </div>
-
-            <div class="form-group">
-                <label class="form-label" for="email">Email Address</label>
-                <input class="form-input" type="email" id="email" placeholder="you@example.com" required>
-            </div>
-
-            <div class="form-group">
-                <label class="form-label" for="phone">Phone Number</label>
-                <input class="form-input" type="tel" id="phone" placeholder="+1 (555) 000-0000" required>
-            </div>
-
-            <div class="form-group">
-                <label class="form-label" for="password">Password</label>
-                <div class="password-wrapper">
-                    <input class="form-input" type="password" id="password" placeholder="Create a strong password" required>
-                    <button type="button" class="password-toggle" onclick="togglePasswordVisibility('password', this)">
-                        <i class="fa-regular fa-eye pw-icon"></i>
-                    </button>
+            <div class="auth-form-grid">
+                <div class="form-group">
+                    <label class="form-label" for="firstName">First Name</label>
+                    <input class="form-input" type="text" id="firstName" placeholder="Ryan" required>
                 </div>
-            </div>
 
-            <div class="form-group">
-                <label class="form-label" for="confirmPassword">Confirm Password</label>
-                <div class="password-wrapper">
-                    <input class="form-input" type="password" id="confirmPassword" placeholder="Confirm your password" required>
-                    <button type="button" class="password-toggle" onclick="togglePasswordVisibility('confirmPassword', this)">
-                        <i class="fa-regular fa-eye pw-icon"></i>
-                    </button>
+                <div class="form-group">
+                    <label class="form-label" for="lastName">Last Name</label>
+                    <input class="form-input" type="text" id="lastName" placeholder="Mitchell" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="email">Email Address</label>
+                    <input class="form-input" type="email" id="email" placeholder="you@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="phone">Phone Number</label>
+                    <input class="form-input" type="tel" id="phone" placeholder="+1 (555) 000-0000" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="password">Password</label>
+                    <div class="password-wrapper">
+                        <input class="form-input" type="password" id="password" placeholder="Create a strong password" required>
+                        <button type="button" class="password-toggle" onclick="togglePasswordVisibility('password', this)">
+                            <i class="fa-regular fa-eye pw-icon"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="confirmPassword">Confirm Password</label>
+                    <div class="password-wrapper">
+                        <input class="form-input" type="password" id="confirmPassword" placeholder="Confirm your password" required>
+                        <button type="button" class="password-toggle" onclick="togglePasswordVisibility('confirmPassword', this)">
+                            <i class="fa-regular fa-eye pw-icon"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
 

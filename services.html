@@ -16,7 +16,9 @@
 <div id="navbar"></div>
 
 <!-- SECTION 1 — PAGE BANNER -->
-<section class="page-banner">
+<section class="page-banner page-banner--photo">
+    <img src="assets/images/banner-services.jpg" alt="Flatbed recovery truck illuminated by amber lights along a twilight highway" class="page-banner-bg">
+    <div class="page-banner-overlay" aria-hidden="true"></div>
     <div class="container">
         <div class="scroll-reveal" style="text-align: center;">
             <span class="section-label"><i class="fa-solid fa-wrench"></i> Services</span>
@@ -34,9 +36,9 @@
             <h2 class="section-title">Every Roadside Emergency Covered</h2>
             <p class="section-subtitle">From towing to lockouts, our trained professionals handle it all with care and speed.</p>
         </div>
-        <div class="scroll-reveal" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+        <div class="fleet-grid scroll-reveal">
             <div class="fleet-card">
-                <img src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=500&h=280&fit=crop" alt="Tow truck loading car" class="fleet-card-img">
+                <img src="assets/images/services-towing-loading.jpg" alt="Tow truck loading car" class="fleet-card-img">
                 <div class="fleet-card-body">
                     <h3><i class="fa-solid fa-truck-ramp-box" style="color: var(--primary); margin-right: 8px;"></i>Emergency Towing</h3>
                     <p>Professional flatbed and wheel-lift towing for cars, SUVs, trucks, and motorcycles. We safely transport your vehicle to any destination within our coverage area.</p>
@@ -50,7 +52,7 @@
                 </div>
             </div>
             <div class="fleet-card">
-                <img src="https://images.unsplash.com/photo-1542621334-a254cf47733d?w=500&h=280&fit=crop" alt="Fuel delivery service" class="fleet-card-img">
+                <img src="assets/images/services-fuel-delivery.jpg" alt="Fuel delivery service" class="fleet-card-img">
                 <div class="fleet-card-body">
                     <h3><i class="fa-solid fa-gas-pump" style="color: var(--primary); margin-right: 8px;"></i>Fuel Delivery</h3>
                     <p>Out of gas? We deliver up to 5 gallons of gasoline or diesel directly to your location so you can reach the nearest filling station safely.</p>
@@ -59,7 +61,7 @@
             <div class="fleet-card">
                 <img src="assets/images/flat-tire-change.jpg" alt="Tire being changed" class="fleet-card-img">
                 <div class="fleet-card-body">
-                    <h3><i class="fa-solid fa-tire" style="color: var(--primary); margin-right: 8px;"></i>Flat Tire Change</h3>
+                    <h3><i class="fa-solid fa-circle-dot" style="color: var(--primary); margin-right: 8px;"></i>Flat Tire Change</h3>
                     <p>We'll swap your flat with the spare tire quickly and safely, right where you are. We also check air pressure and ensure the spare is road-ready.</p>
                 </div>
             </div>
@@ -71,7 +73,7 @@
                 </div>
             </div>
             <div class="fleet-card">
-                <img src="https://images.unsplash.com/photo-1515876305430-f06edab8282a?w=500&h=280&fit=crop" alt="Accident recovery scene" class="fleet-card-img">
+                <img src="assets/images/services-accident-recovery.jpg" alt="Accident recovery scene" class="fleet-card-img">
                 <div class="fleet-card-body">
                     <h3><i class="fa-solid fa-car-burst" style="color: var(--primary); margin-right: 8px;"></i>Accident Recovery</h3>
                     <p>After a collision, we handle safe vehicle extraction, debris cleanup, and transport to your preferred body shop. We coordinate directly with your insurance.</p>
@@ -86,11 +88,11 @@
     <div class="container">
         <div class="split-section scroll-reveal">
             <div class="split-image">
-                <img src="https://images.unsplash.com/photo-1565689157206-0fddef7589a2?w=600&h=450&fit=crop" alt="Flatbed tow truck at work" style="border-radius: var(--radius-lg); width: 100%; height: 420px; object-fit: cover;">
+                <img src="assets/images/services-flatbed-detail.jpg" alt="Flatbed tow truck at work">
             </div>
             <div class="split-content">
                 <span class="section-label"><i class="fa-solid fa-truck-moving"></i> Towing Services</span>
-                <h2 class="section-title" style="text-align: left;">Safe, Damage-Free Towing</h2>
+                <h2 class="section-title">Safe, Damage-Free Towing</h2>
                 <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">
                     Our fleet includes both flatbed carriers and wheel-lift trucks, ensuring we have the right equipment for every vehicle type. Whether it's a luxury sedan, an SUV, or a motorcycle, we transport it safely.
                 </p>
@@ -118,13 +120,13 @@
     </div>
 </section>
 
-<!-- SECTION 4 — BATTERY & FUEL (Reverse Split) -->
+<!-- SECTION 4 — BATTERY & FUEL (Split with Image) -->
 <section class="section">
     <div class="container">
-        <div class="split-section reverse scroll-reveal">
+        <div class="split-section scroll-reveal">
             <div class="split-content">
                 <span class="section-label"><i class="fa-solid fa-car-battery"></i> Quick Fix Services</span>
-                <h2 class="section-title" style="text-align: left;">Battery & Fuel — On the Spot</h2>
+                <h2 class="section-title">Battery & Fuel — On the Spot</h2>
                 <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">
                     Not every breakdown needs a tow. Many roadside issues can be resolved right where you are. Our service vans carry everything needed for jump-starts, tire changes, and fuel delivery.
                 </p>
@@ -149,7 +151,7 @@
                 <a href="contact.html" class="btn btn-secondary"><i class="fa-solid fa-headset"></i> Contact Us</a>
             </div>
             <div class="split-image">
-                <img src="https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?w=600&h=450&fit=crop" alt="Mechanic checking battery" style="border-radius: var(--radius-lg); width: 100%; height: 420px; object-fit: cover;">
+                <img src="assets/images/services-battery-diagnostic.jpg" alt="Mechanic checking battery">
             </div>
         </div>
     </div>
@@ -194,59 +196,118 @@
             <h2 class="section-title">Service Rates</h2>
             <p class="section-subtitle">Clear, upfront pricing with no hidden fees. Know what you'll pay before we arrive.</p>
         </div>
-        <div class="scroll-reveal" style="max-width: 700px; margin: 0 auto;">
+        <div class="scroll-reveal rates-showcase">
+            <div class="rate-highlights">
+                <div class="rate-highlight-card">
+                    <strong>$0 Hookup Fee</strong>
+                    <span>Included on every local flatbed & wheel-lift dispatch</span>
+                </div>
+                <div class="rate-highlight-card">
+                    <strong>15 Min Avg ETA</strong>
+                    <span>Nearest truck routed automatically via live GPS</span>
+                </div>
+                <div class="rate-highlight-card">
+                    <strong>Pro Plan Perks</strong>
+                    <span>Free jump-starts, tire swaps, lockouts & 25-mi towing</span>
+                </div>
+            </div>
             <div class="dash-panel">
                 <div class="dash-table-responsive">
-                    <table class="dash-table-custom">
+                    <table class="dash-table-custom rates-table">
                         <thead>
                             <tr>
                                 <th>Service</th>
-                                <th>Starting Price</th>
-                                <th>Details</th>
+                                <th>Standard Rate</th>
+                                <th>Pro Member</th>
+                                <th>Avg ETA</th>
+                                <th>Included Scope & Equipment</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><i class="fa-solid fa-truck-ramp-box" style="color: var(--primary); margin-right: 8px;"></i>Local Tow (0-5 mi)</td>
-                                <td style="font-weight: 600; color: var(--primary);">$75</td>
-                                <td>+$4/mile after 5 miles</td>
+                                <td><span class="rate-svc-cell"><i class="fa-solid fa-truck-ramp-box"></i>Local Flatbed Tow (0–5 mi)</span></td>
+                                <td class="rate-price">$75 <small>+$4/mi after 5 mi</small></td>
+                                <td><span class="rate-member-pill">Included (25 mi)</span></td>
+                                <td><span class="rate-eta">15 min</span></td>
+                                <td>Hydraulic 11° low-angle bed, 4-point nylon straps & 6-point inspection</td>
                             </tr>
                             <tr>
-                                <td><i class="fa-solid fa-truck-moving" style="color: var(--primary); margin-right: 8px;"></i>Long-Distance Tow</td>
-                                <td style="font-weight: 600; color: var(--primary);">$150</td>
-                                <td>+$3/mile, up to 200 mi</td>
+                                <td><span class="rate-svc-cell"><i class="fa-solid fa-truck-moving"></i>Long-Distance Tow</span></td>
+                                <td class="rate-price">$150 <small>+$3/mi up to 200 mi</small></td>
+                                <td><span class="rate-member-pill">20% Discount</span></td>
+                                <td><span class="rate-eta">20–30 min</span></td>
+                                <td>Dedicated carrier transport, live SMS GPS tracking & direct shop handoff</td>
                             </tr>
                             <tr>
-                                <td><i class="fa-solid fa-car-battery" style="color: var(--primary); margin-right: 8px;"></i>Battery Jump-Start</td>
-                                <td style="font-weight: 600; color: var(--primary);">$55</td>
-                                <td>Includes battery test</td>
+                                <td><span class="rate-svc-cell"><i class="fa-solid fa-bolt"></i>EV & Hybrid Transport</span></td>
+                                <td class="rate-price">$95 <small>Flatbed carrier</small></td>
+                                <td><span class="rate-member-pill">Included (25 mi)</span></td>
+                                <td><span class="rate-eta">18 min</span></td>
+                                <td>Transport-mode activation, wheel dollies & portable fast-boost check</td>
                             </tr>
                             <tr>
-                                <td><i class="fa-solid fa-gas-pump" style="color: var(--primary); margin-right: 8px;"></i>Fuel Delivery</td>
-                                <td style="font-weight: 600; color: var(--primary);">$65</td>
-                                <td>Up to 3 gallons included</td>
+                                <td><span class="rate-svc-cell"><i class="fa-solid fa-motorcycle"></i>Motorcycle Recovery</span></td>
+                                <td class="rate-price">$70 <small>Up to 10 miles</small></td>
+                                <td><span class="rate-member-pill">Included (25 mi)</span></td>
+                                <td><span class="rate-eta">15 min</span></td>
+                                <td>Locking front wheel chock cradle & padded soft-loop frame tie-downs</td>
                             </tr>
                             <tr>
-                                <td><i class="fa-solid fa-tire" style="color: var(--primary); margin-right: 8px;"></i>Flat Tire Change</td>
-                                <td style="font-weight: 600; color: var(--primary);">$60</td>
-                                <td>Spare tire swap</td>
+                                <td><span class="rate-svc-cell"><i class="fa-solid fa-car-battery"></i>Battery Jump-Start</span></td>
+                                <td class="rate-price">$55 <small>On-site service</small></td>
+                                <td><span class="rate-member-pill free">Free Unlimited</span></td>
+                                <td><span class="rate-eta">12 min</span></td>
+                                <td>Commercial booster pack jump, alternator output & battery health test</td>
                             </tr>
                             <tr>
-                                <td><i class="fa-solid fa-lock-open" style="color: var(--primary); margin-right: 8px;"></i>Lockout Service</td>
-                                <td style="font-weight: 600; color: var(--primary);">$50</td>
-                                <td>Non-damaging entry</td>
+                                <td><span class="rate-svc-cell"><i class="fa-solid fa-gas-pump"></i>Emergency Fuel Delivery</span></td>
+                                <td class="rate-price">$65 <small>Up to 3 gallons</small></td>
+                                <td><span class="rate-member-pill free">Free (3 gal)</span></td>
+                                <td><span class="rate-eta">18 min</span></td>
+                                <td>87/91 gasoline or diesel delivered directly with safety funneling</td>
                             </tr>
                             <tr>
-                                <td><i class="fa-solid fa-car-burst" style="color: var(--primary); margin-right: 8px;"></i>Accident Recovery</td>
-                                <td style="font-weight: 600; color: var(--primary);">$200</td>
-                                <td>Varies by situation</td>
+                                <td><span class="rate-svc-cell"><i class="fa-solid fa-circle-dot"></i>Flat Tire Change</span></td>
+                                <td class="rate-price">$60 <small>On-shoulder swap</small></td>
+                                <td><span class="rate-member-pill free">Free Unlimited</span></td>
+                                <td><span class="rate-eta">15 min</span></td>
+                                <td>Hydraulic floor jack lift, spare install, calibrated torque & PSI check</td>
+                            </tr>
+                            <tr>
+                                <td><span class="rate-svc-cell"><i class="fa-solid fa-lock-open"></i>Lockout Service</span></td>
+                                <td class="rate-price">$50 <small>24/7 entry</small></td>
+                                <td><span class="rate-member-pill free">Free Unlimited</span></td>
+                                <td><span class="rate-eta">14 min</span></td>
+                                <td>Non-damaging air-wedge cushion & coated reach rod preserving weatherstrip</td>
+                            </tr>
+                            <tr>
+                                <td><span class="rate-svc-cell"><i class="fa-solid fa-road"></i>Winch-Out Extraction</span></td>
+                                <td class="rate-price">$110 <small>Up to 50 ft cable</small></td>
+                                <td><span class="rate-member-pill">15% Discount</span></td>
+                                <td><span class="rate-eta">20–25 min</span></td>
+                                <td>Controlled mud, snow, or ditch pull using synthetic soft shackles</td>
+                            </tr>
+                            <tr>
+                                <td><span class="rate-svc-cell"><i class="fa-solid fa-car-burst"></i>Accident Recovery</span></td>
+                                <td class="rate-price">$200 <small>Base recovery</small></td>
+                                <td><span class="rate-member-pill">Priority Dispatch</span></td>
+                                <td><span class="rate-eta">15–20 min</span></td>
+                                <td>Scene safety perimeter, debris clear, storage & direct insurer billing</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
+                <div class="rates-footer">
+                    <div class="rates-payment-tags">
+                        <span><i class="fa-solid fa-shield-halved"></i> Direct Insurer Billing</span>
+                        <span><i class="fa-solid fa-credit-card"></i> Cards & Contactless</span>
+                        <span><i class="fa-solid fa-file-invoice"></i> Net-30 Fleet Accounts</span>
+                    </div>
+                    <a href="index.html#quoteEstimator" class="btn btn-primary"><i class="fa-solid fa-calculator"></i> Calculate Exact Rate</a>
+                </div>
             </div>
-            <p style="text-align: center; font-size: 0.82rem; color: var(--text-muted); margin-top: 16px;">
-                * Prices may vary based on location, time of day, and vehicle type. Membership holders receive discounted rates.
+            <p class="rates-disclaimer">
+                * Rates represent baseline upfront dispatch quotes for standard passenger vehicles. Heavy-duty recoveries, after-hours gate fees, and extended winching beyond 50 ft are quoted upfront before truck dispatch.
             </p>
         </div>
     </div>
@@ -309,15 +370,102 @@
     </div>
 </section>
 
-<!-- SECTION 8 — CTA -->
+<!-- SECTION 8 — INTERACTIVE ISSUE-TO-UNIT MATCHER -->
 <section class="section">
     <div class="container">
-        <div class="cta-banner scroll-reveal">
-            <h2>Need Any of These Services?</h2>
-            <p>Don't wait — call now or request online. Our team is ready 24/7 to get you the help you need.</p>
-            <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-                <a href="tel:+18005551234" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Call 1-800-555-1234</a>
-                <a href="login.html" class="btn btn-secondary" style="background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.3); color: #fff;"><i class="fa-solid fa-right-to-bracket"></i> Request Online</a>
+        <div class="text-center scroll-reveal" style="max-width: 620px; margin: 0 auto 48px;">
+            <span class="section-label"><i class="fa-solid fa-compass"></i> Quick Diagnosis</span>
+            <h2 class="section-title">Match Your Issue to the Right Unit</h2>
+            <p class="section-subtitle">Not sure whether you need a mobile mechanic van or a full flatbed carrier? Pick your situation below for an instant recommendation.</p>
+        </div>
+        <div class="svc-matcher-card scroll-reveal" id="serviceMatcherCard">
+            <div class="svc-symptom-list" role="group" aria-label="Vehicle issue scenarios">
+                <button type="button" class="svc-symptom-btn active" data-symptom="battery">
+                    <span class="svc-symptom-icon"><i class="fa-solid fa-car-battery"></i></span>
+                    <div>
+                        <strong>Clicking or Won't Crank</strong>
+                        <span>Dead battery, dim dash, stall</span>
+                    </div>
+                </button>
+                <button type="button" class="svc-symptom-btn" data-symptom="tire">
+                    <span class="svc-symptom-icon"><i class="fa-solid fa-circle-dot"></i></span>
+                    <div>
+                        <strong>Flat Tire or Blowout</strong>
+                        <span>Puncture, spare swap, low PSI</span>
+                    </div>
+                </button>
+                <button type="button" class="svc-symptom-btn" data-symptom="awd">
+                    <span class="svc-symptom-icon"><i class="fa-solid fa-truck-ramp-box"></i></span>
+                    <div>
+                        <strong>AWD, EV or Drivetrain Issue</strong>
+                        <span>Check engine, won't shift, EV fault</span>
+                    </div>
+                </button>
+                <button type="button" class="svc-symptom-btn" data-symptom="lockout">
+                    <span class="svc-symptom-icon"><i class="fa-solid fa-lock-open"></i></span>
+                    <div>
+                        <strong>Keys Locked Inside</strong>
+                        <span>Cabin or trunk accidental lock</span>
+                    </div>
+                </button>
+                <button type="button" class="svc-symptom-btn" data-symptom="winch">
+                    <span class="svc-symptom-icon"><i class="fa-solid fa-road"></i></span>
+                    <div>
+                        <strong>Stuck Off Shoulder or Ditch</strong>
+                        <span>Mud, gravel, curb, snow slide-off</span>
+                    </div>
+                </button>
+                <button type="button" class="svc-symptom-btn" data-symptom="fuel">
+                    <span class="svc-symptom-icon"><i class="fa-solid fa-gas-pump"></i></span>
+                    <div>
+                        <strong>Empty Fuel Tank</strong>
+                        <span>Out of gasoline or diesel on road</span>
+                    </div>
+                </button>
+            </div>
+            <div class="svc-match-panel" id="svcMatchPanel" aria-live="polite">
+                <div class="svc-match-top">
+                    <span class="svc-match-badge" id="svcMatchBadge"><i class="fa-solid fa-bolt"></i> On-Site Resolution</span>
+                    <span class="svc-match-eta" id="svcMatchEta">12 min avg ETA</span>
+                </div>
+                <h3 id="svcMatchTitle">Rapid Mobile Battery &amp; Jump Unit</h3>
+                <p id="svcMatchDesc">Our service van arrives with a commercial 3000A lithium booster and alternator load tester so you can restart safely without waiting on a tow.</p>
+                <div class="svc-match-specs">
+                    <div class="svc-spec-box"><span>Dispatched Vehicle</span><strong id="svcMatchUnit">Mobile Service Van</strong></div>
+                    <div class="svc-spec-box"><span>Standard Base Rate</span><strong id="svcMatchRate">$55 (Free for Pro)</strong></div>
+                </div>
+                <div class="svc-match-prep">
+                    <span class="svc-prep-title">Included Gear &amp; Preparation</span>
+                    <ul id="svcMatchChecklist">
+                        <li><i class="fa-solid fa-check"></i> <span>Safe surge-protected jump-start &amp; voltage test</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span>Battery terminal clean &amp; charging output check</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span>Park with hazards on and pop hood latch if safe</span></li>
+                    </ul>
+                </div>
+                <div class="svc-match-actions">
+                    <a href="contact.html" class="btn btn-primary"><i class="fa-solid fa-truck-fast"></i> Dispatch This Unit</a>
+                    <a href="index.html#quoteEstimator" class="btn btn-secondary"><i class="fa-solid fa-calculator"></i> Estimate Rate</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 9 — CTA -->
+<section class="section" style="background: var(--bg-alt);">
+    <div class="container">
+        <div class="cta-banner cta-banner-split scroll-reveal">
+            <div class="cta-banner-content">
+                <span class="cta-banner-pill"><i class="fa-solid fa-bolt"></i> 24/7 Dispatch Ready</span>
+                <h2>Need Any of These Services?</h2>
+                <p>Don't wait — call now or request online. Our team is ready 24/7 to get you the help you need.</p>
+                <div class="cta-actions">
+                    <a href="tel:+18005551234" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Call 1-800-555-1234</a>
+                    <a href="login.html" class="btn btn-secondary"><i class="fa-solid fa-right-to-bracket"></i> Request Online</a>
+                </div>
+            </div>
+            <div class="cta-banner-media">
+                <img src="assets/images/services-cta-rescue.jpg" alt="Burnt-orange flatbed tow carrier on highway patrol at dusk ready for 24/7 dispatch" class="cta-banner-img">
             </div>
         </div>
     </div>

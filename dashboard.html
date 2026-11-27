@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,474 +8,944 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body data-page="dashboard">
 
-<div class="dash-layout">
-    <!-- ========== SIDEBAR ========== -->
-    <aside class="dash-sidebar" id="dashSidebar">
-        <div class="dash-sidebar-header">
-            <a href="index.html" id="dashLogo" style="display:flex;align-items:center;gap:10px;text-decoration:none;"></a>
-        </div>
-        <nav class="dash-sidebar-nav">
-            <button class="dash-nav-item active" onclick="switchTab('overview', this)">
-                <i class="fa-solid fa-gauge-high"></i><span class="dash-nav-label">Overview</span>
-            </button>
-            <button class="dash-nav-item" onclick="switchTab('requests', this)">
-                <i class="fa-solid fa-clipboard-list"></i><span class="dash-nav-label">My Requests</span>
-            </button>
-            <button class="dash-nav-item" onclick="switchTab('dispatch', this)">
-                <i class="fa-solid fa-satellite-dish"></i><span class="dash-nav-label">Track Dispatch</span>
-            </button>
-            <button class="dash-nav-item" onclick="switchTab('history', this)">
-                <i class="fa-solid fa-clock-rotate-left"></i><span class="dash-nav-label">Service History</span>
-            </button>
-            <button class="dash-nav-item" onclick="switchTab('billing', this)">
-                <i class="fa-solid fa-file-invoice-dollar"></i><span class="dash-nav-label">Billing & Invoices</span>
-            </button>
-            <button class="dash-nav-item" onclick="switchTab('settings', this)">
-                <i class="fa-solid fa-gear"></i><span class="dash-nav-label">Settings</span>
-            </button>
-        </nav>
-        <div class="dash-sidebar-footer">
-            <a href="index.html" class="dash-logout-btn">
-                <i class="fa-solid fa-right-from-bracket"></i><span class="dash-nav-label">Logout</span>
-            </a>
-        </div>
-    </aside>
-
-    <!-- Overlay for mobile sidebar -->
-    <div class="dash-sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
-
-    <!-- ========== MAIN ========== -->
-    <main class="dash-main">
-        <!-- Header -->
-        <header class="dash-header">
-            <div class="dash-header-left">
-                <button class="dash-mobile-toggle" onclick="openSidebar()"><i class="fa-solid fa-bars"></i></button>
-                <h1 class="dash-header-title"><span class="dash-title-prefix">Dashboard / </span><span id="pageTitle">Overview</span></h1>
-            </div>
-            <div class="dash-header-right">
-                <div class="dash-search-box">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Search..." id="dashSearch">
-                </div>
-                <button class="dash-hdr-pill-btn" onclick="toggleDark()" title="Dark Mode"><i class="fa-solid fa-moon"></i></button>
-                <button class="dash-hdr-pill-btn" onclick="toggleRTL()" title="RTL"><i class="fa-solid fa-right-left"></i></button>
-                <!-- Notifications -->
-                <div style="position: relative;">
-                    <button class="dash-hdr-pill-btn dash-notif-btn" onclick="toggleNotifications()">
-                        <i class="fa-solid fa-bell"></i>
-                        <span class="dash-notif-dot"></span>
-                    </button>
-                    <div class="dash-notif-dropdown" id="notifDropdown">
-                        <div class="dash-notif-header">
-                            <span>Notifications</span>
-                            <a href="#" style="font-size: 0.75rem; color: var(--primary); text-decoration: none;">Mark all read</a>
-                        </div>
-                        <div class="dash-notif-list">
-                            <div class="dash-notif-item">
-                                <i class="fa-solid fa-truck"></i>
-                                <div>
-                                    <p>Truck #42 dispatched to your location</p>
-                                    <span class="dash-notif-time">5 minutes ago</span>
-                                </div>
-                            </div>
-                            <div class="dash-notif-item">
-                                <i class="fa-solid fa-check-circle"></i>
-                                <div>
-                                    <p>Service request #RF-1047 completed</p>
-                                    <span class="dash-notif-time">2 hours ago</span>
-                                </div>
-                            </div>
-                            <div class="dash-notif-item">
-                                <i class="fa-solid fa-file-invoice"></i>
-                                <div>
-                                    <p>Invoice #INV-2024-089 is ready for review</p>
-                                    <span class="dash-notif-time">Yesterday</span>
-                                </div>
-                            </div>
-                            <div class="dash-notif-item">
-                                <i class="fa-solid fa-gift"></i>
-                                <div>
-                                    <p>Your Pro membership renews in 7 days</p>
-                                    <span class="dash-notif-time">2 days ago</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Profile -->
-                <button class="dash-profile-btn">
-                    <div class="avatar">JD</div>
-                    <span>John Doe</span>
+    <div class="dash-layout">
+        <!-- ========== SIDEBAR ========== -->
+        <aside class="dash-sidebar" id="dashSidebar">
+            <div class="dash-sidebar-header">
+                <a href="index.html" id="dashLogo" class="nav-logo" aria-label="RescueFleet Home"></a>
+                <button type="button" class="dash-sidebar-close" onclick="closeSidebar()" aria-label="Close Sidebar">
+                    <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
-        </header>
-
-        <!-- Body -->
-        <div class="dash-body">
-
-            <!-- ===== TAB: OVERVIEW ===== -->
-            <div class="dash-tab-content active" id="tab-overview">
-                <div class="dash-welcome">
-                    <h2>Welcome back, John! 👋</h2>
-                    <p>Here's a quick overview of your roadside assistance account and recent activity.</p>
-                </div>
-
-                <div class="dash-metrics">
-                    <div class="dash-metric-card">
-                        <div class="dash-metric-header">
-                            <div class="dash-metric-icon"><i class="fa-solid fa-clipboard-list"></i></div>
-                            <span class="dash-metric-change up">+2 this month</span>
-                        </div>
-                        <span class="dash-metric-value">12</span>
-                        <span class="dash-metric-label">Total Requests</span>
-                    </div>
-                    <div class="dash-metric-card">
-                        <div class="dash-metric-header">
-                            <div class="dash-metric-icon"><i class="fa-solid fa-truck-fast"></i></div>
-                            <span class="dash-metric-change up">Active</span>
-                        </div>
-                        <span class="dash-metric-value">1</span>
-                        <span class="dash-metric-label">Active Dispatch</span>
-                    </div>
-                    <div class="dash-metric-card">
-                        <div class="dash-metric-header">
-                            <div class="dash-metric-icon"><i class="fa-solid fa-clock"></i></div>
-                        </div>
-                        <span class="dash-metric-value">14 min</span>
-                        <span class="dash-metric-label">Avg. Response Time</span>
-                    </div>
-                    <div class="dash-metric-card">
-                        <div class="dash-metric-header">
-                            <div class="dash-metric-icon"><i class="fa-solid fa-credit-card"></i></div>
-                        </div>
-                        <span class="dash-metric-value">$245</span>
-                        <span class="dash-metric-label">Outstanding Balance</span>
-                    </div>
-                </div>
-
-                <!-- Quick Actions -->
-                <h3 style="font-size: 1rem; font-weight: 600; margin-bottom: 16px;">Quick Actions</h3>
-                <div class="dash-ops-grid">
-                    <div class="dash-ops-card" onclick="switchTab('requests', document.querySelectorAll('.dash-nav-item')[1])">
-                        <div class="dash-ops-icon"><i class="fa-solid fa-plus"></i></div>
-                        <div class="dash-ops-title">New Request</div>
-                        <div class="dash-ops-desc">Submit a new roadside assistance request</div>
-                    </div>
-                    <div class="dash-ops-card" onclick="switchTab('dispatch', document.querySelectorAll('.dash-nav-item')[2])">
-                        <div class="dash-ops-icon"><i class="fa-solid fa-satellite-dish"></i></div>
-                        <div class="dash-ops-title">Track Dispatch</div>
-                        <div class="dash-ops-desc">Monitor your active dispatch in real-time</div>
-                    </div>
-                    <div class="dash-ops-card" onclick="switchTab('billing', document.querySelectorAll('.dash-nav-item')[4])">
-                        <div class="dash-ops-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
-                        <div class="dash-ops-title">View Invoices</div>
-                        <div class="dash-ops-desc">Review and download your billing history</div>
-                    </div>
-                </div>
-
-                <!-- Recent Activity -->
-                <div class="dash-panel">
-                    <div class="dash-panel-header">
-                        <span class="dash-panel-title">Recent Activity</span>
-                        <a href="#" style="font-size: 0.82rem; color: var(--primary); text-decoration: none;" onclick="switchTab('history', document.querySelectorAll('.dash-nav-item')[3]); return false;">View All</a>
-                    </div>
-                    <div class="dash-table-responsive">
-                        <table class="dash-table-custom">
-                            <thead>
-                                <tr><th>Request ID</th><th>Service</th><th>Date</th><th>Status</th></tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td style="font-weight: 600;">RF-1048</td>
-                                    <td>Emergency Towing</td>
-                                    <td>Nov 25, 2024</td>
-                                    <td><span class="dash-status active"><span class="dash-status-dot"></span> In Progress</span></td>
-                                </tr>
-                                <tr>
-                                    <td style="font-weight: 600;">RF-1047</td>
-                                    <td>Battery Jump-Start</td>
-                                    <td>Nov 20, 2024</td>
-                                    <td><span class="dash-status completed"><span class="dash-status-dot"></span> Completed</span></td>
-                                </tr>
-                                <tr>
-                                    <td style="font-weight: 600;">RF-1039</td>
-                                    <td>Flat Tire Change</td>
-                                    <td>Nov 12, 2024</td>
-                                    <td><span class="dash-status completed"><span class="dash-status-dot"></span> Completed</span></td>
-                                </tr>
-                                <tr>
-                                    <td style="font-weight: 600;">RF-1031</td>
-                                    <td>Lockout Service</td>
-                                    <td>Oct 28, 2024</td>
-                                    <td><span class="dash-status completed"><span class="dash-status-dot"></span> Completed</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+            <nav class="dash-sidebar-nav">
+                <button class="dash-nav-item active" onclick="switchTab('overview', this)">
+                    <i class="fa-solid fa-gauge-high"></i><span class="dash-nav-label">Overview</span>
+                </button>
+                <button class="dash-nav-item" onclick="switchTab('requests', this)">
+                    <i class="fa-solid fa-clipboard-list"></i><span class="dash-nav-label">My Requests</span>
+                </button>
+                <button class="dash-nav-item" onclick="switchTab('dispatch', this)">
+                    <i class="fa-solid fa-satellite-dish"></i><span class="dash-nav-label">Track Dispatch</span>
+                </button>
+                <button class="dash-nav-item" onclick="switchTab('history', this)">
+                    <i class="fa-solid fa-clock-rotate-left"></i><span class="dash-nav-label">Service History</span>
+                </button>
+                <button class="dash-nav-item" onclick="switchTab('billing', this)">
+                    <i class="fa-solid fa-file-invoice-dollar"></i><span class="dash-nav-label">Billing &
+                        Invoices</span>
+                </button>
+                <button class="dash-nav-item" onclick="switchTab('settings', this)">
+                    <i class="fa-solid fa-gear"></i><span class="dash-nav-label">Settings</span>
+                </button>
+            </nav>
+            <div class="dash-sidebar-footer">
+                <button type="button" class="dash-logout-btn" onclick="openLogoutModal()">
+                    <i class="fa-solid fa-right-from-bracket"></i><span class="dash-nav-label">Logout</span>
+                </button>
             </div>
+        </aside>
 
-            <!-- ===== TAB: MY REQUESTS ===== -->
-            <div class="dash-tab-content" id="tab-requests">
-                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; flex-wrap: wrap; gap: 12px;">
-                    <h2 style="font-size: 1.3rem; font-weight: 600;">My Requests</h2>
-                    <button class="btn btn-primary btn-sm"><i class="fa-solid fa-plus"></i> New Request</button>
+        <!-- Overlay for mobile sidebar -->
+        <div class="dash-sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+
+        <!-- ========== MAIN ========== -->
+        <main class="dash-main">
+            <!-- Header -->
+            <header class="dash-header">
+                <div class="dash-header-left">
+                    <button class="dash-mobile-toggle" onclick="openSidebar()"><i class="fa-solid fa-bars"></i></button>
+                    <h1 class="dash-header-title"><span class="dash-title-prefix">Dashboard / </span><span
+                            id="pageTitle">Overview</span></h1>
                 </div>
-                <div class="dash-panel">
-                    <div class="dash-panel-header">
-                        <span class="dash-panel-title">All Service Requests</span>
-                        <div class="dash-search-box" style="min-width: 200px;">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                            <input type="text" placeholder="Search requests...">
+                <div class="dash-header-right">
+                    <div class="dash-search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search..." id="dashSearch">
+                    </div>
+                    <button class="dash-hdr-pill-btn" onclick="toggleDark()" title="Dark Mode"><i
+                            class="fa-solid fa-moon"></i></button>
+                    <button class="dash-hdr-pill-btn" onclick="toggleRTL()" title="RTL"><i
+                            class="fa-solid fa-right-left"></i></button>
+                    <!-- Notifications -->
+                    <div style="position: relative;">
+                        <button class="dash-hdr-pill-btn dash-notif-btn" onclick="toggleNotifications()">
+                            <i class="fa-solid fa-bell"></i>
+                            <span class="dash-notif-dot"></span>
+                        </button>
+                        <div class="dash-notif-dropdown" id="notifDropdown">
+                            <div class="dash-notif-header">
+                                <span>Notifications</span>
+                                <a href="#"
+                                    style="font-size: 0.75rem; color: var(--primary); text-decoration: none;">Mark all
+                                    read</a>
+                            </div>
+                            <div class="dash-notif-list">
+                                <div class="dash-notif-item">
+                                    <i class="fa-solid fa-truck"></i>
+                                    <div>
+                                        <p>Truck #42 dispatched to your location</p>
+                                        <span class="dash-notif-time">5 minutes ago</span>
+                                    </div>
+                                </div>
+                                <div class="dash-notif-item">
+                                    <i class="fa-solid fa-check-circle"></i>
+                                    <div>
+                                        <p>Service request #RF-1047 completed</p>
+                                        <span class="dash-notif-time">2 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="dash-notif-item">
+                                    <i class="fa-solid fa-file-invoice"></i>
+                                    <div>
+                                        <p>Invoice #INV-2024-089 is ready for review</p>
+                                        <span class="dash-notif-time">Yesterday</span>
+                                    </div>
+                                </div>
+                                <div class="dash-notif-item">
+                                    <i class="fa-solid fa-gift"></i>
+                                    <div>
+                                        <p>Your Pro membership renews in 7 days</p>
+                                        <span class="dash-notif-time">2 days ago</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="dash-table-responsive">
-                        <table class="dash-table-custom">
-                            <thead>
-                                <tr><th>ID</th><th>Service Type</th><th>Vehicle</th><th>Date</th><th>Amount</th><th>Status</th></tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td style="font-weight: 600;">RF-1048</td><td>Emergency Towing</td><td>2022 Honda Civic</td><td>Nov 25, 2024</td><td>$95.00</td>
-                                    <td><span class="dash-status active"><span class="dash-status-dot"></span> In Progress</span></td>
-                                </tr>
-                                <tr>
-                                    <td style="font-weight: 600;">RF-1047</td><td>Battery Jump-Start</td><td>2022 Honda Civic</td><td>Nov 20, 2024</td><td>$55.00</td>
-                                    <td><span class="dash-status completed"><span class="dash-status-dot"></span> Completed</span></td>
-                                </tr>
-                                <tr>
-                                    <td style="font-weight: 600;">RF-1039</td><td>Flat Tire Change</td><td>2020 Toyota Camry</td><td>Nov 12, 2024</td><td>$60.00</td>
-                                    <td><span class="dash-status completed"><span class="dash-status-dot"></span> Completed</span></td>
-                                </tr>
-                                <tr>
-                                    <td style="font-weight: 600;">RF-1031</td><td>Lockout Service</td><td>2022 Honda Civic</td><td>Oct 28, 2024</td><td>$50.00</td>
-                                    <td><span class="dash-status completed"><span class="dash-status-dot"></span> Completed</span></td>
-                                </tr>
-                                <tr>
-                                    <td style="font-weight: 600;">RF-1024</td><td>Fuel Delivery</td><td>2020 Toyota Camry</td><td>Oct 15, 2024</td><td>$65.00</td>
-                                    <td><span class="dash-status completed"><span class="dash-status-dot"></span> Completed</span></td>
-                                </tr>
-                                <tr>
-                                    <td style="font-weight: 600;">RF-1018</td><td>Emergency Towing</td><td>2022 Honda Civic</td><td>Sep 30, 2024</td><td>$120.00</td>
-                                    <td><span class="dash-status completed"><span class="dash-status-dot"></span> Completed</span></td>
-                                </tr>
-                                <tr>
-                                    <td style="font-weight: 600;">RF-1005</td><td>Battery Jump-Start</td><td>2020 Toyota Camry</td><td>Sep 12, 2024</td><td>$55.00</td>
-                                    <td><span class="dash-status cancelled"><span class="dash-status-dot"></span> Cancelled</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <!-- Profile -->
+                    <button class="dash-profile-btn">
+                        <div class="avatar">RM</div>
+                        <span>Ryan Mitchell</span>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Body -->
+            <div class="dash-body">
+
+                <!-- ===== TAB: OVERVIEW ===== -->
+                <div class="dash-tab-content active" id="tab-overview">
+                    <div class="dash-welcome">
+                        <h2>Welcome back, Ryan! <i class="fa-solid fa-hand"></i></h2>
+                        <p>Here's a quick overview of your roadside assistance account and recent activity.</p>
+                    </div>
+
+                    <div class="dash-metrics">
+                        <div class="dash-metric-card">
+                            <div class="dash-metric-header">
+                                <div class="dash-metric-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+                                <span class="dash-metric-change up">+2 this month</span>
+                            </div>
+                            <span class="dash-metric-value">12</span>
+                            <span class="dash-metric-label">Total Requests</span>
+                        </div>
+                        <div class="dash-metric-card">
+                            <div class="dash-metric-header">
+                                <div class="dash-metric-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                                <span class="dash-metric-change up">Active</span>
+                            </div>
+                            <span class="dash-metric-value">1</span>
+                            <span class="dash-metric-label">Active Dispatch</span>
+                        </div>
+                        <div class="dash-metric-card">
+                            <div class="dash-metric-header">
+                                <div class="dash-metric-icon"><i class="fa-solid fa-clock"></i></div>
+                            </div>
+                            <span class="dash-metric-value">14 min</span>
+                            <span class="dash-metric-label">Avg. Response Time</span>
+                        </div>
+                        <div class="dash-metric-card">
+                            <div class="dash-metric-header">
+                                <div class="dash-metric-icon"><i class="fa-solid fa-credit-card"></i></div>
+                            </div>
+                            <span class="dash-metric-value">$245</span>
+                            <span class="dash-metric-label">Outstanding Balance</span>
+                        </div>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <h3 style="font-size: 1rem; font-weight: 600; margin-bottom: 16px;">Quick Actions</h3>
+                    <div class="dash-ops-grid">
+                        <div class="dash-ops-card"
+                            onclick="switchTab('requests', document.querySelectorAll('.dash-nav-item')[1])">
+                            <div class="dash-ops-icon"><i class="fa-solid fa-plus"></i></div>
+                            <div class="dash-ops-title">New Request</div>
+                            <div class="dash-ops-desc">Submit a new roadside assistance request</div>
+                        </div>
+                        <div class="dash-ops-card"
+                            onclick="switchTab('dispatch', document.querySelectorAll('.dash-nav-item')[2])">
+                            <div class="dash-ops-icon"><i class="fa-solid fa-satellite-dish"></i></div>
+                            <div class="dash-ops-title">Track Dispatch</div>
+                            <div class="dash-ops-desc">Monitor your active dispatch in real-time</div>
+                        </div>
+                        <div class="dash-ops-card"
+                            onclick="switchTab('billing', document.querySelectorAll('.dash-nav-item')[4])">
+                            <div class="dash-ops-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                            <div class="dash-ops-title">View Invoices</div>
+                            <div class="dash-ops-desc">Review and download your billing history</div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Activity -->
+                    <div class="dash-panel">
+                        <div class="dash-panel-header">
+                            <span class="dash-panel-title">Recent Activity</span>
+                            <a href="#" style="font-size: 0.82rem; color: var(--primary); text-decoration: none;"
+                                onclick="switchTab('history', document.querySelectorAll('.dash-nav-item')[3]); return false;">View
+                                All</a>
+                        </div>
+                        <div class="dash-table-responsive">
+                            <table class="dash-table-custom">
+                                <thead>
+                                    <tr>
+                                        <th>Request ID</th>
+                                        <th>Service</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="font-weight: 600;">RF-1048</td>
+                                        <td>Emergency Towing</td>
+                                        <td>Nov 25, 2024</td>
+                                        <td><span class="dash-status active"><span class="dash-status-dot"></span> In
+                                                Progress</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight: 600;">RF-1047</td>
+                                        <td>Battery Jump-Start</td>
+                                        <td>Nov 20, 2024</td>
+                                        <td><span class="dash-status completed"><span class="dash-status-dot"></span>
+                                                Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight: 600;">RF-1039</td>
+                                        <td>Flat Tire Change</td>
+                                        <td>Nov 12, 2024</td>
+                                        <td><span class="dash-status completed"><span class="dash-status-dot"></span>
+                                                Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight: 600;">RF-1031</td>
+                                        <td>Lockout Service</td>
+                                        <td>Oct 28, 2024</td>
+                                        <td><span class="dash-status completed"><span class="dash-status-dot"></span>
+                                                Completed</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
+
+                <!-- ===== TAB: MY REQUESTS ===== -->
+                <div class="dash-tab-content" id="tab-requests">
+                    <div
+                        style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; flex-wrap: wrap; gap: 12px;">
+                        <h2 style="font-size: 1.3rem; font-weight: 600;">My Requests</h2>
+                        <button class="btn btn-primary btn-sm"><i class="fa-solid fa-plus"></i> New Request</button>
+                    </div>
+                    <div class="dash-panel">
+                        <div class="dash-panel-header">
+                            <span class="dash-panel-title">All Service Requests</span>
+                            <div class="dash-search-box" style="min-width: 200px;">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <input type="text" placeholder="Search requests...">
+                            </div>
+                        </div>
+                        <div class="dash-table-responsive">
+                            <table class="dash-table-custom">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Service Type</th>
+                                        <th>Vehicle</th>
+                                        <th>Date</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="font-weight: 600;">RF-1048</td>
+                                        <td>Emergency Towing</td>
+                                        <td>2022 Honda Civic</td>
+                                        <td>Nov 25, 2024</td>
+                                        <td>$95.00</td>
+                                        <td><span class="dash-status active"><span class="dash-status-dot"></span> In
+                                                Progress</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight: 600;">RF-1047</td>
+                                        <td>Battery Jump-Start</td>
+                                        <td>2022 Honda Civic</td>
+                                        <td>Nov 20, 2024</td>
+                                        <td>$55.00</td>
+                                        <td><span class="dash-status completed"><span class="dash-status-dot"></span>
+                                                Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight: 600;">RF-1039</td>
+                                        <td>Flat Tire Change</td>
+                                        <td>2020 Toyota Camry</td>
+                                        <td>Nov 12, 2024</td>
+                                        <td>$60.00</td>
+                                        <td><span class="dash-status completed"><span class="dash-status-dot"></span>
+                                                Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight: 600;">RF-1031</td>
+                                        <td>Lockout Service</td>
+                                        <td>2022 Honda Civic</td>
+                                        <td>Oct 28, 2024</td>
+                                        <td>$50.00</td>
+                                        <td><span class="dash-status completed"><span class="dash-status-dot"></span>
+                                                Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight: 600;">RF-1024</td>
+                                        <td>Fuel Delivery</td>
+                                        <td>2020 Toyota Camry</td>
+                                        <td>Oct 15, 2024</td>
+                                        <td>$65.00</td>
+                                        <td><span class="dash-status completed"><span class="dash-status-dot"></span>
+                                                Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight: 600;">RF-1018</td>
+                                        <td>Emergency Towing</td>
+                                        <td>2022 Honda Civic</td>
+                                        <td>Sep 30, 2024</td>
+                                        <td>$120.00</td>
+                                        <td><span class="dash-status completed"><span class="dash-status-dot"></span>
+                                                Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight: 600;">RF-1005</td>
+                                        <td>Battery Jump-Start</td>
+                                        <td>2020 Toyota Camry</td>
+                                        <td>Sep 12, 2024</td>
+                                        <td>$55.00</td>
+                                        <td><span class="dash-status cancelled"><span class="dash-status-dot"></span>
+                                                Cancelled</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight: 600;">RF-0998</td>
+                                        <td>Flatbed Towing</td>
+                                        <td>2022 Honda Civic</td>
+                                        <td>Sep 02, 2024</td>
+                                        <td>$85.00</td>
+                                        <td><span class="dash-status completed"><span class="dash-status-dot"></span>
+                                                Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight: 600;">RF-0991</td>
+                                        <td>Flat Tire Change</td>
+                                        <td>2020 Toyota Camry</td>
+                                        <td>Aug 21, 2024</td>
+                                        <td>$60.00</td>
+                                        <td><span class="dash-status completed"><span class="dash-status-dot"></span>
+                                                Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight: 600;">RF-0984</td>
+                                        <td>Winch-Out Service</td>
+                                        <td>2022 Honda Civic</td>
+                                        <td>Aug 09, 2024</td>
+                                        <td>$110.00</td>
+                                        <td><span class="dash-status completed"><span class="dash-status-dot"></span>
+                                                Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight: 600;">RF-0976</td>
+                                        <td>Lockout Service</td>
+                                        <td>2020 Toyota Camry</td>
+                                        <td>Jul 26, 2024</td>
+                                        <td>$50.00</td>
+                                        <td><span class="dash-status completed"><span class="dash-status-dot"></span>
+                                                Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight: 600;">RF-0969</td>
+                                        <td>Fuel Delivery</td>
+                                        <td>2022 Honda Civic</td>
+                                        <td>Jul 11, 2024</td>
+                                        <td>$65.00</td>
+                                        <td><span class="dash-status completed"><span class="dash-status-dot"></span>
+                                                Completed</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== TAB: TRACK DISPATCH ===== -->
+                <div class="dash-tab-content" id="tab-dispatch">
+                    <h2 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 24px;">Track Dispatch</h2>
+                    <div class="dash-dispatch-card">
+                        <div class="dash-dispatch-header">
+                            <div class="dash-dispatch-id"><i class="fa-solid fa-truck-fast"
+                                    style="color: var(--primary); margin-right: 8px;"></i>Request #RF-1048</div>
+                            <span class="dash-status active"><span class="dash-status-dot"></span> In Progress</span>
+                        </div>
+                        <div class="dash-dispatch-info">
+                            <div class="dash-dispatch-info-item"><label>Service Type</label><span>Emergency
+                                    Towing</span></div>
+                            <div class="dash-dispatch-info-item"><label>Assigned Truck</label><span>Truck #42 —
+                                    Flatbed</span></div>
+                            <div class="dash-dispatch-info-item"><label>ETA</label><span
+                                    style="color: var(--primary); font-weight: 600;">8 minutes</span></div>
+                            <div class="dash-dispatch-info-item"><label>Driver</label><span>Mike Stevens</span></div>
+                            <div class="dash-dispatch-info-item"><label>Driver Phone</label><span>(555) 123-4567</span>
+                            </div>
+                            <div class="dash-dispatch-info-item"><label>Your Location</label><span>I-45 N, Mile Marker
+                                    52</span></div>
+                        </div>
+                    </div>
+                    <div class="live-map-card dash-dispatch-map" style="margin-bottom: 24px;">
+                        <div class="dash-map-hud">
+                            <span class="live-map-status" style="margin-bottom: 0;"><span class="cta-live-dot"
+                                    aria-hidden="true"></span> Live GPS Telemetry · Truck #42</span>
+                            <span class="dash-map-telemetry">3.4 mi away · 42 mph · Signal Strong</span>
+                        </div>
+                        <div class="live-map-frame">
+                            <iframe class="live-map-iframe" title="Live GPS Dispatch Corridor — I-45 N, Houston, TX"
+                                src="https://maps.google.com/maps?q=I-45%20North%2C%20Houston%2C%20TX&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="live-map-bar">
+                            <div class="live-map-info">
+                                <h3>Truck #42 En Route to I-45 N, Mile Marker 52</h3>
+                                <p><i class="fa-solid fa-route"></i> Driver: Mike Stevens · Flatbed Carrier · ETA ~8 min
+                                </p>
+                            </div>
+                            <div class="live-map-actions">
+                                <a href="tel:+15551234567" class="btn btn-secondary btn-sm"><i
+                                        class="fa-solid fa-phone"></i> Call Driver</a>
+                                <a href="https://www.google.com/maps/search/?api=1&query=I-45+North,+Houston,+TX"
+                                    target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i> Open Full Map</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dash-dispatch-split">
+                        <div class="dash-panel">
+                            <div class="dash-panel-header"><span class="dash-panel-title">Dispatch Progress</span></div>
+                            <div class="dash-panel-body">
+                                <div class="dash-timeline-track">
+                                    <div class="dash-timeline-step done">
+                                        <div class="dash-timeline-dot"></div>
+                                        <h4>Request Received</h4>
+                                        <p>Nov 25, 2024 at 3:12 PM</p>
+                                    </div>
+                                    <div class="dash-timeline-step done">
+                                        <div class="dash-timeline-dot"></div>
+                                        <h4>Truck Dispatched</h4>
+                                        <p>Truck #42 assigned and en route — 3:14 PM</p>
+                                    </div>
+                                    <div class="dash-timeline-step active">
+                                        <div class="dash-timeline-dot"></div>
+                                        <h4>Driver En Route</h4>
+                                        <p>Estimated arrival in 8 minutes</p>
+                                    </div>
+                                    <div class="dash-timeline-step">
+                                        <div class="dash-timeline-dot"></div>
+                                        <h4>On-Site Service</h4>
+                                        <p>Waiting for driver arrival</p>
+                                    </div>
+                                    <div class="dash-timeline-step">
+                                        <div class="dash-timeline-dot"></div>
+                                        <h4>Service Complete</h4>
+                                        <p>Pending completion</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dash-panel dash-dispatch-photo-panel">
+                            <div class="dash-panel-header">
+                                <span class="dash-panel-title">Assigned Carrier · Truck #42</span>
+                                <span class="dash-status active"><span class="dash-status-dot"></span>Route</span>
+                            </div>
+                            <div class="dash-panel-body">
+                                <div class="dash-dispatch-photo-wrap">
+                                    <img src="assets/images/dashboard-truck42-dispatch.jpg"
+                                        alt="RescueFleet Truck #42 heavy flatbed carrier en route along I-45 North">
+                                </div>
+                                <div class="dash-dispatch-photo-caption">
+                                    <div>
+                                        <strong>Heavy-Duty Rollback Flatbed · Unit #42</strong>
+                                        <span>Driver: Mike Stevens · Dispatched from North Houston Hub</span>
+                                    </div>
+                                    <span style="font-weight: 600; color: var(--primary);">ETA 8 min</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== TAB: SERVICE HISTORY ===== -->
+                <div class="dash-tab-content" id="tab-history">
+                    <h2 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 24px;">Service History</h2>
+                    <div class="dash-panel">
+                        <div class="dash-panel-header">
+                            <span class="dash-panel-title">Complete Service Record</span>
+                            <select class="dash-custom-select"
+                                style="width: auto; padding: 6px 32px 6px 10px; font-size: 0.82rem;">
+                                <option>All Services</option>
+                                <option>Towing</option>
+                                <option>Jump-Start</option>
+                                <option>Tire Change</option>
+                                <option>Lockout</option>
+                                <option>Fuel Delivery</option>
+                            </select>
+                        </div>
+                        <div class="dash-table-responsive">
+                            <table class="dash-table-custom">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Service</th>
+                                        <th>Vehicle</th>
+                                        <th>Location</th>
+                                        <th>Date</th>
+                                        <th>Cost</th>
+                                        <th>Rating</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="font-weight:600;">RF-1047</td>
+                                        <td>Battery Jump-Start</td>
+                                        <td>2022 Honda Civic</td>
+                                        <td>Downtown Houston</td>
+                                        <td>Nov 20, 2024</td>
+                                        <td>$55.00</td>
+                                        <td><i class="fa-solid fa-star"
+                                                style="color:var(--primary);font-size:0.75rem;"></i> 5.0</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight:600;">RF-1039</td>
+                                        <td>Flat Tire Change</td>
+                                        <td>2020 Toyota Camry</td>
+                                        <td>US-290 Highway</td>
+                                        <td>Nov 12, 2024</td>
+                                        <td>$60.00</td>
+                                        <td><i class="fa-solid fa-star"
+                                                style="color:var(--primary);font-size:0.75rem;"></i> 4.8</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight:600;">RF-1031</td>
+                                        <td>Lockout Service</td>
+                                        <td>2022 Honda Civic</td>
+                                        <td>Galleria Mall</td>
+                                        <td>Oct 28, 2024</td>
+                                        <td>$50.00</td>
+                                        <td><i class="fa-solid fa-star"
+                                                style="color:var(--primary);font-size:0.75rem;"></i> 5.0</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight:600;">RF-1024</td>
+                                        <td>Fuel Delivery</td>
+                                        <td>2020 Toyota Camry</td>
+                                        <td>I-10 W Mile 85</td>
+                                        <td>Oct 15, 2024</td>
+                                        <td>$65.00</td>
+                                        <td><i class="fa-solid fa-star"
+                                                style="color:var(--primary);font-size:0.75rem;"></i> 4.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight:600;">RF-1018</td>
+                                        <td>Emergency Towing</td>
+                                        <td>2022 Honda Civic</td>
+                                        <td>Katy Freeway</td>
+                                        <td>Sep 30, 2024</td>
+                                        <td>$120.00</td>
+                                        <td><i class="fa-solid fa-star"
+                                                style="color:var(--primary);font-size:0.75rem;"></i> 5.0</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight:600;">RF-0998</td>
+                                        <td>Flatbed Towing</td>
+                                        <td>2022 Honda Civic</td>
+                                        <td>Beltway 8 West</td>
+                                        <td>Sep 02, 2024</td>
+                                        <td>$85.00</td>
+                                        <td><i class="fa-solid fa-star"
+                                                style="color:var(--primary);font-size:0.75rem;"></i> 4.9</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight:600;">RF-0991</td>
+                                        <td>Flat Tire Change</td>
+                                        <td>2020 Toyota Camry</td>
+                                        <td>Loop 610 South</td>
+                                        <td>Aug 21, 2024</td>
+                                        <td>$60.00</td>
+                                        <td><i class="fa-solid fa-star"
+                                                style="color:var(--primary);font-size:0.75rem;"></i> 5.0</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight:600;">RF-0984</td>
+                                        <td>Winch-Out Service</td>
+                                        <td>2022 Honda Civic</td>
+                                        <td>Memorial Park Rd</td>
+                                        <td>Aug 09, 2024</td>
+                                        <td>$110.00</td>
+                                        <td><i class="fa-solid fa-star"
+                                                style="color:var(--primary);font-size:0.75rem;"></i> 4.8</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight:600;">RF-0976</td>
+                                        <td>Lockout Service</td>
+                                        <td>2020 Toyota Camry</td>
+                                        <td>Sugar Land Town Sq</td>
+                                        <td>Jul 26, 2024</td>
+                                        <td>$50.00</td>
+                                        <td><i class="fa-solid fa-star"
+                                                style="color:var(--primary);font-size:0.75rem;"></i> 5.0</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight:600;">RF-0969</td>
+                                        <td>Fuel Delivery</td>
+                                        <td>2022 Honda Civic</td>
+                                        <td>I-59 SW Freeway</td>
+                                        <td>Jul 11, 2024</td>
+                                        <td>$65.00</td>
+                                        <td><i class="fa-solid fa-star"
+                                                style="color:var(--primary);font-size:0.75rem;"></i> 4.7</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== TAB: BILLING ===== -->
+                <div class="dash-tab-content" id="tab-billing">
+                    <h2 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 24px;">Billing & Invoices</h2>
+                    <div class="dash-billing-summary">
+                        <div class="dash-billing-card"><span class="value">$245.00</span><span class="label">Outstanding
+                                Balance</span></div>
+                        <div class="dash-billing-card"><span class="value">$19.00</span><span class="label">Monthly Plan
+                                (Pro)</span></div>
+                        <div class="dash-billing-card"><span class="value">$685.00</span><span class="label">Total Spent
+                                (2024)</span></div>
+                    </div>
+                    <div class="dash-panel" style="margin-bottom: 24px;">
+                        <div class="dash-panel-header"><span class="dash-panel-title">Payment Method</span><button
+                                class="btn btn-secondary btn-sm">Update</button></div>
+                        <div class="dash-panel-body">
+                            <div style="display: flex; align-items: center; gap: 16px;">
+                                <div
+                                    style="width: 48px; height: 32px; background: var(--secondary); border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fa-brands fa-cc-visa" style="color: #fff; font-size: 1.2rem;"></i></div>
+                                <div>
+                                    <div style="font-weight: 600; font-size: 0.9rem;">Visa ending in 4242</div>
+                                    <div style="font-size: 0.78rem; color: var(--text-muted);">Expires 08/2026</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dash-panel">
+                        <div class="dash-panel-header"><span class="dash-panel-title">Recent Invoices</span></div>
+                        <div class="dash-table-responsive">
+                            <table class="dash-table-custom">
+                                <thead>
+                                    <tr>
+                                        <th>Invoice #</th>
+                                        <th>Description</th>
+                                        <th>Date</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="font-weight:600;">INV-2024-091</td>
+                                        <td>Emergency Towing — RF-1048</td>
+                                        <td>Nov 25, 2024</td>
+                                        <td>$95.00</td>
+                                        <td><span class="dash-status pending"><span class="dash-status-dot"></span>
+                                                Pending</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight:600;">INV-2024-090</td>
+                                        <td>Pro Membership — December</td>
+                                        <td>Nov 25, 2024</td>
+                                        <td>$19.00</td>
+                                        <td><span class="dash-status pending"><span class="dash-status-dot"></span>
+                                                Pending</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight:600;">INV-2024-089</td>
+                                        <td>Battery Jump-Start — RF-1047</td>
+                                        <td>Nov 20, 2024</td>
+                                        <td>$55.00</td>
+                                        <td><span class="dash-status completed"><span class="dash-status-dot"></span>
+                                                Paid</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight:600;">INV-2024-085</td>
+                                        <td>Pro Membership — November</td>
+                                        <td>Oct 25, 2024</td>
+                                        <td>$19.00</td>
+                                        <td><span class="dash-status completed"><span class="dash-status-dot"></span>
+                                                Paid</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight:600;">INV-2024-082</td>
+                                        <td>Flat Tire Change — RF-1039</td>
+                                        <td>Nov 12, 2024</td>
+                                        <td>$60.00</td>
+                                        <td><span class="dash-status completed"><span class="dash-status-dot"></span>
+                                                Paid</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight:600;">INV-2024-079</td>
+                                        <td>Lockout Service — RF-1031</td>
+                                        <td>Oct 28, 2024</td>
+                                        <td>$50.00</td>
+                                        <td><span class="dash-status completed"><span class="dash-status-dot"></span>
+                                                Paid</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight:600;">INV-2024-076</td>
+                                        <td>Pro Membership — October</td>
+                                        <td>Sep 25, 2024</td>
+                                        <td>$19.00</td>
+                                        <td><span class="dash-status completed"><span class="dash-status-dot"></span>
+                                                Paid</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight:600;">INV-2024-072</td>
+                                        <td>Emergency Towing — RF-1018</td>
+                                        <td>Sep 30, 2024</td>
+                                        <td>$120.00</td>
+                                        <td><span class="dash-status completed"><span class="dash-status-dot"></span>
+                                                Paid</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight:600;">INV-2024-068</td>
+                                        <td>Flatbed Towing — RF-0998</td>
+                                        <td>Sep 02, 2024</td>
+                                        <td>$85.00</td>
+                                        <td><span class="dash-status completed"><span class="dash-status-dot"></span>
+                                                Paid</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight:600;">INV-2024-064</td>
+                                        <td>Winch-Out Service — RF-0984</td>
+                                        <td>Aug 09, 2024</td>
+                                        <td>$110.00</td>
+                                        <td><span class="dash-status completed"><span class="dash-status-dot"></span>
+                                                Paid</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== TAB: SETTINGS ===== -->
+                <div class="dash-tab-content" id="tab-settings">
+                    <h2 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 24px;">Account Settings</h2>
+                    <!-- Personal Info -->
+                    <div class="dash-panel">
+                        <div class="dash-panel-header"><span class="dash-panel-title">Personal Information</span></div>
+                        <div class="dash-panel-body">
+                            <div class="dash-grid-2">
+                                <div class="dash-form-group"><label class="dash-form-label">First Name</label><input
+                                        class="dash-custom-input" type="text" value="Ryan"></div>
+                                <div class="dash-form-group"><label class="dash-form-label">Last Name</label><input
+                                        class="dash-custom-input" type="text" value="Mitchell"></div>
+                                <div class="dash-form-group"><label class="dash-form-label">Email Address</label><input
+                                        class="dash-custom-input" type="email" value="ryan.mitchell@email.com"></div>
+                                <div class="dash-form-group"><label class="dash-form-label">Phone Number</label><input
+                                        class="dash-custom-input" type="tel" value="+1 (555) 234-5678"></div>
+                            </div>
+                            <button class="btn btn-primary btn-sm" style="margin-top: 8px;"><i
+                                    class="fa-solid fa-floppy-disk"></i> Save Changes</button>
+                        </div>
+                    </div>
+                    <!-- Vehicle Info -->
+                    <div class="dash-panel">
+                        <div class="dash-panel-header"><span class="dash-panel-title">My Vehicles</span><button
+                                class="btn btn-secondary btn-sm"><i class="fa-solid fa-plus"></i> Add Vehicle</button>
+                        </div>
+                        <div class="dash-table-responsive">
+                            <table class="dash-table-custom">
+                                <thead>
+                                    <tr>
+                                        <th>Vehicle</th>
+                                        <th>Year</th>
+                                        <th>Color</th>
+                                        <th>License Plate</th>
+                                        <th>Default</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="font-weight:600;">Honda Civic</td>
+                                        <td>2022</td>
+                                        <td>Silver</td>
+                                        <td>ABC-1234</td>
+                                        <td><i class="fa-solid fa-circle-check" style="color:var(--primary);"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight:600;">Toyota Camry</td>
+                                        <td>2020</td>
+                                        <td>White</td>
+                                        <td>XYZ-5678</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- Notifications -->
+                    <div class="dash-panel">
+                        <div class="dash-panel-header"><span class="dash-panel-title">Notification Preferences</span>
+                        </div>
+                        <div class="dash-panel-body">
+                            <div style="display: grid; gap: 16px;">
+                                <label
+                                    style="display: flex; align-items: center; justify-content: space-between; cursor: pointer;">
+                                    <div>
+                                        <div style="font-weight: 500; font-size: 0.9rem;">Dispatch Updates</div>
+                                        <div style="font-size: 0.78rem; color: var(--text-muted);">Receive real-time
+                                            updates on your dispatch status</div>
+                                    </div>
+                                    <input type="checkbox" checked
+                                        style="accent-color: var(--primary); width: 18px; height: 18px;">
+                                </label>
+                                <label
+                                    style="display: flex; align-items: center; justify-content: space-between; cursor: pointer;">
+                                    <div>
+                                        <div style="font-weight: 500; font-size: 0.9rem;">Billing Reminders</div>
+                                        <div style="font-size: 0.78rem; color: var(--text-muted);">Get notified about
+                                            upcoming payments and invoices</div>
+                                    </div>
+                                    <input type="checkbox" checked
+                                        style="accent-color: var(--primary); width: 18px; height: 18px;">
+                                </label>
+                                <label
+                                    style="display: flex; align-items: center; justify-content: space-between; cursor: pointer;">
+                                    <div>
+                                        <div style="font-weight: 500; font-size: 0.9rem;">Promotional Emails</div>
+                                        <div style="font-size: 0.78rem; color: var(--text-muted);">Receive special
+                                            offers and driving tips</div>
+                                    </div>
+                                    <input type="checkbox"
+                                        style="accent-color: var(--primary); width: 18px; height: 18px;">
+                                </label>
+                                <label
+                                    style="display: flex; align-items: center; justify-content: space-between; cursor: pointer;">
+                                    <div>
+                                        <div style="font-weight: 500; font-size: 0.9rem;">SMS Alerts</div>
+                                        <div style="font-size: 0.78rem; color: var(--text-muted);">Get text alerts for
+                                            critical dispatch and account updates</div>
+                                    </div>
+                                    <input type="checkbox" checked
+                                        style="accent-color: var(--primary); width: 18px; height: 18px;">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Change Password -->
+                    <div class="dash-panel">
+                        <div class="dash-panel-header"><span class="dash-panel-title">Change Password</span></div>
+                        <div class="dash-panel-body">
+                            <div style="max-width: 400px;">
+                                <div class="dash-form-group"><label class="dash-form-label">Current
+                                        Password</label><input class="dash-custom-input" type="password"
+                                        placeholder="Enter current password"></div>
+                                <div class="dash-form-group"><label class="dash-form-label">New Password</label><input
+                                        class="dash-custom-input" type="password" placeholder="Enter new password">
+                                </div>
+                                <div class="dash-form-group"><label class="dash-form-label">Confirm New
+                                        Password</label><input class="dash-custom-input" type="password"
+                                        placeholder="Confirm new password"></div>
+                                <button class="btn btn-primary btn-sm"><i class="fa-solid fa-lock"></i> Update
+                                    Password</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /dash-body -->
+        </main>
+    </div>
+
+    <!-- Logout Confirmation Modal -->
+    <div class="dash-modal-backdrop" id="logoutModal" role="dialog" aria-modal="true" aria-labelledby="logoutModalTitle"
+        onclick="if(event.target===this) closeLogoutModal()">
+        <div class="dash-modal-card">
+            <div class="dash-modal-icon"><i class="fa-solid fa-right-from-bracket"></i></div>
+            <h3 id="logoutModalTitle">Confirm Logout</h3>
+            <p>Are you sure you want to log out of your RescueFleet dashboard session?</p>
+            <div class="dash-modal-actions">
+                <button type="button" class="btn btn-secondary" onclick="closeLogoutModal()">Cancel</button>
+                <a href="index.html" class="btn dash-modal-confirm">Yes, Logout</a>
             </div>
+        </div>
+    </div>
 
-            <!-- ===== TAB: TRACK DISPATCH ===== -->
-            <div class="dash-tab-content" id="tab-dispatch">
-                <h2 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 24px;">Track Dispatch</h2>
-                <div class="dash-dispatch-card">
-                    <div class="dash-dispatch-header">
-                        <div class="dash-dispatch-id"><i class="fa-solid fa-truck-fast" style="color: var(--primary); margin-right: 8px;"></i>Request #RF-1048</div>
-                        <span class="dash-status active"><span class="dash-status-dot"></span> In Progress</span>
-                    </div>
-                    <div class="dash-dispatch-info">
-                        <div class="dash-dispatch-info-item"><label>Service Type</label><span>Emergency Towing</span></div>
-                        <div class="dash-dispatch-info-item"><label>Assigned Truck</label><span>Truck #42 — Flatbed</span></div>
-                        <div class="dash-dispatch-info-item"><label>ETA</label><span style="color: var(--primary); font-weight: 600;">8 minutes</span></div>
-                        <div class="dash-dispatch-info-item"><label>Driver</label><span>Mike Stevens</span></div>
-                        <div class="dash-dispatch-info-item"><label>Driver Phone</label><span>(555) 123-4567</span></div>
-                        <div class="dash-dispatch-info-item"><label>Your Location</label><span>I-45 N, Mile Marker 52</span></div>
-                    </div>
-                </div>
-                <div class="map-placeholder" style="margin-bottom: 24px;">
-                    <i class="fa-solid fa-map-location-dot"></i>
-                    <span>Live dispatch tracking map</span>
-                    <span style="font-size: 0.75rem;">Real-time GPS tracking of your assigned truck</span>
-                </div>
-                <div class="dash-panel">
-                    <div class="dash-panel-header"><span class="dash-panel-title">Dispatch Progress</span></div>
-                    <div class="dash-panel-body">
-                        <div class="dash-timeline-track">
-                            <div class="dash-timeline-step done"><div class="dash-timeline-dot"></div><h4>Request Received</h4><p>Nov 25, 2024 at 3:12 PM</p></div>
-                            <div class="dash-timeline-step done"><div class="dash-timeline-dot"></div><h4>Truck Dispatched</h4><p>Truck #42 assigned and en route — 3:14 PM</p></div>
-                            <div class="dash-timeline-step active"><div class="dash-timeline-dot"></div><h4>Driver En Route</h4><p>Estimated arrival in 8 minutes</p></div>
-                            <div class="dash-timeline-step"><div class="dash-timeline-dot"></div><h4>On-Site Service</h4><p>Waiting for driver arrival</p></div>
-                            <div class="dash-timeline-step"><div class="dash-timeline-dot"></div><h4>Service Complete</h4><p>Pending completion</p></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ===== TAB: SERVICE HISTORY ===== -->
-            <div class="dash-tab-content" id="tab-history">
-                <h2 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 24px;">Service History</h2>
-                <div class="dash-panel">
-                    <div class="dash-panel-header">
-                        <span class="dash-panel-title">Complete Service Record</span>
-                        <select class="dash-custom-select" style="width: auto; padding: 6px 32px 6px 10px; font-size: 0.82rem;">
-                            <option>All Services</option><option>Towing</option><option>Jump-Start</option><option>Tire Change</option><option>Lockout</option><option>Fuel Delivery</option>
-                        </select>
-                    </div>
-                    <div class="dash-table-responsive">
-                        <table class="dash-table-custom">
-                            <thead><tr><th>ID</th><th>Service</th><th>Vehicle</th><th>Location</th><th>Date</th><th>Cost</th><th>Rating</th></tr></thead>
-                            <tbody>
-                                <tr><td style="font-weight:600;">RF-1047</td><td>Battery Jump-Start</td><td>2022 Honda Civic</td><td>Downtown Houston</td><td>Nov 20, 2024</td><td>$55.00</td><td><i class="fa-solid fa-star" style="color:var(--primary);font-size:0.75rem;"></i> 5.0</td></tr>
-                                <tr><td style="font-weight:600;">RF-1039</td><td>Flat Tire Change</td><td>2020 Toyota Camry</td><td>US-290 Highway</td><td>Nov 12, 2024</td><td>$60.00</td><td><i class="fa-solid fa-star" style="color:var(--primary);font-size:0.75rem;"></i> 4.8</td></tr>
-                                <tr><td style="font-weight:600;">RF-1031</td><td>Lockout Service</td><td>2022 Honda Civic</td><td>Galleria Mall</td><td>Oct 28, 2024</td><td>$50.00</td><td><i class="fa-solid fa-star" style="color:var(--primary);font-size:0.75rem;"></i> 5.0</td></tr>
-                                <tr><td style="font-weight:600;">RF-1024</td><td>Fuel Delivery</td><td>2020 Toyota Camry</td><td>I-10 W Mile 85</td><td>Oct 15, 2024</td><td>$65.00</td><td><i class="fa-solid fa-star" style="color:var(--primary);font-size:0.75rem;"></i> 4.5</td></tr>
-                                <tr><td style="font-weight:600;">RF-1018</td><td>Emergency Towing</td><td>2022 Honda Civic</td><td>Katy Freeway</td><td>Sep 30, 2024</td><td>$120.00</td><td><i class="fa-solid fa-star" style="color:var(--primary);font-size:0.75rem;"></i> 5.0</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ===== TAB: BILLING ===== -->
-            <div class="dash-tab-content" id="tab-billing">
-                <h2 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 24px;">Billing & Invoices</h2>
-                <div class="dash-billing-summary">
-                    <div class="dash-billing-card"><span class="value">$245.00</span><span class="label">Outstanding Balance</span></div>
-                    <div class="dash-billing-card"><span class="value">$19.00</span><span class="label">Monthly Plan (Pro)</span></div>
-                    <div class="dash-billing-card"><span class="value">$685.00</span><span class="label">Total Spent (2024)</span></div>
-                </div>
-                <div class="dash-panel" style="margin-bottom: 24px;">
-                    <div class="dash-panel-header"><span class="dash-panel-title">Payment Method</span><button class="btn btn-secondary btn-sm">Update</button></div>
-                    <div class="dash-panel-body">
-                        <div style="display: flex; align-items: center; gap: 16px;">
-                            <div style="width: 48px; height: 32px; background: var(--secondary); border-radius: 4px; display: flex; align-items: center; justify-content: center;"><i class="fa-brands fa-cc-visa" style="color: #fff; font-size: 1.2rem;"></i></div>
-                            <div><div style="font-weight: 600; font-size: 0.9rem;">Visa ending in 4242</div><div style="font-size: 0.78rem; color: var(--text-muted);">Expires 08/2026</div></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="dash-panel">
-                    <div class="dash-panel-header"><span class="dash-panel-title">Recent Invoices</span></div>
-                    <div class="dash-table-responsive">
-                        <table class="dash-table-custom">
-                            <thead><tr><th>Invoice #</th><th>Description</th><th>Date</th><th>Amount</th><th>Status</th></tr></thead>
-                            <tbody>
-                                <tr><td style="font-weight:600;">INV-2024-091</td><td>Emergency Towing — RF-1048</td><td>Nov 25, 2024</td><td>$95.00</td><td><span class="dash-status pending"><span class="dash-status-dot"></span> Pending</span></td></tr>
-                                <tr><td style="font-weight:600;">INV-2024-090</td><td>Pro Membership — December</td><td>Nov 25, 2024</td><td>$19.00</td><td><span class="dash-status pending"><span class="dash-status-dot"></span> Pending</span></td></tr>
-                                <tr><td style="font-weight:600;">INV-2024-089</td><td>Battery Jump-Start — RF-1047</td><td>Nov 20, 2024</td><td>$55.00</td><td><span class="dash-status completed"><span class="dash-status-dot"></span> Paid</span></td></tr>
-                                <tr><td style="font-weight:600;">INV-2024-085</td><td>Pro Membership — November</td><td>Oct 25, 2024</td><td>$19.00</td><td><span class="dash-status completed"><span class="dash-status-dot"></span> Paid</span></td></tr>
-                                <tr><td style="font-weight:600;">INV-2024-082</td><td>Flat Tire Change — RF-1039</td><td>Nov 12, 2024</td><td>$60.00</td><td><span class="dash-status completed"><span class="dash-status-dot"></span> Paid</span></td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ===== TAB: SETTINGS ===== -->
-            <div class="dash-tab-content" id="tab-settings">
-                <h2 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 24px;">Account Settings</h2>
-                <!-- Personal Info -->
-                <div class="dash-panel">
-                    <div class="dash-panel-header"><span class="dash-panel-title">Personal Information</span></div>
-                    <div class="dash-panel-body">
-                        <div class="dash-grid-2">
-                            <div class="dash-form-group"><label class="dash-form-label">First Name</label><input class="dash-custom-input" type="text" value="John"></div>
-                            <div class="dash-form-group"><label class="dash-form-label">Last Name</label><input class="dash-custom-input" type="text" value="Doe"></div>
-                            <div class="dash-form-group"><label class="dash-form-label">Email Address</label><input class="dash-custom-input" type="email" value="john.doe@email.com"></div>
-                            <div class="dash-form-group"><label class="dash-form-label">Phone Number</label><input class="dash-custom-input" type="tel" value="+1 (555) 234-5678"></div>
-                        </div>
-                        <button class="btn btn-primary btn-sm" style="margin-top: 8px;"><i class="fa-solid fa-floppy-disk"></i> Save Changes</button>
-                    </div>
-                </div>
-                <!-- Vehicle Info -->
-                <div class="dash-panel">
-                    <div class="dash-panel-header"><span class="dash-panel-title">My Vehicles</span><button class="btn btn-secondary btn-sm"><i class="fa-solid fa-plus"></i> Add Vehicle</button></div>
-                    <div class="dash-table-responsive">
-                        <table class="dash-table-custom">
-                            <thead><tr><th>Vehicle</th><th>Year</th><th>Color</th><th>License Plate</th><th>Default</th></tr></thead>
-                            <tbody>
-                                <tr><td style="font-weight:600;">Honda Civic</td><td>2022</td><td>Silver</td><td>ABC-1234</td><td><i class="fa-solid fa-circle-check" style="color:var(--primary);"></i></td></tr>
-                                <tr><td style="font-weight:600;">Toyota Camry</td><td>2020</td><td>White</td><td>XYZ-5678</td><td></td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <!-- Notifications -->
-                <div class="dash-panel">
-                    <div class="dash-panel-header"><span class="dash-panel-title">Notification Preferences</span></div>
-                    <div class="dash-panel-body">
-                        <div style="display: grid; gap: 16px;">
-                            <label style="display: flex; align-items: center; justify-content: space-between; cursor: pointer;">
-                                <div><div style="font-weight: 500; font-size: 0.9rem;">Dispatch Updates</div><div style="font-size: 0.78rem; color: var(--text-muted);">Receive real-time updates on your dispatch status</div></div>
-                                <input type="checkbox" checked style="accent-color: var(--primary); width: 18px; height: 18px;">
-                            </label>
-                            <label style="display: flex; align-items: center; justify-content: space-between; cursor: pointer;">
-                                <div><div style="font-weight: 500; font-size: 0.9rem;">Billing Reminders</div><div style="font-size: 0.78rem; color: var(--text-muted);">Get notified about upcoming payments and invoices</div></div>
-                                <input type="checkbox" checked style="accent-color: var(--primary); width: 18px; height: 18px;">
-                            </label>
-                            <label style="display: flex; align-items: center; justify-content: space-between; cursor: pointer;">
-                                <div><div style="font-weight: 500; font-size: 0.9rem;">Promotional Emails</div><div style="font-size: 0.78rem; color: var(--text-muted);">Receive special offers and driving tips</div></div>
-                                <input type="checkbox" style="accent-color: var(--primary); width: 18px; height: 18px;">
-                            </label>
-                            <label style="display: flex; align-items: center; justify-content: space-between; cursor: pointer;">
-                                <div><div style="font-weight: 500; font-size: 0.9rem;">SMS Alerts</div><div style="font-size: 0.78rem; color: var(--text-muted);">Get text alerts for critical dispatch and account updates</div></div>
-                                <input type="checkbox" checked style="accent-color: var(--primary); width: 18px; height: 18px;">
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <!-- Change Password -->
-                <div class="dash-panel">
-                    <div class="dash-panel-header"><span class="dash-panel-title">Change Password</span></div>
-                    <div class="dash-panel-body">
-                        <div style="max-width: 400px;">
-                            <div class="dash-form-group"><label class="dash-form-label">Current Password</label><input class="dash-custom-input" type="password" placeholder="Enter current password"></div>
-                            <div class="dash-form-group"><label class="dash-form-label">New Password</label><input class="dash-custom-input" type="password" placeholder="Enter new password"></div>
-                            <div class="dash-form-group"><label class="dash-form-label">Confirm New Password</label><input class="dash-custom-input" type="password" placeholder="Confirm new password"></div>
-                            <button class="btn btn-primary btn-sm"><i class="fa-solid fa-lock"></i> Update Password</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div><!-- /dash-body -->
-    </main>
-</div>
-
-<script src="components.js"></script>
-<script>
-    function switchTab(tabId, navItem) {
-        document.querySelectorAll('.dash-tab-content').forEach(t => t.classList.remove('active'));
-        document.querySelectorAll('.dash-nav-item').forEach(n => n.classList.remove('active'));
-        const tab = document.getElementById('tab-' + tabId);
-        if (tab) tab.classList.add('active');
-        if (navItem) navItem.classList.add('active');
-        const titles = { overview: 'Overview', requests: 'My Requests', dispatch: 'Track Dispatch', history: 'Service History', billing: 'Billing & Invoices', settings: 'Settings' };
-        document.getElementById('pageTitle').textContent = titles[tabId] || tabId;
-        closeSidebar();
-    }
-    function openSidebar() {
-        document.getElementById('dashSidebar').classList.add('open');
-        document.getElementById('sidebarOverlay').classList.add('show');
-        document.body.style.overflow = 'hidden';
-    }
-    function closeSidebar() {
-        document.getElementById('dashSidebar').classList.remove('open');
-        document.getElementById('sidebarOverlay').classList.remove('show');
-        document.body.style.overflow = '';
-    }
-    function toggleNotifications() {
-        document.getElementById('notifDropdown').classList.toggle('show');
-    }
-    document.addEventListener('click', function(e) {
-        const dd = document.getElementById('notifDropdown');
-        if (dd && !e.target.closest('.dash-notif-btn') && !e.target.closest('.dash-notif-dropdown')) dd.classList.remove('show');
-    });
-    document.addEventListener('DOMContentLoaded', function() {
-        const logoEl = document.getElementById('dashLogo');
-        if (logoEl && typeof LOGO_SVG !== 'undefined') {
-            logoEl.innerHTML = LOGO_SVG + '<div><span class="dash-brand">RescueFleet</span><span class="dash-brand-sub">Roadside Assistance</span></div>';
+    <script src="components.js"></script>
+    <script>
+        function openLogoutModal() {
+            const modal = document.getElementById('logoutModal');
+            if (modal) modal.classList.add('show');
         }
-    });
-</script>
+        function closeLogoutModal() {
+            const modal = document.getElementById('logoutModal');
+            if (modal) modal.classList.remove('show');
+        }
+        function switchTab(tabId, navItem) {
+            document.querySelectorAll('.dash-tab-content').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.dash-nav-item').forEach(n => n.classList.remove('active'));
+            const tab = document.getElementById('tab-' + tabId);
+            if (tab) tab.classList.add('active');
+            if (navItem) navItem.classList.add('active');
+            const titles = { overview: 'Overview', requests: 'My Requests', dispatch: 'Track Dispatch', history: 'Service History', billing: 'Billing & Invoices', settings: 'Settings' };
+            document.getElementById('pageTitle').textContent = titles[tabId] || tabId;
+            closeSidebar();
+        }
+        function openSidebar() {
+            document.getElementById('dashSidebar').classList.add('open');
+            document.getElementById('sidebarOverlay').classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeSidebar() {
+            document.getElementById('dashSidebar').classList.remove('open');
+            document.getElementById('sidebarOverlay').classList.remove('show');
+            document.body.style.overflow = '';
+        }
+        function toggleNotifications() {
+            document.getElementById('notifDropdown').classList.toggle('show');
+        }
+        document.addEventListener('click', function (e) {
+            const dd = document.getElementById('notifDropdown');
+            if (dd && !e.target.closest('.dash-notif-btn') && !e.target.closest('.dash-notif-dropdown')) dd.classList.remove('show');
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeLogoutModal();
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            const logoEl = document.getElementById('dashLogo');
+            if (logoEl && typeof BRAND_LOGO_HTML !== 'undefined') {
+                logoEl.innerHTML = BRAND_LOGO_HTML;
+            }
+        });
+    </script>
 </body>
+
 </html>

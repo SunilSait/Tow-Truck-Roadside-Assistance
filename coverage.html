@@ -16,7 +16,9 @@
 <div id="navbar"></div>
 
 <!-- SECTION 1 — PAGE BANNER -->
-<section class="page-banner">
+<section class="page-banner page-banner--photo">
+    <img src="assets/images/banner-coverage.jpg" alt="Multi-lane highway interchange and city horizon lit at twilight" class="page-banner-bg">
+    <div class="page-banner-overlay" aria-hidden="true"></div>
     <div class="container">
         <div class="scroll-reveal" style="text-align: center;">
             <span class="section-label"><i class="fa-solid fa-map-location-dot"></i> Coverage</span>
@@ -32,14 +34,14 @@
         <div class="split-section scroll-reveal">
             <div class="split-content">
                 <span class="section-label"><i class="fa-solid fa-globe"></i> Service Network</span>
-                <h2 class="section-title" style="text-align: left;">35+ Cities, One Reliable Network</h2>
+                <h2 class="section-title">35+ Cities, One Reliable Network</h2>
                 <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">
                     RescueFleet has strategically positioned trucks and service centers across the state to ensure maximum coverage. Whether you're in a bustling downtown, a quiet suburb, or stranded on a remote highway, our GPS-tracked fleet can reach you quickly.
                 </p>
                 <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px;">
                     Our AI-powered dispatch system identifies the nearest available truck and routes it to your location using real-time traffic data, ensuring the fastest possible response time.
                 </p>
-                <div style="display: flex; gap: 24px; flex-wrap: wrap;">
+                <div class="split-inline-stats">
                     <div style="text-align: center;">
                         <span style="font-size: 1.8rem; font-weight: 700; color: var(--primary); display: block;" class="counter" data-target="35">0</span>
                         <span style="font-size: 0.78rem; color: var(--text-muted);">Cities Covered</span>
@@ -55,7 +57,7 @@
                 </div>
             </div>
             <div class="split-image">
-                <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=600&h=450&fit=crop" alt="Map view of service area" style="border-radius: var(--radius-lg); width: 100%; height: 420px; object-fit: cover;">
+                <img src="assets/images/coverage-dispatch-map.jpg" alt="Map view of service area">
             </div>
         </div>
     </div>
@@ -71,7 +73,7 @@
         </div>
         <div class="zone-grid scroll-reveal">
             <div class="zone-card">
-                <div class="zone-card-icon"><i class="fa-solid fa-buildings"></i></div>
+                <div class="zone-card-icon"><i class="fa-solid fa-city"></i></div>
                 <h3>Downtown & Urban Core</h3>
                 <p>Full-service coverage in all major city centers. High truck density ensures the fastest response times of 10-15 minutes even during peak hours.</p>
                 <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
@@ -159,7 +161,7 @@
         <div class="split-section reverse scroll-reveal">
             <div class="split-content">
                 <span class="section-label"><i class="fa-solid fa-road"></i> Highway Coverage</span>
-                <h2 class="section-title" style="text-align: left;">Major Highway Corridors</h2>
+                <h2 class="section-title">Major Highway Corridors</h2>
                 <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">
                     We maintain active coverage along all major interstate highways in the state. Our highway teams are specially trained for high-speed roadside situations and work closely with highway patrol for safe operations.
                 </p>
@@ -187,7 +189,7 @@
                 </div>
             </div>
             <div class="split-image">
-                <img src="https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?w=600&h=450&fit=crop" alt="Highway at sunset" style="border-radius: var(--radius-lg); width: 100%; height: 420px; object-fit: cover;">
+                <img src="assets/images/highway-corridor-sunset.jpg" alt="Highway at sunset">
             </div>
         </div>
     </div>
@@ -229,15 +231,15 @@
     <div class="container">
         <div class="split-section scroll-reveal">
             <div class="split-image">
-                <img src="https://images.unsplash.com/photo-1449965408869-ecd3f77b2735?w=600&h=450&fit=crop" alt="Tow truck fleet lineup" style="border-radius: var(--radius-lg); width: 100%; height: 420px; object-fit: cover;">
+                <img src="assets/images/coverage-fleet-lineup.jpg" alt="Tow truck fleet lineup">
             </div>
             <div class="split-content">
                 <span class="section-label"><i class="fa-solid fa-truck-front"></i> Our Fleet</span>
-                <h2 class="section-title" style="text-align: left;">120+ Trucks, Always Ready</h2>
+                <h2 class="section-title">120+ Trucks, Always Ready</h2>
                 <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">
                     Our fleet consists of flatbed carriers, wheel-lift trucks, and fully equipped service vans. Every vehicle is GPS-tracked and maintained to the highest standards.
                 </p>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                <div class="fleet-breakdown-grid">
                     <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 16px; text-align: center;">
                         <span style="font-size: 1.5rem; font-weight: 700; color: var(--primary); display: block;">45</span>
                         <span style="font-size: 0.78rem; color: var(--text-muted);">Flatbed Carriers</span>
@@ -263,12 +265,65 @@
 <!-- SECTION 8 — CTA -->
 <section class="section">
     <div class="container">
-        <div class="cta-banner scroll-reveal">
-            <h2>Not Sure if We Cover Your Area?</h2>
-            <p>Contact us and our team will confirm coverage for your specific location and provide response time estimates.</p>
-            <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-                <a href="contact.html" class="btn btn-primary"><i class="fa-solid fa-headset"></i> Contact Us</a>
-                <a href="tel:+18005551234" class="btn btn-secondary" style="background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.3); color: #fff;"><i class="fa-solid fa-phone"></i> Call Now</a>
+        <div class="coverage-cta-card scroll-reveal" id="coverageCtaCard">
+            <div class="coverage-cta-main">
+                <span class="section-label"><i class="fa-solid fa-location-crosshairs"></i> Live Zone Lookup</span>
+                <h2>Not Sure if We Cover Your Area?</h2>
+                <p>Enter your ZIP code or nearby highway corridor to verify live fleet readiness and estimated arrival windows — or reach our 24/7 dispatch coordinator anytime.</p>
+                <form class="coverage-zip-form" id="coverageZipForm">
+                    <div class="coverage-zip-input-wrap">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="coverageZipInput" placeholder="Enter ZIP or city (e.g. 77002, Austin)" aria-label="ZIP code or city" autocomplete="postal-code">
+                    </div>
+                    <button type="submit" class="btn btn-primary"><i class="fa-solid fa-bolt"></i> Check Availability</button>
+                </form>
+                <div class="coverage-zip-chips" aria-label="Sample coverage locations">
+                    <button type="button" class="coverage-zip-chip" data-loc="77002 Houston">77002 Houston</button>
+                    <button type="button" class="coverage-zip-chip" data-loc="75201 Dallas">75201 Dallas</button>
+                    <button type="button" class="coverage-zip-chip" data-loc="78701 Austin">78701 Austin</button>
+                    <button type="button" class="coverage-zip-chip" data-loc="I-10 West Corridor">I-10 Corridor</button>
+                </div>
+                <div class="coverage-zip-result" id="coverageZipResult" aria-live="polite">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Active in 15+ Texas metro centers &amp; interstate corridors 24/7.</span>
+                </div>
+                <div class="coverage-cta-actions">
+                    <a href="tel:+18005551234" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Call (800) 555-1234</a>
+                    <a href="contact.html" class="btn btn-secondary"><i class="fa-solid fa-headset"></i> Message Dispatch</a>
+                </div>
+            </div>
+            <div class="coverage-cta-panel">
+                <div class="coverage-panel-head">
+                    <span class="coverage-live-badge"><span class="coverage-live-dot" aria-hidden="true"></span> Dispatch Active</span>
+                    <span class="coverage-panel-tag">All 3 Zones</span>
+                </div>
+                <h3>Regional Coverage Guarantees</h3>
+                <div class="coverage-zone-list">
+                    <div class="coverage-zone-row">
+                        <div class="coverage-zone-icon"><i class="fa-solid fa-city"></i></div>
+                        <div class="coverage-zone-info">
+                            <strong>Urban Metro Centers</strong>
+                            <span>15+ major cities · 12 min avg ETA</span>
+                        </div>
+                    </div>
+                    <div class="coverage-zone-row">
+                        <div class="coverage-zone-icon"><i class="fa-solid fa-road"></i></div>
+                        <div class="coverage-zone-info">
+                            <strong>Interstate Corridors</strong>
+                            <span>I-10, I-35, I-45, I-20 &amp; US-290 patrol</span>
+                        </div>
+                    </div>
+                    <div class="coverage-zone-row">
+                        <div class="coverage-zone-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+                        <div class="coverage-zone-info">
+                            <strong>Rural &amp; Extended Tow Relay</strong>
+                            <span>County roads &amp; 200+ mi transport</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="coverage-panel-foot">
+                    <i class="fa-solid fa-shield-halved"></i> Zero out-of-zone dispatch fees quoted blindly
+                </div>
             </div>
         </div>
     </div>
