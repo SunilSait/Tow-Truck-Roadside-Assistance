@@ -75,8 +75,8 @@
             <div class="zone-card">
                 <div class="zone-card-icon"><i class="fa-solid fa-city"></i></div>
                 <h3>Downtown & Urban Core</h3>
-                <p>Full-service coverage in all major city centers. High truck density ensures the fastest response times of 10-15 minutes even during peak hours.</p>
-                <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
+                <p>Full-service coverage across major city hubs. High local unit density ensures quick downtown response within 10–15 minutes.</p>
+                <div>
                     <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 8px;">
                         <span style="color: var(--text-muted);">Response Time</span>
                         <span style="font-weight: 600; color: var(--primary);">10-15 min</span>
@@ -87,8 +87,8 @@
             <div class="zone-card">
                 <div class="zone-card-icon"><i class="fa-solid fa-house-chimney"></i></div>
                 <h3>Suburban Communities</h3>
-                <p>Extended reach into suburban neighborhoods, shopping areas, and residential communities surrounding major metro areas.</p>
-                <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
+                <p>Extended roadside reach into local neighborhoods, shopping districts, and outer residential communities around the clock.</p>
+                <div>
                     <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 8px;">
                         <span style="color: var(--text-muted);">Response Time</span>
                         <span style="font-weight: 600; color: var(--primary);">15-25 min</span>
@@ -100,7 +100,7 @@
                 <div class="zone-card-icon"><i class="fa-solid fa-road"></i></div>
                 <h3>Highways & Interstates</h3>
                 <p>Coverage along all major interstate corridors, toll roads, state highways, and rural routes connecting cities across the region.</p>
-                <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
+                <div>
                     <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 8px;">
                         <span style="color: var(--text-muted);">Response Time</span>
                         <span style="font-weight: 600; color: var(--primary);">20-30 min</span>
@@ -165,26 +165,26 @@
                 <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">
                     We maintain active coverage along all major interstate highways in the state. Our highway teams are specially trained for high-speed roadside situations and work closely with highway patrol for safe operations.
                 </p>
-                <div style="display: grid; gap: 10px; margin-bottom: 24px;">
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <i class="fa-solid fa-road" style="color: var(--primary); font-size: 0.85rem; width: 16px; text-align: center;"></i>
-                        <span style="font-size: 0.9rem; font-weight: 500;">I-10 — Houston to El Paso</span>
+                <div class="split-checklist split-checklist--corridors">
+                    <div class="split-checklist-item">
+                        <i class="fa-solid fa-road"></i>
+                        <span>I-10 — Houston to El Paso</span>
                     </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <i class="fa-solid fa-road" style="color: var(--primary); font-size: 0.85rem; width: 16px; text-align: center;"></i>
-                        <span style="font-size: 0.9rem; font-weight: 500;">I-35 — Laredo to Dallas</span>
+                    <div class="split-checklist-item">
+                        <i class="fa-solid fa-road"></i>
+                        <span>I-35 — Laredo to Dallas</span>
                     </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <i class="fa-solid fa-road" style="color: var(--primary); font-size: 0.85rem; width: 16px; text-align: center;"></i>
-                        <span style="font-size: 0.9rem; font-weight: 500;">I-45 — Houston to Dallas</span>
+                    <div class="split-checklist-item">
+                        <i class="fa-solid fa-road"></i>
+                        <span>I-45 — Houston to Dallas</span>
                     </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <i class="fa-solid fa-road" style="color: var(--primary); font-size: 0.85rem; width: 16px; text-align: center;"></i>
-                        <span style="font-size: 0.9rem; font-weight: 500;">I-20 — West Texas Corridor</span>
+                    <div class="split-checklist-item">
+                        <i class="fa-solid fa-road"></i>
+                        <span>I-20 — West Texas Corridor</span>
                     </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <i class="fa-solid fa-road" style="color: var(--primary); font-size: 0.85rem; width: 16px; text-align: center;"></i>
-                        <span style="font-size: 0.9rem; font-weight: 500;">US-290 — Houston to Austin</span>
+                    <div class="split-checklist-item">
+                        <i class="fa-solid fa-road"></i>
+                        <span>US-290 — Houston to Austin</span>
                     </div>
                 </div>
             </div>
@@ -275,7 +275,6 @@
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <input type="text" id="coverageZipInput" placeholder="Enter ZIP or city (e.g. 77002, Austin)" aria-label="ZIP code or city" autocomplete="postal-code">
                     </div>
-                    <button type="submit" class="btn btn-primary"><i class="fa-solid fa-bolt"></i> Check Availability</button>
                 </form>
                 <div class="coverage-zip-chips" aria-label="Sample coverage locations">
                     <button type="button" class="coverage-zip-chip" data-loc="77002 Houston">77002 Houston</button>

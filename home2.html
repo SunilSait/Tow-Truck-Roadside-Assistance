@@ -17,41 +17,121 @@
 <div id="navbar"></div>
 
 <!-- ============================================================
-     SECTION 1 — HERO (Two-Column with Floating Stats)
+     SECTION 1 — HERO (3-Slide Split Showcase)
      ============================================================ -->
-<section class="hero">
+<section class="hero home2-hero" id="home2HeroSlider">
     <div class="container">
-        <div class="split-section">
-            <div class="split-content scroll-reveal">
-                <span class="section-label"><i class="fa-solid fa-bolt"></i> 24/7 Emergency Service</span>
-                <h1 style="font-weight: 600; line-height: 1.15; margin-bottom: 20px;">
-                    Stranded? We'll Get<br>You <span style="color: var(--primary);">Back on Track</span>
-                </h1>
-                <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 32px; max-width: 500px;">
-                    Fast, reliable towing and roadside assistance across the region. From flat tires to engine breakdowns — we're just one call away, day or night.
-                </p>
-                <div class="split-actions">
-                    <a href="contact.html" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Call for Help</a>
-                    <a href="services.html" class="btn btn-secondary"><i class="fa-solid fa-list-check"></i> Our Services</a>
-                </div>
-                <div class="split-inline-stats">
-                    <div style="text-align: center;">
-                        <span style="font-size: 1.6rem; font-weight: 700; color: var(--primary); display: block;" class="counter" data-target="15">0</span>
-                        <span style="font-size: 0.78rem; color: var(--text-muted);">Min Avg. Response</span>
+        <div class="home2-hero-stage">
+            <!-- Slide 1 -->
+            <div class="home2-hero-slide active" aria-hidden="false">
+                <div class="split-section">
+                    <div class="split-content">
+                        <span class="section-label"><i class="fa-solid fa-bolt"></i> 24/7 Emergency Service</span>
+                        <h1 style="font-weight: 600; line-height: 1.15; margin-bottom: 20px;">
+                            Stranded? We'll Get<br>You <span style="color: var(--primary);">Back on Track</span>
+                        </h1>
+                        <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 32px; max-width: 500px;">
+                            Fast, reliable towing and roadside assistance across the region. From flat tires to engine breakdowns — we're just one call away, day or night.
+                        </p>
+                        <div class="split-actions">
+                            <a href="contact.html" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Call for Help</a>
+                            <a href="services.html" class="btn btn-secondary"><i class="fa-solid fa-list-check"></i> Our Services</a>
+                        </div>
+                        <div class="split-inline-stats">
+                            <div style="text-align: center;">
+                                <span style="font-size: 1.6rem; font-weight: 700; color: var(--primary); display: block;" class="counter" data-target="15">0</span>
+                                <span style="font-size: 0.78rem; color: var(--text-muted);">Min Avg. Response</span>
+                            </div>
+                            <div style="text-align: center;">
+                                <span style="font-size: 1.6rem; font-weight: 700; color: var(--primary); display: block;" class="counter" data-target="50000">0</span>
+                                <span style="font-size: 0.78rem; color: var(--text-muted);">Vehicles Rescued</span>
+                            </div>
+                            <div style="text-align: center;">
+                                <span style="font-size: 1.6rem; font-weight: 700; color: var(--primary); display: block;" class="counter" data-target="98">0</span>
+                                <span style="font-size: 0.78rem; color: var(--text-muted);">% Satisfaction</span>
+                            </div>
+                        </div>
                     </div>
-                    <div style="text-align: center;">
-                        <span style="font-size: 1.6rem; font-weight: 700; color: var(--primary); display: block;" class="counter" data-target="50000">0</span>
-                        <span style="font-size: 0.78rem; color: var(--text-muted);">Vehicles Rescued</span>
-                    </div>
-                    <div style="text-align: center;">
-                        <span style="font-size: 1.6rem; font-weight: 700; color: var(--primary); display: block;" class="counter" data-target="98">0</span>
-                        <span style="font-size: 0.78rem; color: var(--text-muted);">% Satisfaction</span>
+                    <div class="split-image">
+                        <img src="assets/images/hero-highway-sunset.jpg" alt="Tow truck on highway at sunset" class="hero-feature-img">
                     </div>
                 </div>
             </div>
-            <div class="split-image scroll-reveal">
-                <img src="assets/images/hero-highway-sunset.jpg" alt="Tow truck on highway at sunset" class="hero-feature-img">
+            <!-- Slide 2 -->
+            <div class="home2-hero-slide" aria-hidden="true">
+                <div class="split-section">
+                    <div class="split-content">
+                        <span class="section-label"><i class="fa-solid fa-truck-ramp-box"></i> Precision Flatbed Care</span>
+                        <h1 style="font-weight: 600; line-height: 1.15; margin-bottom: 20px;">
+                            Low-Angle Loading,<br><span style="color: var(--primary);">Zero-Hook</span> Protection
+                        </h1>
+                        <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 32px; max-width: 500px;">
+                            Extended 11° hydraulic beds, nylon over-the-tire soft straps, and EV-certified operators shield sports sedans, luxury coupes, and all-wheel-drive vehicles.
+                        </p>
+                        <div class="split-actions">
+                            <a href="index.html#quoteEstimator" class="btn btn-primary"><i class="fa-solid fa-calculator"></i> Estimate Rate</a>
+                            <a href="#fleet" class="btn btn-secondary"><i class="fa-solid fa-truck-front"></i> Explore Fleet</a>
+                        </div>
+                        <div class="split-inline-stats">
+                            <div style="text-align: center;">
+                                <span style="font-size: 1.6rem; font-weight: 700; color: var(--primary); display: block;">11°</span>
+                                <span style="font-size: 0.78rem; color: var(--text-muted);">Tilt Bed Clearance</span>
+                            </div>
+                            <div style="text-align: center;">
+                                <span style="font-size: 1.6rem; font-weight: 700; color: var(--primary); display: block;">0</span>
+                                <span style="font-size: 0.78rem; color: var(--text-muted);">Metal Axle Hooks</span>
+                            </div>
+                            <div style="text-align: center;">
+                                <span style="font-size: 1.6rem; font-weight: 700; color: var(--primary); display: block;">4-Pt</span>
+                                <span style="font-size: 0.78rem; color: var(--text-muted);">Nylon Wheel Straps</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="split-image">
+                        <img src="assets/images/home2-hero-slide-2.jpg" alt="Electric luxury sedan secured with wheel straps on orange hydraulic flatbed ramp" class="hero-feature-img">
+                    </div>
+                </div>
             </div>
+            <!-- Slide 3 -->
+            <div class="home2-hero-slide" aria-hidden="true">
+                <div class="split-section">
+                    <div class="split-content">
+                        <span class="section-label"><i class="fa-solid fa-screwdriver-wrench"></i> Rapid Workshop Vans</span>
+                        <h1 style="font-weight: 600; line-height: 1.15; margin-bottom: 20px;">
+                            Mobile Repairs<br>Right <span style="color: var(--primary);">At Your Shoulder</span>
+                        </h1>
+                        <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 32px; max-width: 500px;">
+                            Dead battery, flat tire, lockout, or empty fuel tank? Our rolling diagnostics vans fix most breakdowns right on the spot without waiting on a tow.
+                        </p>
+                        <div class="split-actions">
+                            <a href="contact.html" class="btn btn-primary"><i class="fa-solid fa-headset"></i> Request Service Van</a>
+                            <a href="coverage.html" class="btn btn-secondary"><i class="fa-solid fa-map-location-dot"></i> Coverage Map</a>
+                        </div>
+                        <div class="split-inline-stats">
+                            <div style="text-align: center;">
+                                <span style="font-size: 1.6rem; font-weight: 700; color: var(--primary); display: block;">12m</span>
+                                <span style="font-size: 0.78rem; color: var(--text-muted);">Mobile Van Target</span>
+                            </div>
+                            <div style="text-align: center;">
+                                <span style="font-size: 1.6rem; font-weight: 700; color: var(--primary); display: block;">35+</span>
+                                <span style="font-size: 0.78rem; color: var(--text-muted);">Cities Covered 24/7</span>
+                            </div>
+                            <div style="text-align: center;">
+                                <span style="font-size: 1.6rem; font-weight: 700; color: var(--primary); display: block;">100%</span>
+                                <span style="font-size: 0.78rem; color: var(--text-muted);">Upfront Flat Quotes</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="split-image">
+                        <img src="assets/images/home2-hero-slide-3.jpg" alt="Technician jump-starting SUV beside open orange roadside mobile workshop van" class="hero-feature-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home2-hero-controls">
+            <button type="button" class="home2-hero-arrow" id="home2PrevBtn" aria-label="Previous hero slide"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="hero-dots" id="home2HeroDots" role="tablist" aria-label="Hero slide indicators"></div>
+            <button type="button" class="home2-hero-arrow" id="home2NextBtn" aria-label="Next hero slide"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
     </div>
 </section>
@@ -191,7 +271,6 @@
                     <h3>Flatbed Carriers</h3>
                     <p>Safely transport all-wheel-drive, luxury, and low-clearance vehicles on hydraulic 11° ramps without undercarriage risk.</p>
                     <div class="fleet-specs">
-                        <span><i class="fa-solid fa-check"></i> 12,000 lb Bed</span>
                         <span><i class="fa-solid fa-check"></i> Nylon Soft-Straps</span>
                     </div>
                 </div>
@@ -208,7 +287,6 @@
                     <h3>Wheel-Lift Trucks</h3>
                     <p>Agile hydraulic stinger trucks engineered to navigate tight downtown alleys, curbs, and covered multi-level garages.</p>
                     <div class="fleet-specs">
-                        <span><i class="fa-solid fa-check"></i> 6'8" Deck</span>
                         <span><i class="fa-solid fa-check"></i> Under-60s Hookup</span>
                     </div>
                 </div>
@@ -225,7 +303,6 @@
                     <h3>Service Response Vans</h3>
                     <p>Rolling diagnostics and roadside workshops stocked for battery replacements, air-wedge lockouts, fuel, and tire swaps.</p>
                     <div class="fleet-specs">
-                        <span><i class="fa-solid fa-check"></i>EV Jump Packs</span>
                         <span><i class="fa-solid fa-check"></i> 200+ Gear Loadout</span>
                     </div>
                 </div>
@@ -441,7 +518,7 @@
             <div class="zone-card">
                 <div class="zone-card-icon"><i class="fa-solid fa-house-chimney"></i></div>
                 <h3>Suburban Areas</h3>
-                <p>Extended coverage reaching suburban communities, shopping districts, and residential neighborhoods.</p>
+                <p>Extended coverage reaching suburban communities, shopping districts, and residential home.</p>
                 <div style="margin-top: 16px;">
                     <span style="display: inline-block; font-size: 0.75rem; font-weight: 600; color: var(--primary);">15-25 min response</span>
                 </div>
@@ -449,7 +526,7 @@
             <div class="zone-card">
                 <div class="zone-card-icon"><i class="fa-solid fa-road"></i></div>
                 <h3>Highway Corridors</h3>
-                <p>Coverage along all major interstate highways, toll roads, and state routes across the region.</p>
+                <p>Coverage along all major interstate highways, toll roads, and state routes across the all region.</p>
                 <div style="margin-top: 16px;">
                     <span style="display: inline-block; font-size: 0.75rem; font-weight: 600; color: var(--primary);">20-30 min response</span>
                 </div>
@@ -502,7 +579,7 @@
                     </div>
                     <div class="corporate-stat">
                         <strong>&lt;15m</strong>
-                        <span>Priority Metro Response</span>
+                        <span>Priority Response</span>
                     </div>
                 </div>
             </div>

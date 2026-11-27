@@ -352,7 +352,7 @@
         <div class="hotline-bar">
             <div style="display: flex; align-items: center; gap: 10px;">
                 <i class="fa-solid fa-phone-volume" style="font-size: 1.3rem;"></i>
-                <div style="text-align: left;">
+                <div style="text-align: start;">
                     <div style="font-size: 0.72rem; opacity: 0.8; text-transform: uppercase;">Emergency Hotline</div>
                     <div style="font-size: 1.1rem; font-weight: 700;">1-800-555-1234</div>
                 </div>
@@ -360,7 +360,7 @@
             <div class="hotline-divider"></div>
             <div style="display: flex; align-items: center; gap: 10px;">
                 <i class="fa-solid fa-clock" style="font-size: 1.3rem;"></i>
-                <div style="text-align: left;">
+                <div style="text-align: start;">
                     <div style="font-size: 0.72rem; opacity: 0.8; text-transform: uppercase;">Available</div>
                     <div style="font-size: 1.1rem; font-weight: 700;">24/7 — 365 Days</div>
                 </div>
@@ -368,7 +368,7 @@
             <div class="hotline-divider"></div>
             <div style="display: flex; align-items: center; gap: 10px;">
                 <i class="fa-solid fa-gauge-high" style="font-size: 1.3rem;"></i>
-                <div style="text-align: left;">
+                <div style="text-align: start;">
                     <div style="font-size: 0.72rem; opacity: 0.8; text-transform: uppercase;">Response Time</div>
                     <div style="font-size: 1.1rem; font-weight: 700;">15 Min Average</div>
                 </div>
@@ -470,7 +470,7 @@
 <section class="section">
     <div class="container">
         <div class="split-section scroll-reveal">
-            <div class="split-image">
+            <div class="split-image split-image-tall">
                 <img src="assets/images/why-choose-mechanic.jpg" alt="Mechanic helping driver">
             </div>
             <div class="split-content">
@@ -479,32 +479,26 @@
                 <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px;">
                     With over a decade of experience, RescueFleet has built a reputation for fast response times, transparent pricing, and courteous service. We treat every call as an emergency.
                 </p>
-                <div style="display: grid; gap: 16px;">
-                    <div style="display: flex; align-items: start; gap: 14px;">
-                        <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(211,84,0,0.08); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                            <i class="fa-solid fa-clock" style="color: var(--primary); font-size: 0.9rem;"></i>
-                        </div>
-                        <div>
-                            <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 2px;">15-Minute Average Response</h4>
-                            <p style="font-size: 0.85rem; color: var(--text-secondary);">Our GPS-tracked fleet ensures the nearest truck reaches you fast.</p>
+                <div class="why-choose-list">
+                    <div class="why-choose-item">
+                        <div class="why-choose-icon"><i class="fa-solid fa-clock"></i></div>
+                        <div class="why-choose-text">
+                            <h4>15-Minute Average Response</h4>
+                            <p>Our GPS-tracked fleet ensures the nearest truck reaches you fast.</p>
                         </div>
                     </div>
-                    <div style="display: flex; align-items: start; gap: 14px;">
-                        <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(211,84,0,0.08); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                            <i class="fa-solid fa-dollar-sign" style="color: var(--primary); font-size: 0.9rem;"></i>
-                        </div>
-                        <div>
-                            <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 2px;">No Hidden Fees</h4>
-                            <p style="font-size: 0.85rem; color: var(--text-secondary);">Upfront pricing with no surprise charges. Know the cost before we dispatch.</p>
+                    <div class="why-choose-item">
+                        <div class="why-choose-icon"><i class="fa-solid fa-dollar-sign"></i></div>
+                        <div class="why-choose-text">
+                            <h4>No Hidden Fees</h4>
+                            <p>Upfront pricing with no surprise charges. Know the cost before we dispatch.</p>
                         </div>
                     </div>
-                    <div style="display: flex; align-items: start; gap: 14px;">
-                        <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(211,84,0,0.08); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                            <i class="fa-solid fa-certificate" style="color: var(--primary); font-size: 0.9rem;"></i>
-                        </div>
-                        <div>
-                            <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 2px;">Certified Technicians</h4>
-                            <p style="font-size: 0.85rem; color: var(--text-secondary);">All our operators are trained, licensed, and background-checked professionals.</p>
+                    <div class="why-choose-item">
+                        <div class="why-choose-icon"><i class="fa-solid fa-certificate"></i></div>
+                        <div class="why-choose-text">
+                            <h4>Certified Technicians</h4>
+                            <p>All our operators are trained, licensed, and background-checked professionals.</p>
                         </div>
                     </div>
                 </div>
@@ -587,7 +581,7 @@
                 </div>
                 <div class="vehicle-card-body">
                     <div class="vehicle-icon"><i class="fa-solid fa-car-side"></i></div>
-                    <h3>Sedans & Low-Clearance</h3>
+                    <h3>Sedans </h3>
                     <p>Extended hydraulic ramp angles and nylon soft-straps protect front splitters, spoilers, and alloy rims during loading.</p>
                     <span class="vehicle-tag"><i class="fa-solid fa-check"></i> Zero Metal Hooks</span>
                 </div>
@@ -598,7 +592,7 @@
                 </div>
                 <div class="vehicle-card-body">
                     <div class="vehicle-icon"><i class="fa-solid fa-truck-pickup"></i></div>
-                    <h3>AWD SUVs & 4x4 Trucks</h3>
+                    <h3>AWD SUVs </h3>
                     <p>Full-deck flatbed transport lifts all four wheels off the pavement to protect sensitive transfer cases and transmissions.</p>
                     <span class="vehicle-tag"><i class="fa-solid fa-check"></i> Drivetrain Safe</span>
                 </div>

@@ -858,7 +858,90 @@ function initHeroRescue(slider) {
 }
 
 /* ---- HERO SLIDER ---- */
+function initHome2HeroSlider() {
+    const slider = document.getElementById('home2HeroSlider');
+    if (!slider) return;
+    const slides = slider.querySelectorAll('.home2-hero-slide');
+    if (slides.length <= 1) return;
+
+    const dotsContainer = document.getElementById('home2HeroDots');
+    if (dotsContainer && !dotsContainer.children.length) {
+        slides.forEach((_, i) => {
+            const dot = document.createElement('button');
+            dot.type = 'button';
+            dot.className = 'hero-dot' + (i === 0 ? ' active' : '');
+            dot.setAttribute('aria-label', 'Hero slide ' + (i + 1));
+            const fill = document.createElement('span');
+            fill.className = 'hero-dot-fill';
+            dot.appendChild(fill);
+            dotsContainer.appendChild(dot);
+        });
+    }
+
+    const dots = slider.querySelectorAll('.hero-dot');
+    const prevBtn = document.getElementById('home2PrevBtn');
+    const nextBtn = document.getElementById('home2NextBtn');
+    const duration = 5000;
+    let currentIndex = 0;
+    let timer = null;
+
+    function updateSlide(index) {
+        currentIndex = (index + slides.length) % slides.length;
+        slides.forEach((slide, i) => {
+            const isActive = i === currentIndex;
+            slide.classList.toggle('active', isActive);
+            slide.setAttribute('aria-hidden', String(!isActive));
+        });
+        dots.forEach((dot, i) => {
+            const isActive = i === currentIndex;
+            dot.classList.toggle('active', isActive);
+            dot.setAttribute('aria-selected', String(isActive));
+            const fill = dot.querySelector('.hero-dot-fill');
+            if (fill) {
+                fill.style.animation = 'none';
+                if (isActive) {
+                    void fill.offsetWidth;
+                    fill.style.animation = `heroProgress ${duration}ms linear forwards`;
+                }
+            }
+        });
+    }
+
+    function nextSlide() { updateSlide(currentIndex + 1); }
+    function prevSlide() { updateSlide(currentIndex - 1); }
+    function startTimer() {
+        if (timer) clearInterval(timer);
+        timer = setInterval(nextSlide, duration);
+    }
+
+    if (nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); startTimer(); });
+    if (prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); startTimer(); });
+    dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+            if (currentIndex !== i) {
+                updateSlide(i);
+                startTimer();
+            }
+        });
+    });
+
+    let touchStartX = 0;
+    slider.addEventListener('touchstart', (e) => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+    slider.addEventListener('touchend', (e) => {
+        const diff = touchStartX - e.changedTouches[0].screenX;
+        if (Math.abs(diff) > 45) {
+            const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
+            diff > 0 ? (isRTL ? prevSlide() : nextSlide()) : (isRTL ? nextSlide() : prevSlide());
+            startTimer();
+        }
+    }, { passive: true });
+
+    updateSlide(0);
+    startTimer();
+}
+
 function initHeroSlider() {
+    initHome2HeroSlider();
     const slider = document.getElementById('heroSlider');
     if (!slider) return;
     initHeroRescue(slider);
@@ -1194,6 +1277,11 @@ function initCoverageChecker() {
         evaluateQuery(input.value);
     });
 
+    input.addEventListener('input', () => {
+        document.querySelectorAll('.coverage-zip-chip').forEach(c => c.classList.remove('active'));
+        evaluateQuery(input.value);
+    });
+
     document.querySelectorAll('.coverage-zip-chip[data-loc]').forEach(chip => {
         chip.addEventListener('click', () => {
             document.querySelectorAll('.coverage-zip-chip').forEach(c => c.classList.remove('active'));
@@ -1236,8 +1324,6 @@ function initServiceMatcher() {
             eta: '12 min avg ETA',
             title: 'Rapid Mobile Battery & Jump Unit',
             desc: 'Our service van arrives with a commercial 3000A lithium booster and alternator load tester so you can restart safely without waiting on a tow.',
-            unit: 'Mobile Service Van',
-            rate: '$55 (Free for Pro)',
             items: [
                 'Safe surge-protected jump-start & voltage test',
                 'Battery terminal clean & charging output check',
@@ -1250,8 +1336,6 @@ function initServiceMatcher() {
             eta: '15 min avg ETA',
             title: 'Hydraulic Tire Swap & Inflation Support',
             desc: 'If you have a usable spare or need wheel lug extraction, our rapid van lifts cleanly on the shoulder. Missing spare? We dispatch a flatbed instead.',
-            unit: 'Service Van / Flatbed',
-            rate: '$60 (Free for Pro)',
             items: [
                 '3-ton floor jack, calibrated torque wrench & lock lug tools',
                 'Spare inflation & valve stem safety check included',
@@ -1264,8 +1348,6 @@ function initServiceMatcher() {
             eta: '15–18 min avg ETA',
             title: '11° Low-Angle Hydraulic Tilt Flatbed',
             desc: 'All-wheel-drive vehicles, EVs, and sports sedans must keep all four wheels off the pavement. We secure tires with soft nylon straps — zero metal hooks.',
-            unit: '11° Tilt Flatbed Carrier',
-            rate: '$75 base (Included Pro)',
             items: [
                 'Full-deck clearance preserves bumper splitters & differentials',
                 'EV transport-mode & polymer wheel skates carried onboard',
@@ -1278,8 +1360,6 @@ function initServiceMatcher() {
             eta: '14 min avg ETA',
             title: 'Non-Damaging Air-Wedge Lockout Unit',
             desc: 'Certified lockout technicians open passenger doors in minutes using protective silicone cushions and vinyl-coated reach tools with zero paint or seal scratches.',
-            unit: 'Rapid Response Van',
-            rate: '$50 (Free for Pro)',
             items: [
                 'Window frame & weatherstrip fully protected',
                 'Works on frameless doors, trucks & commercial vans',
@@ -1292,8 +1372,6 @@ function initServiceMatcher() {
             eta: '20 min avg ETA',
             title: '50-Ft Soft-Shackle Winch-Out Carrier',
             desc: 'Slid off a slick shoulder, unpaved turnout, or muddy construction apron? Our recovery rig anchors safely and pulls at a controlled low-stress angle.',
-            unit: 'Heavy Winch Carrier',
-            rate: '$110 base extract',
             items: [
                 'Synthetic recovery lines prevent bumper or suspension damage',
                 'High-visibility safety cone perimeter while extracting',
@@ -1306,8 +1384,6 @@ function initServiceMatcher() {
             eta: '18 min avg ETA',
             title: '3–5 Gallon Emergency Fuel Delivery',
             desc: 'Ran dry miles from an exit? Our responder delivers regular unleaded, premium 91+, or ultra-low-sulfur diesel straight into your tank with spill-free funnels.',
-            unit: 'Mobile Fuel Unit',
-            rate: '$65 (Free Pro 3 gal)',
             items: [
                 'Sealed EPA containers with unleaded or diesel grade matched',
                 'Enough range to reach the closest highway filling station',
@@ -1320,8 +1396,6 @@ function initServiceMatcher() {
     const etaEl = document.getElementById('svcMatchEta');
     const titleEl = document.getElementById('svcMatchTitle');
     const descEl = document.getElementById('svcMatchDesc');
-    const unitEl = document.getElementById('svcMatchUnit');
-    const rateEl = document.getElementById('svcMatchRate');
     const listEl = document.getElementById('svcMatchChecklist');
 
     root.querySelectorAll('.svc-symptom-btn[data-symptom]').forEach(btn => {
@@ -1339,13 +1413,11 @@ function initServiceMatcher() {
             if (etaEl) etaEl.textContent = data.eta;
             if (titleEl) titleEl.textContent = data.title;
             if (descEl) descEl.textContent = data.desc;
-            if (unitEl) unitEl.textContent = data.unit;
-            if (rateEl) rateEl.textContent = data.rate;
             if (listEl) {
                 const rows = data.items.map(text => {
                     const li = document.createElement('li');
                     const icon = document.createElement('i');
-                    icon.className = 'fa-solid fa-check';
+                    icon.className = 'fa-solid fa-circle-check';
                     const span = document.createElement('span');
                     span.textContent = text;
                     li.append(icon, span);
