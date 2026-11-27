@@ -2684,9 +2684,11 @@ body[data-page="signup"] .auth-card .btn { padding: 12px 20px; margin-bottom: 16
 .contact-side-photo:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: rgba(211,84,0,0.45); border-left-color: var(--primary); }
 [dir="rtl"] .contact-side-photo:hover { border-left-color: rgba(211,84,0,0.45); border-right-color: var(--primary); }
 .contact-side-photo img {
-    width: 100%; height: 155px; object-fit: cover; object-position: center 22%; display: block;
+    width: 100%; height: 220px; object-fit: cover; object-position: center 18%; display: block;
     transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
 }
+@media (max-width: 768px) { .contact-side-photo img { height: 290px; } }
+@media (max-width: 480px) { .contact-side-photo img { height: 220px; } }
 .contact-side-photo:hover img { transform: scale(1.04); }
 .contact-side-caption {
     padding: 10px 18px; border-top: 1px solid var(--border);
